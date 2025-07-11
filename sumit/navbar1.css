@@ -1,0 +1,25 @@
+#main-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+#main-navbar #logo {
+    text-transform: uppercase;
+    font-family: "PP Monument Extended";
+    font-weight: 900;
+}
+#main-navbar button {
+    border: none;
+    outline: none;
+    font-weight: 500;
+    color: black;
+    padding: 0.75em 1em;
+    background-color: white;
+    border-radius: 0.25em;
+}
