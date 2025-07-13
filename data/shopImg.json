@@ -1,0 +1,531 @@
+[
+  {
+    "name": "Harmony in Diversity: Gond Art Expressions by Kailash Pradhan",
+    "artist": "Kailash Pradhan",
+    "price": 1500,
+    "src": "assets/shopImg/001.webp",
+    "size": "small",
+    "dimensions": "H-7 | W-7 inches"
+  },
+    {
+    "name": "Tree of Life Kalamkari Painting by Siva Reddy",
+    "artist": "Siva Reddy",
+    "price": 12000,
+    "src": "assets/shopImg/002.webp",
+    "size": "medium",
+    "dimensions": "H: 28 inches | W: 21 inches"
+  },
+  {
+
+    "name": "Dance scene along with musical instruments: Phad by Kalyan Joshi",
+    "artist": "Kalyan Joshi",
+    "price": 1300,
+    "src": "assets/shopImg/003.webp",
+    "size": "small",
+    "dimensions": "H: 10 inches | W: 10 inches"
+  },
+  {
+    "name": "The Sacred Grove: Nurturing Blessings: Kalamkari Painting by Harinath.N",
+    "artist": "Harinath N",
+    "price": 20000,
+    "src": "assets/shopImg/004.webp",
+    "size": "medium",
+    "dimensions": "H: 12 inches | W: 12 inches"
+  },
+  {
+    "name": "Marine Elegance: Gond Art Visions by Kailash Pradhan",
+    "artist": "Kailash Pradhan",
+    "price": 1500,
+    "src": "assets/shopImg/005.webp",
+    "size": "small",
+    "dimensions": "H: 7 inches | W: 7 inches"
+  },
+  {
+    "name": "Bound by Nature: Gond Art Musings by Kailash Pradhan",
+    "artist": "Kailash Pradhan",
+    "price": 1500,
+    "src": "assets/shopImg/006.webp",
+    "size": "small",
+    "dimensions": "H: 7 inches | W: 7 inches"
+  },
+  {
+    "name": "Love's Thrilling Ride: A Kalighat Portrait by Uttam Chitrakar",
+    "artist": "Uttam Chitrakar",
+    "price": 6500,
+    "src": "assets/shopImg/007.webp",
+    "size": "medium",
+    "dimensions": "H: 22 inches | W: 14 inches"
+  },
+  {
+    "name": "A Woman At Door in Kalamkari by K. Lakshminarayanan",
+    "artist": "K. Lakshminarayan",
+    "price": 5000,
+    "src": "assets/shopImg/008.webp",
+    "size": "medium",
+    "dimensions": "H: 23 inches | W: 19 inches"
+  },
+  {
+    "name": "Harmony beneath the Tree of Life: Warli by Dilip Bahotha",
+    "artist": "Dilip Bahotha",
+    "price": 3800,
+    "src": "assets/shopImg/009.webp",
+    "size": "medium",
+    "dimensions": "H: 14 inches | W: 14 inches"
+  },
+  {
+    "name": "A Flight into Eternity – The Mughal Miniature Postcard by Mohan Prajapati",
+    "artist": "Mohan Prajapati",
+    "price": 700,
+    "src": "assets/shopImg/010.webp",
+    "size": "small",
+    "dimensions": "H: 3.5 inches | W: 5.5 inches"
+  },
+  {
+    "name": "Mata Saraswati Kalamkari Painting by Siva Reddy",
+    "artist": "Siva Reddy",
+    "price": 3200,
+    "src": "assets/shopImg/011.webp",
+    "size": "medium",
+    "dimensions": "H: 15 inches | W: 11 inches"
+  },
+  {
+    "name": "The reader, Kalighat Art by Bapi Chitrakar",
+    "artist": "Bapi Chitrakar",
+    "price": 4000,
+    "src": "assets/shopImg/012.webp",
+    "size": "medium",
+    "dimensions": "H: 11.69 inches | W: 8.27 inches"
+  },
+  {
+    "name": "Symphony of Plumage: Gond Art Interactions by Kailash Pradhan",
+    "artist": "Kailash Pradhan",
+    "price": 1500,
+    "src": "assets/shopImg/013.webp",
+    "size": "small",
+    "dimensions": "H: 7 inches | W: 7 inches"
+  },
+  {
+    "name": "Maa Saraswati with a Swan in Bengal Pattachitra by Manoranjan Chitrakar",
+    "artist": "Manoranjan Chitrakar",
+    "price": 1400,
+    "src": "assets/shopImg/014.webp",
+    "size": "small",
+    "dimensions": "H: 11 inches | W: 7 inches"
+  },
+  {
+    "name": "Depiction of Maa Durga in Bengal Pattachitra by Manoranjan Chitrakar",
+    "artist": "Manoranjan Chitrakar",
+    "price": 1500,
+    "src": "assets/shopImg/015.webp",
+    "size": "small",
+    "dimensions": "H: 11 inches | W: 7 inches"
+  },
+  {
+    "name": "Wetland Whispers: A Woodpecker's portrayal Miniature Painting by Mohan Prajapati",
+    "artist": "Mohan Prajapati",
+    "price": 700,
+    "src": "assets/shopImg/016.webp",
+    "size": "small",
+    "dimensions": "H: 3.5 inches | W: 5.5 inches"
+  },
+  {
+    "name": "Glimpses of Paradise: Mughal Miniature Postcard Unveiling a Captivating Avian Kaleidoscope by Mohan Prajapati",
+    "artist": "Mohan Prajapati",
+    "price": 700,
+    "src": "assets/shopImg/017.webp",
+    "size": "small",
+    "dimensions": "H: 3.5 inches | W: 5.5 inches"
+  },
+  {
+    "name": "Maa Saraswati Kalamkari Painting by Siva Reddy",
+    "artist": "Siva Reddy",
+    "price": 4500,
+    "src": "assets/shopImg/018.webp",
+    "size": "medium",
+    "dimensions": "H: 14 inches | W: 14 inches"
+  },
+  {
+    "name": "Krishna with Cows Kalamkari Painting by Siva Reddy",
+    "artist": "Siva Reddy",
+    "price": 3200,
+    "src": "assets/shopImg/019.webp",
+    "size": "medium",
+    "dimensions": "H: 10 inches | W: 16 inches"
+  },
+  {
+    "name": "Krishna and Cows in Frolic in Pichwai Style by Mohan Prajapati",
+    "artist": "Mohan Prajapati",
+    "price": 12000,
+    "src": "assets/shopImg/020.webp",
+    "size": "medium",
+    "dimensions": "H: 10 inches | W: 9 inches"
+  },
+  {
+    "name": "Whispers of Romance: Uttam Chitrakar's Kalighat Love Tale",
+    "artist": "Uttam Chitrakar",
+    "price": 3200,
+    "src": "assets/shopImg/021.webp",
+    "size": "medium",
+    "dimensions": "H: 14 inches | W: 11 inches"
+  },
+  {
+    "name": "Graceful Charm: Kalighat Art by Bapi Chitrakar",
+    "artist": "Bapi Chitrakar",
+    "price": 4000,
+    "src": "assets/shopImg/022.webp",
+    "size": "medium",
+    "dimensions": "H: 11.69 inches | W: 8.27 inches"
+  },
+  {
+    "name": "Madhubani Painting of Good Luck Charm by Ambika Devi",
+    "artist": "Ambika Devi",
+    "price": 5100,
+    "src": "assets/shopImg/023.webp",
+    "size": "medium",
+    "dimensions": "H: 7.5 inches | W: 22 inches"
+  },
+  {
+    "name": "Mirror of Confidence: Uttam Chitrakar's Kalighat Self-Admiration",
+    "artist": "Uttam Chitrakar",
+    "price": 3200,
+    "src": "assets/shopImg/024.webp",
+    "size": "medium",
+    "dimensions": "H: 14 inches | W: 11 inches"
+  },
+  {
+    "name": "The Musical Cat in Kalighat by Sonali Chitrakar",
+    "artist": "Sonali Chitrakar",
+    "price": 5000,
+    "src": "assets/shopImg/025.webp",
+    "size": "medium",
+    "dimensions": "H: 14 inches | W: 11 inches"
+  },
+  {
+    "name": "A Women in Batik by Kartik Manna",
+    "artist": "Kartik Manna",
+    "price": 5600,
+    "src": "assets/shopImg/026.webp",
+    "size": "large",
+    "dimensions": "H: 22.5 inches | W: 32.5 inches"
+  },
+  {
+    "name": "Working Women In Kalighat by Uttam Chitrakar",
+    "artist": "Uttam Chitrakar",
+    "price": 3000,
+    "src": "assets/shopImg/027.webp",
+    "size": "medium",
+    "dimensions": "H: 11 inches | W: 8.5 inches"
+  },
+  {
+    "name": "Turtle in Gond by Kailash Pradhan",
+    "artist": "Kailash Pradhan",
+    "price": 400,
+    "src": "assets/shopImg/028.webp",
+    "size": "small",
+    "dimensions": "H: 4 inches | W: 4 inches"
+  },
+  {
+    "name": "Natural impressions in Kashidakari Embroidery by Samjhau Devi",
+    "artist": "Samjhau Devi",
+    "price": 5500,
+    "src": "assets/shopImg/029.webp",
+    "size": "medium",
+    "dimensions": "H: 12 inches | W: 16 inches"
+  },
+  {
+    "name": "Chirps of Unity: Gond Art Impressions by Kailash Pradhan",
+    "artist": "Kailash Pradhan",
+    "price": 1500,
+    "src": "assets/shopImg/030.webp",
+    "size": "small",
+    "dimensions": "H: 7 inches | W: 7 inches"
+  },
+  {
+    "name": "Floral Symphony in Kashidakari by Samjhau Devi",
+    "artist": "Samjhau Devi",
+    "price": 6200,
+    "src": "assets/shopImg/031.webp",
+    "size": "medium",
+    "dimensions": "H: 14 inches | W: 18 inches"
+  },
+  {
+    "name": "Paisley Dreams in Kashidakari Embroidery by Samjhau Devi",
+    "artist": "Samjhau Devi",
+    "price": 7800,
+    "src": "assets/shopImg/032.webp",
+    "size": "medium",
+    "dimensions": "H: 16 inches | W: 20 inches"
+  },
+  {
+    "name": "Garden of Eden in Kashidakari by Samjhau Devi",
+    "artist": "Samjhau Devi",
+    "price": 8500,
+    "src": "assets/shopImg/033.webp",
+    "size": "large",
+    "dimensions": "H: 20 inches | W: 24 inches"
+  },
+  {
+    "name": "Mughal Heritage in Kashidakari Embroidery by Samjhau Devi",
+    "artist": "Samjhau Devi",
+    "price": 9200,
+    "src": "assets/shopImg/034.webp",
+    "size": "large",
+    "dimensions": "H: 18 inches | W: 22 inches"
+  },
+  {
+    "name": "Traditional Motifs in Kashidakari by Samjhau Devi",
+    "artist": "Samjhau Devi",
+    "price": 5800,
+    "src": "assets/shopImg/035.webp",
+    "size": "medium",
+    "dimensions": "H: 15 inches | W: 19 inches"
+  },
+  {
+    "name": "Royal Court Scene in Miniature by Mohan Prajapati",
+    "artist": "Mohan Prajapati",
+    "price": 12000,
+    "src": "assets/shopImg/036.webp",
+    "size": "medium",
+    "dimensions": "H: 12 inches | W: 16 inches"
+  },
+  {
+    "name": "Radha Krishna in Pichwai Style by Mohan Prajapati",
+    "artist": "Mohan Prajapati",
+    "price": 15000,
+    "src": "assets/shopImg/037.webp",
+    "size": "large",
+    "dimensions": "H: 18 inches | W: 24 inches"
+  },
+  {
+    "name": "Lotus Garden in Madhubani by Ambika Devi",
+    "artist": "Ambika Devi",
+    "price": 4800,
+    "src": "assets/shopImg/038.webp",
+    "size": "medium",
+    "dimensions": "H: 14 inches | W: 18 inches"
+  },
+  {
+    "name": "Fish and Birds in Madhubani by Ambika Devi",
+    "artist": "Ambika Devi",
+    "price": 5200,
+    "src": "assets/shopImg/039.webp",
+    "size": "medium",
+    "dimensions": "H: 16 inches | W: 20 inches"
+  },
+  {
+    "name": "Village Festival in Madhubani by Ambika Devi",
+    "artist": "Ambika Devi",
+    "price": 6500,
+    "src": "assets/shopImg/040.webp",
+    "size": "large",
+    "dimensions": "H: 20 inches | W: 24 inches"
+  },
+  {
+    "name": "Elephant Procession in Kalamkari by Siva Reddy",
+    "artist": "Siva Reddy",
+    "price": 18000,
+    "src": "assets/shopImg/041.webp",
+    "size": "large",
+    "dimensions": "H: 24 inches | W: 30 inches"
+  },
+  {
+    "name": "Tree of Wisdom in Kalamkari by Siva Reddy",
+    "artist": "Siva Reddy",
+    "price": 16000,
+    "src": "assets/shopImg/042.webp",
+    "size": "large",
+    "dimensions": "H: 22 inches | W: 28 inches"
+  },
+  {
+    "name": "Dancing Figures in Warli by Dilip Bahotha",
+    "artist": "Dilip Bahotha",
+    "price": 4200,
+    "src": "assets/shopImg/043.webp",
+    "size": "medium",
+    "dimensions": "H: 16 inches | W: 16 inches"
+  },
+  {
+    "name": "Harvest Celebration in Warli by Dilip Bahotha",
+    "artist": "Dilip Bahotha",
+    "price": 4800,
+    "src": "assets/shopImg/044.webp",
+    "size": "medium",
+    "dimensions": "H: 18 inches | W: 18 inches"
+  },
+  {
+    "name": "Royal Hunt Scene in Phad by Kalyan Joshi",
+    "artist": "Kalyan Joshi",
+    "price": 8500,
+    "src": "assets/shopImg/045.webp",
+    "size": "large",
+    "dimensions": "H: 20 inches | W: 28 inches"
+  },
+  {
+    "name": "Devnarayan Saga in Phad by Kalyan Joshi",
+    "artist": "Kalyan Joshi",
+    "price": 12000,
+    "src": "assets/shopImg/046.webp",
+    "size": "large",
+    "dimensions": "H: 24 inches | W: 36 inches"
+  },
+  {
+    "name": "Princess and Parrot in Kalighat by Bapi Chitrakar",
+    "artist": "Bapi Chitrakar",
+    "price": 4500,
+    "src": "assets/shopImg/047.webp",
+    "size": "medium",
+    "dimensions": "H: 12 inches | W: 9 inches"
+  },
+  {
+    "name": "Modern Woman in Kalighat by Uttam Chitrakar",
+    "artist": "Uttam Chitrakar",
+    "price": 3800,
+    "src": "assets/shopImg/048.webp",
+    "size": "medium",
+    "dimensions": "H: 14 inches | W: 11 inches"
+  },
+  {
+    "name": "Fish Market Scene in Kalighat by Sonali Chitrakar",
+    "artist": "Sonali Chitrakar",
+    "price": 5200,
+    "src": "assets/shopImg/049.webp",
+    "size": "medium",
+    "dimensions": "H: 15 inches | W: 12 inches"
+  },
+  {
+    "name": "Jagannath Rath Yatra in Pattachitra by Manoranjan Chitrakar",
+    "artist": "Manoranjan Chitrakar",
+    "price": 6800,
+    "src": "assets/shopImg/050.webp",
+    "size": "large",
+    "dimensions": "H: 18 inches | W: 24 inches"
+  },
+  {
+    "name": "Radha Krishna Leela in Pattachitra by Manoranjan Chitrakar",
+    "artist": "Manoranjan Chitrakar",
+    "price": 7500,
+    "src": "assets/shopImg/051.webp",
+    "size": "large",
+    "dimensions": "H: 20 inches | W: 26 inches"
+  },
+  {
+    "name": "Ganesha Blessing in Pattachitra by Manoranjan Chitrakar",
+    "artist": "Manoranjan Chitrakar",
+    "price": 5500,
+    "src": "assets/shopImg/052.webp",
+    "size": "medium",
+    "dimensions": "H: 16 inches | W: 20 inches"
+  },
+  {
+    "name": "Peacock Dance in Miniature by Mohan Prajapati",
+    "artist": "Mohan Prajapati",
+    "price": 1200,
+    "src": "assets/shopImg/053.webp",
+    "size": "small",
+    "dimensions": "H: 4 inches | W: 6 inches"
+  },
+  {
+    "name": "Royal Palace Scene in Miniature by Mohan Prajapati",
+    "artist": "Mohan Prajapati",
+    "price": 1500,
+    "src": "assets/shopImg/054.webp",
+    "size": "small",
+    "dimensions": "H: 5 inches | W: 7 inches"
+  },
+  {
+    "name": "Garden Party in Miniature by Mohan Prajapati",
+    "artist": "Mohan Prajapati",
+    "price": 1800,
+    "src": "assets/shopImg/055.webp",
+    "size": "small",
+    "dimensions": "H: 6 inches | W: 8 inches"
+  },
+  {
+    "name": "Butterfly Garden in Kashidakari by Samjhau Devi",
+    "artist": "Samjhau Devi",
+    "price": 7200,
+    "src": "assets/shopImg/056.webp",
+    "size": "medium",
+    "dimensions": "H: 14 inches | W: 18 inches"
+  },
+  {
+    "name": "Bridal Ensemble in Kashidakari by Samjhau Devi",
+    "artist": "Samjhau Devi",
+    "price": 9800,
+    "src": "assets/shopImg/057.webp",
+    "size": "large",
+    "dimensions": "H: 20 inches | W: 26 inches"
+  },
+  {
+    "name": "Vintage Charm in Kashidakari by Samjhau Devi",
+    "artist": "Samjhau Devi",
+    "price": 6500,
+    "src": "assets/shopImg/058.webp",
+    "size": "medium",
+    "dimensions": "H: 12 inches | W: 16 inches"
+  },
+  {
+    "name": "Royal Procession in Batik by Kartik Manna",
+    "artist": "Kartik Manna",
+    "price": 8200,
+    "src": "assets/shopImg/059.webp",
+    "size": "large",
+    "dimensions": "H: 24 inches | W: 32 inches"
+  },
+  {
+    "name": "Abstract Nature in Batik by Kartik Manna",
+    "artist": "Kartik Manna",
+    "price": 6800,
+    "src": "assets/shopImg/060.webp",
+    "size": "medium",
+    "dimensions": "H: 18 inches | W: 24 inches"
+  },
+  {
+    "name": "Traditional Motifs in Batik by Kartik Manna",
+    "artist": "Kartik Manna",
+    "price": 5200,
+    "src": "assets/shopImg/061.webp",
+    "size": "medium",
+    "dimensions": "H: 16 inches | W: 20 inches"
+  },
+  {
+    "name": "Cosmic Dance in Madhubani by Ambika Devi",
+    "artist": "Ambika Devi",
+    "price": 7800,
+    "src": "assets/shopImg/062.webp",
+    "size": "large",
+    "dimensions": "H: 22 inches | W: 28 inches"
+  },
+  {
+    "name": "Wedding Celebration in Madhubani by Ambika Devi",
+    "artist": "Ambika Devi",
+    "price": 8500,
+    "src": "assets/shopImg/063.webp",
+    "size": "large",
+    "dimensions": "H: 24 inches | W: 30 inches"
+  },
+  {
+    "name": "Sacred Geometry in Mandana by Vibhuti Nath",
+    "artist": "Vibhuti Nath",
+    "price": 3200,
+    "src": "assets/shopImg/064.webp",
+    "size": "medium",
+    "dimensions": "H: 12 inches | W: 12 inches"
+  },
+  {
+    "name": "Tribal Warriors in Bhil Art by Anil Wangad",
+    "artist": "Anil Wangad",
+    "price": 6800,
+    "src": "assets/shopImg/065.webp",
+    "size": "medium",
+    "dimensions": "H: 18 inches | W: 24 inches"
+  },
+  {
+    "name": "Ocean of Stories in Cheriyal Scroll by Sai Kiran",
+    "artist": "Sai Kiran Dhanalakota",
+    "price": 12500,
+    "src": "assets/shopImg/066.webp",
+    "size": "large",
+    "dimensions": "H: 36 inches | W: 12 inches"
+  }
+]
