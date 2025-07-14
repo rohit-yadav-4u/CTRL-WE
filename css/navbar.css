@@ -10,6 +10,55 @@
 }
 
 
+:root {
+  font-size: 12px;
+  --color-text: #292828;
+  --color-bg: #ddd;
+  --color-link: #000;
+  --color-link-hover: #000;
+  --page-padding: 1rem;
+  --angle: -15deg;
+}
+
+body {
+  margin: 0;
+  
+  
+  font-family: new-science-mono, sans-serif;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  height: 100%;
+}
+html {
+
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.noscroll {
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+
+/* Tricolor gradient text for Kalayatra */
+.tricolor-text {
+  display: inline-block;
+  background: linear-gradient(90deg, orange 0%, #fff 45%, #fff 55%, green 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 
 
 /* Traditional Art Section Styles */
@@ -346,8 +395,9 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 102vw;
+    width: 100vw;
     z-index: 1200;
+
 }
 #mobile-bottom-navbar ul li {
     flex: 1 1 0;
