@@ -62,6 +62,7 @@ function revealNavLinks(skipNavLogo = false) {
 
   tl.from("#hero-text-after-zoom h1", {
     opacity: 0,
+    scale: 0,
     filter: "blur(70px)",
     duration: 0.4,
     delay: 0.1,
@@ -70,17 +71,11 @@ function revealNavLinks(skipNavLogo = false) {
 
   // Wavy text animation for tagline (word by word, smooth)
   const taglineP = document.getElementById("hero-text-after-zoom-p");
-  const originalText = "WHERE TRADITION TRAVELS" + (window.innerWidth <= 600 ? "<br class=\"mobile-br\">" : "") + " TIMELESSLY";
+  const originalText = 'WHERE TRADITION TRAVELS TIMELESSLY';
   if (taglineP && !taglineP.classList.contains("wavy-ready")) {
-    // Split by space, keep <br> as a separate word if present
-    let text = taglineP.innerHTML;
-    // Replace <br> with a placeholder
-    text = text.replace(/<br\s*class=\"mobile-br\"\s*\/?\>/gi, '[[BR]]');
-    const words = text.split(/\s+/).map(w => w === '[[BR]]' ? '<br class="mobile-br">' : w);
-    taglineP.innerHTML = words.map(word => {
-      if (word === '<br class="mobile-br">') return word;
-      return `<span class="wavy-word">${word}</span>`;
-    }).join(' ');
+    let text = originalText;
+    const words = text.split(/\s+/);
+    taglineP.innerHTML = words.map(word => `<span class="wavy-word">${word}</span>`).join(' ');
     taglineP.classList.add("wavy-ready");
   }
   tl.set("#hero-text-after-zoom-p", {overflow: "hidden", display: "inline-block"});

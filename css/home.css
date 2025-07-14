@@ -126,8 +126,7 @@
 	font-size: 2.5rem !important;
 	line-height: 1.5;
 	letter-spacing: 0.03em;
-	filter:saturate(0.8);
-	padding: 0 0.2em;
+	padding: 0 0.1em;
 	text-align:center;
 	margin: 0;
   }
@@ -151,6 +150,7 @@
 	text-align: center;
 	color: #00ffdd;
 	letter-spacing: 0.09em;
+  word-spacing: 0.4em;
 	display: inline-block;
 	font-family: "Montserrat", "Poppins", "Lato", Arial, sans-serif;
 }
@@ -380,3 +380,7 @@ html {
 	align-content: space-between;
   }
 }
+
+
+/* hero section completes */
+
