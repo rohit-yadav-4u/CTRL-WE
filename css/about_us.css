@@ -389,6 +389,69 @@ a:focus-visible {
     margin-top: -20%
 }
 
+/*our team*/
+.team-section {
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    padding: 1em 1.5em;
+    min-width: 280px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: left;
+    flex: 1 1 320px;
+    box-sizing: border-box;
+}
+
+.team-member h3{
+    font-size: 1.7em;
+    font-family:  Arial, sans-serif;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.4em;
+    letter-spacing: 0.04em;
+}
+
+/* Responsive: 1 in each line on small screens */
+@media (max-width: 700px) {
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        max-width: 90vw;
+    }
+}
+
+.team-wrapper {
+    max-width: 860px;
+    /* or the width of two cards + gap */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-wrapper h2 {
+    margin-bottom: 1.2em;
+    text-align: center;
+}
+
+/*  */
+
 @media screen and (min-width:53em) {
     .content__sides {
         grid-template-columns: 55% 1fr
