@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,10 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
 
     <link rel="stylesheet" href="../css/navbar.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,700,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/demosearch.css" />
+		<link rel="stylesheet" type="text/css" href="../css/componentsearch.css" />
 
 </head>
 <body>
@@ -16,6 +19,9 @@
       #login-btn {
         margin-right: 1.1em !important;
       }
+      .desktop-login-btn {
+    display: none !important;
+  }
     }
     </style>
     <!-- Navbar reusable component: Place this in pages with <div id="navbar-container"></div> and load navbar.js to inject -->
@@ -35,30 +41,178 @@
                     <li><a href="#"><i class="fas fa-store"></i> Shop</a></li>
                 </ul>
     </div>
-    <div class="search-container" style="position: absolute; margin-right: 4.25em;">
-        <div class="searchbar-morph" style="margin-left: 30px;">
-            <i class="fas fa-search searchbar-icon"></i>
-            <input type="text" id="search-bar" placeholder="Search" autocomplete="off" />
-        </div>
-    </div>
+
+
+
+
+    <div class="desktop-login-btn">
     <button id="login-btn" style="margin-right: 4.375em; padding: 0.75em 1em; font-size: 1.2rem; font-weight: 600; border-radius: 0.25em; background-color: white; color: black; border: none; font-family: 'Poppins', 'Lato', Arial, sans-serif;">
         <span style="display:block; position:relative;">
             <span class="login-btn-text">Login/Register</span>
         </span>
     </button>
+    </div>
     </nav>
 <!-- Mobile Bottom Navbar -->
 <nav id="mobile-bottom-navbar">
     <ul>
         <li class="active"><a href="#"><i class="fas fa-home"></i><span>HOME</span></a></li>
         <li><a href="#"><i class="fas fa-brush"></i><span>CANVAS</span></a></li>
-        <li><a href="#"><i class="fas fa-search"></i><span>SEARCH</span></a></li>
-        <li><a href="#"><i class="fas fa-users"></i><span>ABOUT US</span></a></li>
         <li><a href="#"><i class="fas fa-store"></i><span>SHOP</span></a></li>
+        <li><a href="#"><i class="fas fa-users"></i><span>ABOUT US</span></a></li>
+        <li><a href="#"><i class="fas fa-user"></i><span>LOGIN</span></a></li>
+
     </ul>
 </nav>
+<div class="container-search">
+			
+			<div id="morphsearch" class="morphsearch">
+				<form class="morphsearch-form">
+					<input class="morphsearch-input" type="search" placeholder="Search..."/>
+					<button class="morphsearch-submit" type="submit">Search</button>
+				</form>
+				<div class="morphsearch-content">
+					<div class="dummy-column">
+						<h2>People</h2>
+						<a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+							<img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
+							<h3>Sara Soueidan</h3>
+						</a>
+						<a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+							<img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+							<h3>Rachel Smith</h3>
+						</a>
+						<a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+							<img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+							<h3>Peter Finlan</h3>
+						</a>
+						<a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+							<img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+							<h3>Patrick Cox</h3>
+						</a>
+						<a class="dummy-media-object" href="https://twitter.com/twholman">
+							<img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+							<h3>Tim Holman</h3>
+						</a>
+						<a class="dummy-media-object" href="https://twitter.com/shaund0na">
+							<img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
+							<h3>Shaun Dona</h3>
+						</a>
+					</div>
+					<div class="dummy-column">
+						<h2>Popular</h2>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/05/page-preloading-effect/">
+							<img src="../assets/img-search/thumbs/PagePreloadingEffect.png" alt="PagePreloadingEffect"/>
+							<h3>Page Preloading Effect</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/">
+							<img src="../assets/img-search/thumbs/ArrowNavigationStyles.png" alt="ArrowNavigationStyles"/>
+							<h3>Arrow Navigation Styles</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/">
+							<img src="../assets/img-search/thumbs/HoverEffectsIdeasNew.png" alt="HoverEffectsIdeasNew"/>
+							<h3>Ideas for Subtle Hover Effects</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/14/freebie-halcyon-days-one-page-website-template/">
+							<img src="../assets/img-search/thumbs/FreebieHalcyonDays.png" alt="FreebieHalcyonDays"/>
+							<h3>Halcyon Days Template</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/22/inspiration-for-article-intro-effects/">
+							<img src="../assets/img-search/thumbs/ArticleIntroEffects.png" alt="ArticleIntroEffects"/>
+							<h3>Inspiration for Article Intro Effects</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/26/draggable-dual-view-slideshow/">
+							<img src="../assets/img-search/thumbs/DraggableDualViewSlideshow.png" alt="DraggableDualViewSlideshow"/>
+							<h3>Draggable Dual-View Slideshow</h3>
+						</a>
+					</div>
+					<div class="dummy-column">
+						<h2>Recent</h2>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/10/07/tooltip-styles-inspiration/">
+							<img src="../assets/img-search/thumbs/TooltipStylesInspiration.png" alt="TooltipStylesInspiration"/>
+							<h3>Tooltip Styles Inspiration</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/23/animated-background-headers/">
+							<img src="../assets/img-search/thumbs/AnimatedHeaderBackgrounds.png" alt="AnimatedHeaderBackgrounds"/>
+							<h3>Animated Background Headers</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/16/off-canvas-menu-effects/">
+							<img src="../assets/img-search/thumbs/OffCanvas.png" alt="OffCanvas"/>
+							<h3>Off-Canvas Menu Effects</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/">
+							<img src="../assets/img-search/thumbs/TabStyles.png" alt="TabStyles"/>
+							<h3>Tab Styles Inspiration</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">
+							<img src="../assets/img-search/thumbs/ResponsiveSVGs.png" alt="ResponsiveSVGs"/>
+							<h3>Make SVGs Responsive with CSS</h3>
+						</a>
+						<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/23/notification-styles-inspiration/">
+							<img src="../assets/img-search/thumbs/NotificationStyles.png" alt="NotificationStyles"/>
+							<h3>Notification Styles Inspiration</h3>
+						</a>
+					</div>
+				</div><!-- /morphsearch-content -->
+				<span class="morphsearch-close"></span>
+			</div><!-- /morphsearch -->
+			
+		</div><!-- /container -->
 
 <script src="../js/navbar.js"></script>
+
+<script src="../js/classiesearch.js"></script>
+		<script>
+			(function() {
+				var morphSearch = document.getElementById( 'morphsearch' ),
+					input = morphSearch.querySelector( 'input.morphsearch-input' ),
+					ctrlClose = morphSearch.querySelector( 'span.morphsearch-close' ),
+					isOpen = isAnimating = false,
+					// show/hide search area
+					toggleSearch = function(evt) {
+						// return if open and the input gets focused
+						if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
+
+						if( isOpen ) {
+							classie.remove( morphSearch, 'open' );
+
+							// trick to hide input text once the search overlay closes 
+							// todo: hardcoded times, should be done after transition ends
+							if( input.value !== '' ) {
+								setTimeout(function() {
+									classie.add( morphSearch, 'hideInput' );
+									setTimeout(function() {
+										classie.remove( morphSearch, 'hideInput' );
+										input.value = '';
+									}, 300 );
+								}, 500);
+							}
+							
+							input.blur();
+						}
+						else {
+							classie.add( morphSearch, 'open' );
+						}
+						isOpen = !isOpen;
+					};
+
+				// events
+				input.addEventListener( 'focus', toggleSearch );
+				ctrlClose.addEventListener( 'click', toggleSearch );
+				// esc key closes search overlay
+				// keyboard navigation events
+				document.addEventListener( 'keydown', function( ev ) {
+					var keyCode = ev.keyCode || ev.which;
+					if( keyCode === 27 && isOpen ) {
+						toggleSearch(ev);
+					}
+				} );
+
+
+				/***** for demo purposes only: don't allow to submit the form *****/
+				morphSearch.querySelector( 'button[type="submit"]' ).addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+			})();
+		</script>
 </body>
 </html>
 
