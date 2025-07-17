@@ -16,23 +16,62 @@
 
 <body>
 
+	<!-- Navbar will be loaded here, hidden by default -->
+	<div id="navbar-container" style="display:none;"></div>
 	<!-- div .wrapp -->
 	<div class="wrapp">
-
-
-<h1 class="title" id="search-title">Gallery Image</h1>
-<ul class="gallery" id="gallery-list"></ul>
-
+		<h1 class="title" id="search-title">Gallery Image</h1>
+		<ul class="gallery" id="gallery-list"></ul>
 	</div>
 	<!-- /div .wrapp END -->
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 	<script>
+	// Dynamically load navbar.html into #navbar-container and inject its CSS/JS
+	document.addEventListener('DOMContentLoaded', function() {
+		fetch('../html/navbar.html')
+			.then(response => response.text())
+			.then(html => {
+				const tempDiv = document.createElement('div');
+				tempDiv.innerHTML = html;
+				// Inject all <link rel="stylesheet"> to <head>
+				tempDiv.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+					if (!document.head.querySelector(`link[href="${link.getAttribute('href')}"]`)) {
+						document.head.appendChild(link.cloneNode());
+					}
+				});
+				// Insert navbar HTML first
+				const navbarHtml = Array.from(tempDiv.children)
+					.filter(el => el.tagName !== 'SCRIPT' && el.tagName !== 'LINK' && el.tagName !== 'HEAD')
+					.map(el => el.outerHTML).join('');
+				const navbarContainer = document.getElementById('navbar-container');
+				navbarContainer.innerHTML = navbarHtml;
+				navbarContainer.style.display = 'block'; // Show instantly, no effects
+				// Now inject all <script src> to <body> (after navbar is present)
+				tempDiv.querySelectorAll('script[src]').forEach(script => {
+					if (!document.body.querySelector(`script[src="${script.getAttribute('src')}"]`)) {
+						const s = document.createElement('script');
+						s.src = script.getAttribute('src');
+						s.async = false;
+						s.onload = function() {
+							if (s.src.includes('navbar.js')) {
+								if (window.attachUnifiedSearchLogic) {
+									window.attachUnifiedSearchLogic();
+								}
+							}
+						};
+						document.body.appendChild(s);
+					}
+				});
+				// Inline scripts: execute them after navbar is present
+				tempDiv.querySelectorAll('script:not([src])').forEach(script => {
+					try { eval(script.textContent); } catch(e) {}
+				});
+			});
+	});
 	// Get search query from localStorage or URL
 	function getSearchQuery() {
-		// Try to get from localStorage (set by search form)
 		let query = localStorage.getItem('searchQuery');
 		if (!query) {
-			// Fallback: try to get from URL param
 			const params = new URLSearchParams(window.location.search);
 			query = params.get('q') || '';
 		}
@@ -56,7 +95,6 @@
 		try {
 			const response = await fetch('../data/imgData.json');
 			const data = await response.json();
-			// Filter images by tag
 			const results = data.filter(img =>
 				img.tags && img.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
 			);
@@ -70,7 +108,6 @@
 					<span class="zoom">zoom</span>
 				</li>
 			`).join('');
-			// Re-bind Fancybox
 			Fancybox.bind('[data-fancybox="gallery"]', {
 				dragToClose: false,
 				closeButton: "top",
