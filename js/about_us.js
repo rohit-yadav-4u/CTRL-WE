@@ -292,47 +292,9 @@ a = (function () {
                     });
             }),
             (e._bind = function () {
-                o.hasWheelEvent &&
-                    r(this, u)[u].addEventListener(
-                        "wheel",
-                        this._onWheel,
-                        this.listenerOptions
-                    ),
-                    o.hasMouseWheelEvent &&
-                        r(this, u)[u].addEventListener(
-                            "mousewheel",
-                            this._onMouseWheel,
-                            this.listenerOptions
-                        ),
-                    o.hasTouch &&
-                        r(this, a)[a].useTouch &&
-                        (r(this, u)[u].addEventListener(
-                            "touchstart",
-                            this._onTouchStart,
-                            this.listenerOptions
-                        ),
-                        r(this, u)[u].addEventListener(
-                            "touchmove",
-                            this._onTouchMove,
-                            this.listenerOptions
-                        )),
-                    o.hasPointer &&
-                        o.hasTouchWin &&
-                        ((r(this, f)[f] = document.body.style.msTouchAction),
-                        (document.body.style.msTouchAction = "none"),
-                        r(this, u)[u].addEventListener(
-                            "MSPointerDown",
-                            this._onTouchStart,
-                            !0
-                        ),
-                        r(this, u)[u].addEventListener(
-                            "MSPointerMove",
-                            this._onTouchMove,
-                            !0
-                        )),
-                    o.hasKeyDown &&
-                        r(this, a)[a].useKeyboard &&
-                        document.addEventListener("keydown", this._onKeyDown);
+                // Disable custom virtual scroll binding for desktop browsers
+                // Let browser handle wheel, mousewheel, touch, and keyboard events natively
+                // Only GSAP/ScrollTrigger should animate SVG paths and sections
             }),
             (e._unbind = function () {
                 o.hasWheelEvent &&
@@ -409,7 +371,10 @@ var l = (function (e) {
                     (s.windowWidth = window.innerWidth);
             }),
             (s.onWheel = function (t) {
-                s.smooth && !t.ctrlKey && t.preventDefault();
+                // Only prevent default if a GSAP animation is actively running and needs to block scroll
+                // Otherwise, let the browser handle scrolling
+                // If you need to trigger animation, do so without resetting scroll position
+                // For most cases, do nothing here:
             }),
             (s.onVirtualScroll = function (t) {
                 var e, r;

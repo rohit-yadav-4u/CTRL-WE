@@ -1,3 +1,30 @@
+/* Main content wrapper to avoid navbar overlap */
+#main-content {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+/* Chrome, Edge, Safari */
+#main-content::-webkit-scrollbar {
+  display: none;
+}
+.shop-container {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.shop-container::-webkit-scrollbar {
+  display: none;
+}
+ 
+@media (max-width: 600px) {
+  #main-content {
+    padding-top: 80px; /* Match mobile navbar height */
+    overflow: auto;
+  }
+}
+
+/* If content is still covered, check navbar z-index in navbar.css and reduce if excessive */
  /* Responsive styles and cart dropdown */
  body {
    min-height: 100vh;
@@ -18,10 +45,9 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 32px 0 32px 0;
+   padding: 50px 0 32px 0;
    width: 100%;
-   max-width: 900px;
-   margin: 0 auto;
+  margin: 0;
  }
 
  .shop-list {
@@ -100,6 +126,16 @@
  }
 
  @media (max-width: 600px) {
+
+/* for Cart icon  */
+  .main-header{
+    position: fixed;
+    left: 13vw;
+    z-index: 5;
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+  
    .shop-list {
      grid-template-columns: 1fr;
      gap: 14px;
@@ -138,13 +174,24 @@
    }
  }
 
+ 
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 0 16px;
+    position: fixed;
+    top: 5rem;
+    right: 90vw;
+    z-index: 5000;
+}
 
- .main-header {
+ /* .main-header {
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 16px 16px 0 16px;
- }
+ } */
 
  .main-title {
    font-size: 1.3rem;
@@ -277,7 +324,7 @@
    font-size: 0.95rem;
    color: #2a7;
    font-weight: 500;
- }
+    padding-top: 80px; /* Mobile navbar height, adjust as needed */
 
  .shop-panel.effect-panel {
    position: fixed;
@@ -461,6 +508,9 @@
    gap: 32px;
    width: 100%;
    padding: 0 10px;
+  margin-top: 70px; /* Adjust to match desktop navbar height */
+}
+
    justify-items: center;
 
  }
@@ -777,7 +827,7 @@
    font-weight: 600;
    cursor: pointer;
    transition: background 0.3s ease, transform 0.2s ease;
-   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+   /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
  }
 
  button:hover,

@@ -17,46 +17,59 @@
         <!-- Navbar will be loaded above -->
         <main>
         <script>
-        // Dynamically load navbar.html into #navbar-container and inject its CSS/JS
+        // Load navbar only after Explore is clicked
         document.addEventListener('DOMContentLoaded', function() {
+          var exploreBtn = document.querySelector('.enter');
+          function loadNavbarOnce() {
+            if (window._navbarLoaded) return;
+            window._navbarLoaded = true;
             fetch('./html/navbar.html')
-                .then(response => response.text())
-                .then(html => {
-                    const tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = html;
-                    // Inject all <link rel="stylesheet"> to <head>
-                    tempDiv.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-                        if (!document.head.querySelector(`link[href="${link.getAttribute('href')}"]`)) {
-                            document.head.appendChild(link.cloneNode());
-                        }
-                    });
-                    // Insert navbar HTML first
-                    const navbarHtml = Array.from(tempDiv.children)
-                        .filter(el => el.tagName !== 'SCRIPT' && el.tagName !== 'LINK' && el.tagName !== 'HEAD')
-                        .map(el => el.outerHTML).join('');
-                    document.getElementById('navbar-container').innerHTML = navbarHtml;
-                    // Now inject all <script src> to <body> (after navbar is present)
-                    tempDiv.querySelectorAll('script[src]').forEach(script => {
-                        if (!document.body.querySelector(`script[src="${script.getAttribute('src')}"]`)) {
-                            const s = document.createElement('script');
-                            s.src = script.getAttribute('src');
-                            s.async = false;
-                            s.onload = function() {
-                              // After navbar.js loads, patch search redirect to always use absolute path
-                              if (s.src.includes('navbar.js')) {
-                                if (window.attachUnifiedSearchLogic) {
-                                  window.attachUnifiedSearchLogic();
-                                }
-                              }
-                            };
-                            document.body.appendChild(s);
-                        }
-                    });
-                    // Inline scripts: execute them after navbar is present
-                    tempDiv.querySelectorAll('script:not([src])').forEach(script => {
-                        try { eval(script.textContent); } catch(e) {}
-                    });
+              .then(response => response.text())
+              .then(html => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                // Inject all <link rel="stylesheet"> to <head>
+                tempDiv.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+                  if (!document.head.querySelector(`link[href="${link.getAttribute('href')}"]`)) {
+                    document.head.appendChild(link.cloneNode());
+                  }
                 });
+                // Insert navbar HTML first
+                const navbarHtml = Array.from(tempDiv.children)
+                  .filter(el => el.tagName !== 'SCRIPT' && el.tagName !== 'LINK' && el.tagName !== 'HEAD')
+                  .map(el => el.outerHTML).join('');
+                document.getElementById('navbar-container').innerHTML = navbarHtml;
+                // Set #main-navbar width to 100% via inline style (index only)
+               
+                // Now inject all <script src> to <body> (after navbar is present)
+                tempDiv.querySelectorAll('script[src]').forEach(script => {
+                  if (!document.body.querySelector(`script[src="${script.getAttribute('src')}"]`)) {
+                    const s = document.createElement('script');
+                    s.src = script.getAttribute('src');
+                    s.async = false;
+                    s.onload = function() {
+                      if (s.src.includes('navbar.js')) {
+                        if (window.attachUnifiedSearchLogic) {
+                          window.attachUnifiedSearchLogic();
+                        }
+                      }
+                    };
+                    document.body.appendChild(s);
+                  }
+                });
+                // Inline scripts: execute them after navbar is present
+                tempDiv.querySelectorAll('script:not([src])').forEach(script => {
+                  try { eval(script.textContent); } catch(e) {}
+                });
+              });
+          }
+          if (exploreBtn) {
+            exploreBtn.addEventListener('click', loadNavbarOnce);
+            exploreBtn.addEventListener('touchend', function(e) {
+              e.preventDefault();
+              loadNavbarOnce();
+            }, { passive: false });
+          }
         });
         </script>
             
