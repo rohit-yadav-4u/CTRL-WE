@@ -66,6 +66,65 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+// Attach search logic to morphsearch-form
+window.attachUnifiedSearchLogic = function() {
+    // Attach search logic
+    const searchForm = document.querySelector('.morphsearch-form');
+    if (searchForm && !searchForm.__searchAttached) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = searchForm.querySelector('input').value.trim();
+            if (!query) return;
+            localStorage.setItem('searchQuery', query);
+            // Robust path handling for searchresult.html
+            let resultPath = '';
+            if (window.location.pathname.includes('index.html') || window.location.pathname === '/' || window.location.pathname === '') {
+                resultPath = 'html/searchresult.html';
+            } else if (window.location.pathname.includes('shop.html')) {
+                resultPath = '../html/searchresult.html';
+            } else if (window.location.pathname.includes('about_us.html')) {
+                resultPath = '../html/searchresult.html';
+            } else {
+                resultPath = 'searchresult.html';
+            }
+            window.location.href = resultPath;
+        });
+        searchForm.__searchAttached = true;
+    }
+    // Mobile navbar logic (ensure it runs after dynamic injection)
+    const mobileBottomNavbar = document.getElementById('mobile-bottom-navbar');
+    function toggleMobileNavbar() {
+        if (mobileBottomNavbar) {
+            if (window.innerWidth <= 600) {
+                mobileBottomNavbar.classList.add('show');
+            } else {
+                mobileBottomNavbar.classList.remove('show');
+            }
+        }
+    }
+    toggleMobileNavbar();
+    window.addEventListener('resize', toggleMobileNavbar);
+    // Mobile menu logic (no animation)
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuOverlay = document.getElementById('mobile-menu-overlay');
+    const menuClose = document.getElementById('mobile-menu-close');
+    if (menuBtn && menuOverlay && menuClose) {
+        menuBtn.addEventListener('click', function() {
+            menuOverlay.style.display = 'block';
+        });
+        menuClose.addEventListener('click', function() {
+            menuOverlay.style.display = 'none';
+        });
+        // Optional: close overlay when clicking outside menu
+        menuOverlay.addEventListener('click', function(e) {
+            if (e.target === menuOverlay) menuOverlay.style.display = 'none';
+        });
+    }
+};
+// Attach on DOMContentLoaded for static navbar.html
+document.addEventListener('DOMContentLoaded', function() {
+    window.attachUnifiedSearchLogic();
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {
