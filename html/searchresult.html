@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Gallery Image</title>
+	<link rel="icon" href="img/icon.jpg" type="icon/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+	<link rel="stylesheet" href="../css/searchresult.css">
+</head>
+
+<body>
+
+	<!-- div .wrapp -->
+	<div class="wrapp">
+
+
+<h1 class="title" id="search-title">Gallery Image</h1>
+<ul class="gallery" id="gallery-list"></ul>
+
+	</div>
+	<!-- /div .wrapp END -->
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script>
+	// Get search query from localStorage or URL
+	function getSearchQuery() {
+		// Try to get from localStorage (set by search form)
+		let query = localStorage.getItem('searchQuery');
+		if (!query) {
+			// Fallback: try to get from URL param
+			const params = new URLSearchParams(window.location.search);
+			query = params.get('q') || '';
+		}
+		return query.trim();
+	}
+
+	// Update title with search term
+	function updateTitle(query) {
+		const titleEl = document.getElementById('search-title');
+		if (query) {
+			titleEl.textContent = `Results for: "${query}"`;
+		} else {
+			titleEl.textContent = 'Gallery Image';
+		}
+	}
+
+	// Load and filter images from JSON
+	async function loadGallery(query) {
+		const gallery = document.getElementById('gallery-list');
+		gallery.innerHTML = '<li>Loading...</li>';
+		try {
+			const response = await fetch('../data/imgData.json');
+			const data = await response.json();
+			// Filter images by tag
+			const results = data.filter(img =>
+				img.tags && img.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
+			);
+			if (results.length === 0) {
+				gallery.innerHTML = '<li>No images found for this search.</li>';
+				return;
+			}
+			gallery.innerHTML = results.map(img => `
+				<li class="gallery__item" data-fancybox="gallery" data-src="../${img.src}">
+					<img src="../${img.src}" alt="${img.title || img.category || ''}" class="gallery__img">
+					<span class="zoom">zoom</span>
+				</li>
+			`).join('');
+			// Re-bind Fancybox
+			Fancybox.bind('[data-fancybox="gallery"]', {
+				dragToClose: false,
+				closeButton: "top",
+				Image: { zoom: false },
+				on: {
+					initCarousel: (fancybox) => {
+						const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+						fancybox.$container.style.setProperty(
+							"--bg-image",
+							`url("${slide.$thumb.src}")`
+						);
+					},
+					"Carousel.change": (fancybox, carousel, to, from) => {
+						const slide = carousel.slides[to];
+						fancybox.$container.style.setProperty(
+							"--bg-image",
+							`url("${slide.$thumb.src}")`
+						);
+					},
+				},
+			});
+		} catch (err) {
+			gallery.innerHTML = '<li>Error loading images.</li>';
+		}
+	}
+
+	// Main
+	document.addEventListener('DOMContentLoaded', () => {
+		const query = getSearchQuery();
+		updateTitle(query);
+		if (query) {
+			loadGallery(query);
+		} else {
+			document.getElementById('gallery-list').innerHTML = '<li>No search term provided.</li>';
+		}
+	});
+	</script>
+</body>
+
+</html>
