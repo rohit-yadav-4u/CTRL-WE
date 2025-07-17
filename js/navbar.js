@@ -66,3 +66,68 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+        var searchForm = document.getElementById("navbar-search-form");
+        var searchInput = document.getElementById("navbar-search-input");
+        if (searchForm && searchInput) {
+          searchForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var query = searchInput.value.trim();
+          if (query) {
+            localStorage.setItem("searchQuery", query);
+            // Always redirect to /html/searchresult.html from any page
+            window.location.href = window.location.origin + "/html/searchresult.html";
+          }
+          });
+        }
+        // Dummy column search links logic
+        var searchLinks = document.querySelectorAll(
+          ".search-link[data-search]"
+        );
+        searchLinks.forEach(function (link) {
+          link.addEventListener("click", function (e) {
+            var tag = link.getAttribute("data-search");
+            if (tag) {
+              e.preventDefault();
+              localStorage.setItem("searchQuery", tag);
+              window.location.href = link.getAttribute("href");
+            }
+          });
+        });
+      });
+      // Existing morphsearch open/close logic
+      (function () {
+        var morphSearch = document.getElementById("morphsearch"),
+          input = morphSearch.querySelector("input.morphsearch-input"),
+          ctrlClose = morphSearch.querySelector("span.morphsearch-close"),
+          isOpen = (isAnimating = false),
+          toggleSearch = function (evt) {
+            if (evt.type.toLowerCase() === "focus" && isOpen) return false;
+            if (isOpen) {
+              classie.remove(morphSearch, "open");
+              if (input.value !== "") {
+                setTimeout(function () {
+                  classie.add(morphSearch, "hideInput");
+                  setTimeout(function () {
+                    classie.remove(morphSearch, "hideInput");
+                    input.value = "";
+                  }, 300);
+                }, 500);
+              }
+              input.blur();
+            } else {
+              classie.add(morphSearch, "open");
+            }
+            isOpen = !isOpen;
+          };
+        input.addEventListener("focus", toggleSearch);
+        ctrlClose.addEventListener("click", toggleSearch);
+        document.addEventListener("keydown", function (ev) {
+          var keyCode = ev.keyCode || ev.which;
+          if (keyCode === 27 && isOpen) {
+            toggleSearch(ev);
+          }
+        });
+      })();
