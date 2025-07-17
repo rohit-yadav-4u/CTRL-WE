@@ -1,186 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
 
-	<link rel="stylesheet" href="../css/navbar.css">
-	<link href='http://fonts.googleapis.com/css?family=Raleway:100,700,800' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="../css/demosearch.css" />
-		<link rel="stylesheet" type="text/css" href="../css/componentsearch.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Raleway:100,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/font-awesome-4.2.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/demosearch.css" />
+    <link rel="stylesheet" type="text/css" href="../css/componentsearch.css" />
+  </head>
+  <body>
+    <style>
+      @media (max-width: 600px) {
+        #login-btn {
+          margin-right: 1.1em !important;
+        }
+        .desktop-login-btn {
+          display: none !important;
+        }
+      }
+    </style>
+    <!-- Navbar reusable component: Place this in pages with <div id="navbar-container"></div> and load navbar.js to inject -->
 
-</head>
-<body>
-	<style>
-	@media (max-width: 600px) {
-	  #login-btn {
-		margin-right: 1.1em !important;
-	  }
-	  .desktop-login-btn {
-	display: none !important;
-  }
-	}
-	</style>
-	<!-- Navbar reusable component: Place this in pages with <div id="navbar-container"></div> and load navbar.js to inject -->
-   
-<nav id="main-navbar">
-	<div id="logo">
-		<img src="../assets/logo/logopic.png" alt="Kalayatra" id="logo-img" />
-		<p id="logo-text" style="font-family:'Samarkan',cursive;font-size:2.3rem;font-weight:700;letter-spacing:0.01em;text-transform:uppercase;margin:0;display:flex;gap:0;align-items:center;">
-			<span class="tricolor-text">Kalayatra</span>
-		</p>
-	</div>
-	<div id="navbar-items">
-				<ul id="nav-links">
-					<li><a href="#" class="active"><i class="fas fa-home"></i> HOME</a></li>
-					<li><a href="#"><i class="fas fa-brush"></i> Canvas</a></li>
-					<li><a href="#"><i class="fas fa-users"></i> About Us</a></li>
-					<li><a href="#"><i class="fas fa-store"></i> Shop</a></li>
-				</ul>
-	</div>
+    <nav id="main-navbar">
+      <div id="logo">
+        <img src="../assets/logo/logopic.png" alt="Kalayatra" id="logo-img" />
+        <p
+          id="logo-text"
+          style="
+            font-family: 'Samarkan', cursive;
+            font-size: 2.3rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            margin: 0;
+            display: flex;
+            gap: 0;
+            align-items: center;
+          "
+        >
+          <span class="tricolor-text">Kalayatra</span>
+        </p>
+      </div>
+      <div id="navbar-items">
+        <ul id="nav-links">
+          <li>
+            <a href="#" class="active"><i class="fas fa-home"></i> HOME</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-brush"></i> Canvas</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i> About Us</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-store"></i> Shop</a>
+          </li>
+        </ul>
+      </div>
 
-
-
-
-	<div class="desktop-login-btn">
+      <!-- Morphsearch block moved inside navbar for sticky/unified header -->
+      <div class="container-search">
+        <div id="morphsearch" class="morphsearch">
+          <form class="morphsearch-form">
+            <input
+              class="morphsearch-input"
+              type="search"
+              placeholder="Search..."
+            />
+            <button class="morphsearch-submit" type="submit">Search</button>
+          </form>
+          <div class="morphsearch-content">
+            <div class="dummy-column">
+              <h2>Popular Search</h2>
+              <a
+                class="dummy-media-object search-link"
+                data-search="Handicrafts"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Handicrafts/0004.avif"
+                  alt="Handicrafts"
+                />
+                <h3>Handicrafts</h3>
+              </a>
+              <a
+                class="dummy-media-object search-link"
+                data-search="Oral Traditions"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Oral traditions and Storytelling/0024.webp"
+                  alt="Oral Traditions and Storytelling"
+                />
+                <h3>Oral Traditions</h3>
+              </a>
+            </div>
+            <div class="dummy-column">
+              <h2>Past Search</h2>
+              <a
+                class="dummy-media-object search-link"
+                data-search="Handicrafts"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Handicrafts/0004.avif"
+                  alt="Handicrafts"
+                />
+                <h3>Handicrafts</h3>
+              </a>
+              <a
+                class="dummy-media-object search-link"
+                data-search="Oral Traditions"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Oral traditions and Storytelling/0024.webp"
+                  alt="Oral Traditions and Storytelling"
+                />
+                <h3>Oral Traditions</h3>
+              </a>
+            </div>
+            <div class="dummy-column">
+              <h2>Suggestions</h2>
+              <a
+                class="dummy-media-object search-link"
+                data-search="Handicrafts"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Handicrafts/0004.avif"
+                  alt="Handicrafts"
+                />
+                <h3>Handicrafts</h3>
+              </a>
+              <a
+                class="dummy-media-object search-link"
+                data-search="Oral Traditions"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Oral traditions and Storytelling/0024.webp"
+                  alt="Oral Traditions and Storytelling"
+                />
+                <h3>Oral Traditions</h3>
+              </a>
+            </div>
+          </div>
+          <!-- /morphsearch-content -->
+          <span class="morphsearch-close"></span>
+        </div>
+        <!-- /morphsearch -->
+      </div>
+	  	<div class="desktop-login-btn">
 	<button id="login-btn" style="margin-right: 4.375em; padding: 0.75em 1em; font-size: 1.2rem; font-weight: 600; border-radius: 0.25em; background-color: white; color: black; border: none; font-family: 'Poppins', 'Lato', Arial, sans-serif;">
 		<span style="display:block; position:relative;">
-			<span class="login-btn-text">Login/Register</span>
+			<span class="login-btn-text">Login</span>
 		</span>
 	</button>
 	</div>
-	</nav>
-<!-- Mobile Bottom Navbar -->
-<nav id="mobile-bottom-navbar">
-	<ul>
-		<li class="active"><a href="#"><i class="fas fa-home"></i><span>HOME</span></a></li>
-		<li><a href="#"><i class="fas fa-brush"></i><span>CANVAS</span></a></li>
-		<li><a href="#"><i class="fas fa-store"></i><span>SHOP</span></a></li>
-		<li><a href="#"><i class="fas fa-users"></i><span>ABOUT US</span></a></li>
-		<li><a href="#"><i class="fas fa-user"></i><span>LOGIN</span></a></li>
+      <!-- /container-search -->
+      <!-- End morphsearch block -->
+    </nav>
+    <!-- Mobile Bottom Navbar -->
+    <nav id="mobile-bottom-navbar">
+      <ul>
+        <li class="active">
+          <a href="#"><i class="fas fa-home"></i><span>HOME</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-brush"></i><span>CANVAS</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-store"></i><span>SHOP</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-users"></i><span>ABOUT US</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-user"></i><span>LOGIN</span></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- morphsearch block now inside main-navbar above -->
 
-	</ul>
-</nav>
-<div class="container-search">
-			
-			<div id="morphsearch" class="morphsearch">
-<form class="morphsearch-form" id="navbar-search-form">
-	<input class="morphsearch-input" type="search" placeholder="Search..." id="navbar-search-input"/>
-	<button class="morphsearch-submit" type="submit">Search</button>
-</form>
-				<div class="morphsearch-content">
-					<div class="dummy-column">
-						<h2>Popular Search</h2>
-<a class="dummy-media-object search-link" data-search="Handicrafts" href="searchresult.html">
-	<img class="round" src="../Images/Handicrafts/0004.avif" alt="Handicrafts"/>
-	<h3>Handicrafts</h3>
-</a>
-<a class="dummy-media-object search-link" data-search="Oral Traditions" href="searchresult.html">
-	<img class="round" src="../Images/Oral traditions and Storytelling/0024.webp" alt="Oral Traditions and Storytelling"/>
-	<h3>Oral Traditions</h3>
-</a>
-					</div>
-					 <div class="dummy-column">
-						<h2>Past Search</h2>
-<a class="dummy-media-object search-link" data-search="Handicrafts" href="searchresult.html">
-	<img class="round" src="../Images/Handicrafts/0004.avif" alt="Handicrafts"/>
-	<h3>Handicrafts</h3>
-</a>
-<a class="dummy-media-object search-link" data-search="Oral Traditions" href="searchresult.html">
-	<img class="round" src="../Images/Oral traditions and Storytelling/0024.webp" alt="Oral Traditions and Storytelling"/>
-	<h3>Oral Traditions</h3>
-</a>
-					</div>
-					 <div class="dummy-column">
-						<h2>Suggestions</h2>
-<a class="dummy-media-object search-link" data-search="Handicrafts" href="searchresult.html">
-	<img class="round" src="../Images/Handicrafts/0004.avif" alt="Handicrafts"/>
-	<h3>Handicrafts</h3>
-</a>
-<a class="dummy-media-object search-link" data-search="Oral Traditions" href="searchresult.html">
-	<img class="round" src="../Images/Oral traditions and Storytelling/0024.webp" alt="Oral Traditions and Storytelling"/>
-	<h3>Oral Traditions</h3>
-</a>
-					</div>
-				</div><!-- /morphsearch-content -->
-				<span class="morphsearch-close"></span>
-			</div><!-- /morphsearch -->
-			
-		</div><!-- /container -->
+    <script src="../js/navbar.js"></script>
 
-<script src="../js/navbar.js"></script>
-<script src="../js/classiesearch.js"></script>
-<script>
-// Search form logic: save query and redirect to searchresult.html
-document.addEventListener('DOMContentLoaded', function() {
-	var searchForm = document.getElementById('navbar-search-form');
-	var searchInput = document.getElementById('navbar-search-input');
-	if (searchForm && searchInput) {
-		searchForm.addEventListener('submit', function(e) {
-			e.preventDefault();
-			var query = searchInput.value.trim();
-			if (query) {
-				localStorage.setItem('searchQuery', query);
-				window.location.href = 'searchresult.html';
-			}
-		});
-	}
-	// Dummy column search links logic
-	var searchLinks = document.querySelectorAll('.search-link[data-search]');
-	searchLinks.forEach(function(link) {
-		link.addEventListener('click', function(e) {
-			var tag = link.getAttribute('data-search');
-			if (tag) {
-				e.preventDefault();
-				localStorage.setItem('searchQuery', tag);
-				window.location.href = link.getAttribute('href');
-			}
-		});
-	});
-});
-// Existing morphsearch open/close logic
-(function() {
-	var morphSearch = document.getElementById( 'morphsearch' ),
-		input = morphSearch.querySelector( 'input.morphsearch-input' ),
-		ctrlClose = morphSearch.querySelector( 'span.morphsearch-close' ),
-		isOpen = isAnimating = false,
-		toggleSearch = function(evt) {
-			if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
-			if( isOpen ) {
-				classie.remove( morphSearch, 'open' );
-				if( input.value !== '' ) {
-					setTimeout(function() {
-						classie.add( morphSearch, 'hideInput' );
-						setTimeout(function() {
-							classie.remove( morphSearch, 'hideInput' );
-							input.value = '';
-						}, 300 );
-					}, 500);
-				}
-				input.blur();
-			}
-			else {
-				classie.add( morphSearch, 'open' );
-			}
-			isOpen = !isOpen;
-		};
-	input.addEventListener( 'focus', toggleSearch );
-	ctrlClose.addEventListener( 'click', toggleSearch );
-	document.addEventListener( 'keydown', function( ev ) {
-		var keyCode = ev.keyCode || ev.which;
-		if( keyCode === 27 && isOpen ) {
-			toggleSearch(ev);
-		}
-	} );
-})();
-</script>
-</body>
+    <script src="../js/classiesearch.js"></script>
+    <script>
+      (function () {
+        var morphSearch = document.getElementById("morphsearch"),
+          input = morphSearch.querySelector("input.morphsearch-input"),
+          ctrlClose = morphSearch.querySelector("span.morphsearch-close"),
+          isOpen = (isAnimating = false),
+          // show/hide search area
+          toggleSearch = function (evt) {
+            // return if open and the input gets focused
+            if (evt.type.toLowerCase() === "focus" && isOpen) return false;
+
+            if (isOpen) {
+              classie.remove(morphSearch, "open");
+
+              // trick to hide input text once the search overlay closes
+              // todo: hardcoded times, should be done after transition ends
+              if (input.value !== "") {
+                setTimeout(function () {
+                  classie.add(morphSearch, "hideInput");
+                  setTimeout(function () {
+                    classie.remove(morphSearch, "hideInput");
+                    input.value = "";
+                  }, 300);
+                }, 500);
+              }
+
+              input.blur();
+            } else {
+              classie.add(morphSearch, "open");
+            }
+            isOpen = !isOpen;
+          };
+
+        // events
+        input.addEventListener("focus", toggleSearch);
+        ctrlClose.addEventListener("click", toggleSearch);
+        // esc key closes search overlay
+        // keyboard navigation events
+        document.addEventListener("keydown", function (ev) {
+          var keyCode = ev.keyCode || ev.which;
+          if (keyCode === 27 && isOpen) {
+            toggleSearch(ev);
+          }
+        });
+
+        /***** for demo purposes only: don't allow to submit the form *****/
+        morphSearch
+          .querySelector('button[type="submit"]')
+          .addEventListener("click", function (ev) {
+            ev.preventDefault();
+          });
+      })();
+    </script>
+  </body>
 </html>
-
-
-
-
-

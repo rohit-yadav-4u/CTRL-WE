@@ -9,50 +9,48 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
         
         
+        
     </head>
     <body class="noscroll loading">
-        <nav id="main-navbar" style="display: none">
-            <div id="logo">
-                <img src="./assets/logo/logopic.png" alt="Kalayatra" id="logo-img" />
-                <p id="logo-text" style="font-family:'Samarkan',cursive;font-size:3rem;font-weight:700;letter-spacing:0.01em;text-transform:uppercase;margin:0;display:flex;gap:0;align-items:center;">
-                    <span class="tricolor-text">Kalayatra</span>
-                </p>
-            </div>
-
-            <div id="navbar-items">
-                <ul id="nav-links">
-                    <li><a href="#" class="active"><i class="fas fa-home"></i> HOME</a></li>
-                    <li><a href="#"><i class="fas fa-brush"></i> CANVAS</a></li>
-                    <li><a href="./html/about_us.html"><i class="fas fa-users"></i> ABOUT US</a></li>
-                    <li><a href="./html/shop.html"><i class="fas fa-store"></i> SHOP</a></li>
-                </ul>
-
-                
-            </div>
-            <div class="search-container">
-                    <div class="searchbar-morph">
-                        <i class="fas fa-search searchbar-icon"></i>
-                        <input type="text" id="search-bar" placeholder="Search" autocomplete="off" />
-                    </div>
-                </div>
-        </div>
-        <button id="login-btn">
-            <span style="display:block; position:relative;">
-                <span class="login-btn-text">Login/Register</span>
-            </span>
-        </button>
-    </nav>
-<!-- Mobile Bottom Navbar -->
-<nav id="mobile-bottom-navbar">
-    <ul>
-        <li class="active"><a href="#"><i class="fas fa-home"></i><span>HOME</span></a></li>
-        <li><a href="#"><i class="fas fa-brush"></i><span>CANVAS</span></a></li>
-        <li><a href="#"><i class="fas fa-search"></i><span>SEARCH</span></a></li>
-        <li><a href="./html/about_us.html"><i class="fas fa-users"></i><span>ABOUT US</span></a></li>
-        <li><a href="./html/shop.html"><i class="fas fa-store"></i><span>SHOP</span></a></li>
-    </ul>
-</nav>
+        <!-- Navbar will be loaded here -->
+        <div id="navbar-container"></div>
+        <!-- Navbar will be loaded above -->
         <main>
+        <script>
+        // Dynamically load navbar.html into #navbar-container and inject its CSS/JS
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('./html/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
+                    // Inject all <link rel="stylesheet"> to <head>
+                    tempDiv.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+                        if (!document.head.querySelector(`link[href="${link.getAttribute('href')}"]`)) {
+                            document.head.appendChild(link.cloneNode());
+                        }
+                    });
+                    // Insert navbar HTML first
+                    const navbarHtml = Array.from(tempDiv.children)
+                        .filter(el => el.tagName !== 'SCRIPT' && el.tagName !== 'LINK' && el.tagName !== 'HEAD')
+                        .map(el => el.outerHTML).join('');
+                    document.getElementById('navbar-container').innerHTML = navbarHtml;
+                    // Now inject all <script src> to <body> (after navbar is present)
+                    tempDiv.querySelectorAll('script[src]').forEach(script => {
+                        if (!document.body.querySelector(`script[src="${script.getAttribute('src')}"]`)) {
+                            const s = document.createElement('script');
+                            s.src = script.getAttribute('src');
+                            s.async = false;
+                            document.body.appendChild(s);
+                        }
+                    });
+                    // Inline scripts: execute them after navbar is present
+                    tempDiv.querySelectorAll('script:not([src])').forEach(script => {
+                        try { eval(script.textContent); } catch(e) {}
+                    });
+                });
+        });
+        </script>
             
             <section class="intro">
                 <!-- Hero heading and tagline will be injected after zoom -->
