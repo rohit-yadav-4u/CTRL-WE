@@ -5,9 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart Animation Demo</title>
   <link rel="stylesheet" href="../css/shop.css">
-  <script src="../js/gsap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar.css">
+
+  <!-- Navbar CSS links will be injected dynamically -->
 </head>
 <body>
+  <!-- Navbar will be loaded here, hidden by default -->
+  <div id="navbar-container" style="display:none;"></div>
+  <!-- Navbar will be loaded above -->
   <div class="shop-container">
     <header class="main-header">
       <span class="main-title">Cart ....</span>
@@ -43,8 +48,52 @@
       </div>
       <button class="effect-panel-close">Close</button>
     </div>
-  </div>
+  <script src="../js/gsap.min.js"></script>
   <script src="../js/shop-loader.js"></script>
   <script src="../js/shop.js"></script>
+  <script>
+  // Dynamically load navbar.html into #navbar-container and inject its CSS/JS
+  document.addEventListener('DOMContentLoaded', function() {
+      fetch('../html/navbar.html')
+          .then(response => response.text())
+          .then(html => {
+              const tempDiv = document.createElement('div');
+              tempDiv.innerHTML = html;
+              // Inject all <link rel="stylesheet"> to <head>
+              tempDiv.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+                  if (!document.head.querySelector(`link[href="${link.getAttribute('href')}"]`)) {
+                      document.head.appendChild(link.cloneNode());
+                  }
+              });
+              // Insert navbar HTML first
+              const navbarHtml = Array.from(tempDiv.children)
+                  .filter(el => el.tagName !== 'SCRIPT' && el.tagName !== 'LINK' && el.tagName !== 'HEAD')
+                  .map(el => el.outerHTML).join('');
+              const navbarContainer = document.getElementById('navbar-container');
+              navbarContainer.innerHTML = navbarHtml;
+              navbarContainer.style.display = 'block'; // Show instantly, no effects
+              // Now inject all <script src> to <body> (after navbar is present)
+              tempDiv.querySelectorAll('script[src]').forEach(script => {
+                  if (!document.body.querySelector(`script[src="${script.getAttribute('src')}"]`)) {
+                      const s = document.createElement('script');
+                      s.src = script.getAttribute('src');
+                      s.async = false;
+                      s.onload = function() {
+                        if (s.src.includes('navbar.js')) {
+                          if (window.attachUnifiedSearchLogic) {
+                            window.attachUnifiedSearchLogic();
+                          }
+                        }
+                      };
+                      document.body.appendChild(s);
+                  }
+              });
+              // Inline scripts: execute them after navbar is present
+              tempDiv.querySelectorAll('script:not([src])').forEach(script => {
+                  try { eval(script.textContent); } catch(e) {}
+              });
+          });
+  });
+  </script>
 </body>
 </html>
