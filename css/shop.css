@@ -196,7 +196,7 @@ body {
 
 @media (max-width: 768px) {
   .cart-panel {
-    width: 90vw;
+    width: 80vw;
     max-width: 90vw;
     min-height: 150vw%;
     height: fit-content;
@@ -646,7 +646,7 @@ button:hover,
     display: flex;
     flex-direction: column;
     width: 90vw;
-    max-height: 90vh;
+    max-height: 70vh;
     overflow-y: auto;
     align-items: center;
   }
@@ -664,22 +664,22 @@ button:hover,
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 12px;
+    gap: 5px;
     justify-content: space-around;
     justify-items: center;
     width: 100%;
     font-size: 1.qrem;
-    padding: 24px 32px;
+    padding: 10px 14px;
   }
 
   .shop-panel-info h2 {
     font-size: 1.5rem;
-    margin-bottom: 12px;
+    margin-bottom: 2px;
   }
 
   .shop-panel-buy {
     display: flex;
-    padding: 10px 24px;
+    padding: 5px 24px;
     background: #7a4c2b;
     color: #fff;
     font-size: 1.1rem;
@@ -692,7 +692,7 @@ button:hover,
   }
 
   .shop-panel-price {
-    margin-bottom: 6px;
+    margin-bottom: 2px;
   }
 
   .shop-list {
@@ -703,6 +703,8 @@ button:hover,
 
   .shop-item {
     max-width: 100%;
+    max-height: 80vw;
+    margin: 0;
   }
 }
 
