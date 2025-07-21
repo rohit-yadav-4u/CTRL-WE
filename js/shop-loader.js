@@ -33,11 +33,15 @@ async function loadShopProducts() {
     div.innerHTML = `
       <img src="${imgSrc}" alt="${prod.name}" class="shop-img" style="width:100%;display:block;object-fit:cover;">
       <div class="shop-title">${prod.name}</div>
+      <div class="spacer"></div>
       <div class="shop-price">$${prod.price}</div>
-      <button class="add-to-cart">Add to Cart</button>
+      <div class="shop-footer">
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
     `;
     shopList.appendChild(div);
   });
+  //The <div class="spacer"></div> helps balance out variable title heights.
   // Dispatch event so cart.js can re-bind add-to-cart buttons
   document.dispatchEvent(new CustomEvent('shop:productsLoaded'));
 }
