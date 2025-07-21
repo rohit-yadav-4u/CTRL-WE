@@ -455,7 +455,7 @@ a:hover {
   transform: translate(-50%, -50%);
   width: 50%;
   height: 30%;
-  min-width: 320px;
+  min-width: 278px;
   max-width: 480px;
   min-height: 320px;
   background: var(--color-card-bg);
@@ -482,6 +482,7 @@ a:hover {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 18px;
+  flex-direction: row;
   color: var(--color-link-hover);
 }
 
@@ -503,16 +504,28 @@ a:hover {
 }
 
 .cart-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  background: var(--color-bg);
-  border-radius: 8px;
-  padding: 6px 8px;
-  font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    background: var(--color-bg);
+    border-radius: 8px;
+    padding: 6px 8px;
+    font-size: 1.5rem;
+    flex-direction: row;
+    max-height: 50px;
+    overflow: hidden;
 }
-
+.main-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0px;
+  position: relative;
+  background-color: var(--color-bg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
 .cart-item img {
   width: 40px;
   height: 40px;
@@ -522,8 +535,9 @@ a:hover {
 }
 
 .cart-item-title {
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
   font-size: 1.4rem;
+  align-self: start;
   color: var(--color-text);
 }
 
@@ -532,6 +546,7 @@ a:hover {
   font-size: 1.3rem;
   font-weight: 500;
   margin-left: 8px;
+ justify-self:left;
 }
 
 .cart-item-remove {
@@ -565,7 +580,7 @@ a:hover {
   font-weight: 600;
 }
 
-.cart-close-btn {}
+
 
 .checkout-btn:hover {
   background: var(--color-btn-hover);
