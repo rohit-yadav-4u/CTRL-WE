@@ -155,6 +155,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           });
         });
+
+        // New code to update login button with username if logged in
+        const loginContainer = document.getElementById('login-container');
+        const user = JSON.parse(sessionStorage.getItem('loggedInUser'));
+        if (user && user.username) {
+          loginContainer.innerHTML = `
+            <div class="user-info">
+              <span class="username">Hello, ${user.username}</span>
+              <button id="logout-btn" class="login-btn">Logout</button>
+            </div>
+          `;
+          document.getElementById('logout-btn').addEventListener('click', () => {
+            sessionStorage.removeItem('loggedInUser');
+            location.reload();
+          });
+        }
       });
       // Existing morphsearch open/close logic
       (function () {

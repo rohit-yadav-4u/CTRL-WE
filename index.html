@@ -460,9 +460,474 @@
                     </div>
                 </div>
             </section>
-
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <span class="tricolor-text" style="font-family:'Samarkan',cursive;font-size:2.2rem;">Kalayatra</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">Canvas</a>
+                        <a href="#">Shop</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-copy">
+                        &copy; 2025 Kalayatra. All rights reserved.
+                    </div>
+                </div>
+            </footer>
+        </main>
+=======
+        <!-- Navbar will be loaded here -->
+        <div id="navbar-container"></div>
+        <!-- Navbar will be loaded above -->
+        <main>
+        <script>
+        // Load navbar only after Explore is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+          var exploreBtn = document.querySelector('.enter');
+          function loadNavbarOnce() {
+            if (window._navbarLoaded) return;
+            window._navbarLoaded = true;
+            fetch('./html/navbar.html')
+              .then(response => response.text())
+              .then(html => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                // Inject all <link rel="stylesheet"> to <head>
+                tempDiv.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+                  if (!document.head.querySelector(`link[href="${link.getAttribute('href')}"]`)) {
+                    document.head.appendChild(link.cloneNode());
+                  }
+                });
+                // Insert navbar HTML first
+                const navbarHtml = Array.from(tempDiv.children)
+                  .filter(el => el.tagName !== 'SCRIPT' && el.tagName !== 'LINK' && el.tagName !== 'HEAD')
+                  .map(el => el.outerHTML).join('');
+                document.getElementById('navbar-container').innerHTML = navbarHtml;
+                // Set #main-navbar width to 100% via inline style (index only)
+               
+                // Now inject all <script src> to <body> (after navbar is present)
+                tempDiv.querySelectorAll('script[src]').forEach(script => {
+                  if (!document.body.querySelector(`script[src="${script.getAttribute('src')}"]`)) {
+                    const s = document.createElement('script');
+                    s.src = script.getAttribute('src');
+                    s.async = false;
+                    s.onload = function() {
+                      if (s.src.includes('navbar.js')) {
+                        if (window.attachUnifiedSearchLogic) {
+                          window.attachUnifiedSearchLogic();
+                        }
+                      }
+                    };
+                    document.body.appendChild(s);
+                  }
+                });
+                // Inline scripts: execute them after navbar is present
+                tempDiv.querySelectorAll('script:not([src])').forEach(script => {
+                  try { eval(script.textContent); } catch(e) {}
+                });
+              });
+          }
+          if (exploreBtn) {
+            exploreBtn.addEventListener('click', loadNavbarOnce);
+            exploreBtn.addEventListener('touchend', function(e) {
+              e.preventDefault();
+              loadNavbarOnce();
+            }, { passive: false });
+          }
+        });
+        </script>
             
+            <section class="intro">
+                <!-- Hero heading and tagline will be injected after zoom -->
+                <div class="grid">
+                    <div class="row">
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/001.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/002.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/003.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/004.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/005.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/006.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/007.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/008.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/009.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/010.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/011.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/012.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/013.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/014.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/015.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/016.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/017.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/AboutUsPageImg/collage-landscape2.jpg);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/019.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/020.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/021.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/022.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/023.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/024.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/025.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/026.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/001.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/002.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/004.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/004.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/004.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/004.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/004.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/004.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                        <div class="row__item">
+                            <div class="row__item-inner">
+                                <div
+                                    class="row__item-img"
+                                    style="
+                                        background-image: url(./assets/shopImg/004.webp);
+                                    "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullview"></div>
+                <!-- Container for hero heading and tagline after zoom -->
+                <div id="hero-text-after-zoom"
+                    style="display:none;flex-direction:column;align-items:center;justify-content:center;position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:1;">
+                    <h1 class="tricolor-text"
+                        style="font-family:'Samarkan',cursive;font-size:13rem;letter-spacing:0.02em;margin:0 0 0.4em 0;text-align:center;">
+                        Kalayatra
+                    </h1>
+                    <p id="hero-text-after-zoom-p">WHERE TRADITION TRAVELS TIMELESSLY</p>
+                </div>
+                <div class="enter"><span>Explore</span></div>
 
+            </section>
+
+            <!-- Traditional Art Section -->
+            <section class="traditional-art-section">
+                <div class="container">
+                    <h2 style="font-family:'Samarkan',cursive;font-size:2.7rem;text-align:center;margin-bottom:1.2rem;letter-spacing:0.04em;">TRADITIONAL ART</h2>
+                    <p style="font-size:1.18rem;line-height:1.7;text-align:center;max-width:800px;margin:0 auto 2.5rem auto;font-family:'Poppins','Lato',Arial,sans-serif;">
+                        India is home to a rich tapestry of traditional art forms, each reflecting the diverse cultural heritage and history of its regions. From the intricate <b>Madhubani</b> paintings of Bihar, known for their vibrant colors and mythological themes, to the detailed <b>Warli</b> art of Maharashtra, which uses simple geometric shapes to depict daily life and nature, Indian art is a celebration of creativity and tradition. <b>Pattachitra</b> from Odisha and West Bengal is famous for its scroll paintings narrating stories of deities, while <b>Phad</b> painting from Rajasthan brings epic tales to life on long cloth scrolls. The origins of these art forms date back centuries, often rooted in rituals, folklore, and the daily lives of communities. Passed down through generations, these arts continue to thrive, preserving the timeless spirit of Indian culture and craftsmanship.
+                    </p>
+                </div>
+            </section>
+            <!-- Dummy Content Section -->
+            <section class="dummy-content">
+                <div class="container">
+                    <h2>About Kalayatra</h2>
+                    <p>
+                        Kalayatra is a journey through the timeless traditions of art and culture. Explore our curated collections, discover unique crafts, and connect with artisans from across the country.
+                    </p>
+                    <div class="features">
+                        <div class="feature-card">
+                            <h3>Curated Art</h3>
+                            <p>Handpicked artworks and crafts from master artisans.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Workshops</h3>
+                            <p>Participate in live workshops and learn from the best.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Community</h3>
+                            <p>Join a vibrant community of art lovers and creators.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Workshops</h3>
+                            <p>Participate in live workshops and learn from the best.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Workshops</h3>
+                            <p>Participate in live workshops and learn from the best.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Workshops</h3>
+                            <p>Participate in live workshops and learn from the best.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- Footer -->
             <footer class="site-footer">
                 <div class="footer-container">
