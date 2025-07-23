@@ -157,20 +157,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // New code to update login button with username if logged in
-        const loginContainer = document.getElementById('login-container');
-        const user = JSON.parse(sessionStorage.getItem('loggedInUser'));
-        if (user && user.username) {
-          loginContainer.innerHTML = `
-            <div class="user-info">
-              <span class="username">Hello, ${user.username}</span>
-              <button id="logout-btn" class="login-btn">Logout</button>
-            </div>
-          `;
-          document.getElementById('logout-btn').addEventListener('click', () => {
-            sessionStorage.removeItem('loggedInUser');
-            location.reload();
-          });
+        function updateLoginUsername() {
+          const user = JSON.parse(sessionStorage.getItem('loggedInUser'));
+          if (user && user.username) {
+            // Update desktop login button text
+            const loginBtnText = document.querySelector('#login-btn .login-btn-text');
+            if (loginBtnText) {
+              loginBtnText.textContent = user.username;
+            }
+            // Update mobile login link text
+            const mobileLoginLink = document.querySelector('#mobile-login a span');
+            if (mobileLoginLink) {
+              mobileLoginLink.textContent = user.username;
+            }
+            // Optionally add logout functionality or dropdown here
+          }
         }
+        // Listen for custom event fired after navbar is loaded
+        document.addEventListener('navbarLoaded', updateLoginUsername);
+        // Also call on DOMContentLoaded in case navbar is static
+        document.addEventListener('DOMContentLoaded', updateLoginUsername);
       });
       // Existing morphsearch open/close logic
       (function () {

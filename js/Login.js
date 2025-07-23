@@ -1,4 +1,17 @@
 $(document).ready(function () {
+  // Load navbar dynamically using js/navbar.js
+  fetch('../html/navbar.html')
+    .then(response => response.text())
+    .then(html => {
+      $('#navbar-container').html(html);
+      const script = document.createElement('script');
+      script.src = '../js/navbar.js';
+      document.body.appendChild(script);
+      // Dispatch custom event after navbar is loaded
+      document.dispatchEvent(new Event('navbarLoaded'));
+    })
+    .catch(err => console.error('Failed to load navbar:', err));
+  });
   // Toggle between login and signup forms
   $(".info-item .btn").click(function () {
     $(".container").toggleClass("log-in");
@@ -20,12 +33,12 @@ $(document).ready(function () {
       method: "POST",
       contentType: "application/json",
       data: JSON.stringify({ username: username, password: password }),
-        success: function (response) {
-          alert(response.message);
-          // Store login state in sessionStorage
-          sessionStorage.setItem("loggedInUser", JSON.stringify(response.user));
-          $(".container").addClass("active");
-        },
+      success: function (response) {
+        alert(response.message);
+        // Store login state in sessionStorage
+        sessionStorage.setItem("loggedInUser", JSON.stringify(response.user));
+        $(".container").addClass("active");
+      },
       error: function (xhr) {
         if (xhr.responseJSON && xhr.responseJSON.message) {
           alert("Login failed: " + xhr.responseJSON.message);
@@ -68,4 +81,4 @@ $(document).ready(function () {
       }
     });
   });
-});
+
