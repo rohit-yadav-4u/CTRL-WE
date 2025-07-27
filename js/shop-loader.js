@@ -34,7 +34,7 @@ async function loadShopProducts() {
       <img src="${imgSrc}" alt="${prod.name}" class="shop-img" style="width:100%;display:block;object-fit:cover;">
       <div class="shop-title">${prod.name}</div>
       <div class="spacer"></div>
-      <div class="shop-price">$${prod.price}</div>
+      <div class="shop-price">₹${prod.price}</div>
       <div class="shop-footer">
         <button class="add-to-cart">Add to Cart</button>
       </div>
