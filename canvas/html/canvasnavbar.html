@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalayatra Navbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/demosearch.css" />
-    <link rel="stylesheet" href="../css/componentsearch.css" />
+    <link rel="stylesheet" href="../css/canvasnavbar.css" />
+
     <link href="http://fonts.googleapis.com/css?family=Raleway:100,700,800" rel="stylesheet" type="text/css" />
     <style>
       /* Tan color for active nav link */
@@ -36,50 +35,7 @@
           <li><a href="/html/shop.html" id="nav-shop"><i class="fas fa-store"></i> Shop</a></li>
         </ul>
       </div>
-      <div class="container-search" style="margin-left:2em;">
-        <div id="morphsearch" class="morphsearch">
-          <form class="morphsearch-form" id="navbar-search-form">
-            <input class="morphsearch-input" type="search" placeholder="Search..." id="navbar-search-input" />
-            <button class="morphsearch-submit" type="submit">Search</button>
-          </form>
-          <div class="morphsearch-content">
-            <div class="dummy-column">
-              <h2>Popular Search</h2>
-              <a class="dummy-media-object search-link" data-search="Handicrafts" href="../html/searchresult.html">
-                <img class="round" src="../Images/Handicrafts/0004.avif" alt="Handicrafts" />
-                <h3>Handicrafts</h3>
-              </a>
-              <a class="dummy-media-object search-link" data-search="Oral Traditions" href="../html/searchresult.html">
-                <img class="round" src="../Images/Oral traditions and Storytelling/0024.webp" alt="Oral Traditions and Storytelling" />
-                <h3>Oral Traditions</h3>
-              </a>
-            </div>
-            <div class="dummy-column">
-              <h2>Past Search</h2>
-              <a class="dummy-media-object search-link" data-search="Handicrafts" href="../html/searchresult.html">
-                <img class="round" src="../Images/Handicrafts/0004.avif" alt="Handicrafts" />
-                <h3>Handicrafts</h3>
-              </a>
-              <a class="dummy-media-object search-link" data-search="Oral Traditions" href="../html/searchresult.html">
-                <img class="round" src="../Images/Oral traditions and Storytelling/0024.webp" alt="Oral Traditions and Storytelling" />
-                <h3>Oral Traditions</h3>
-              </a>
-            </div>
-            <div class="dummy-column">
-              <h2>Suggestions</h2>
-              <a class="dummy-media-object search-link" data-search="Handicrafts" href="../html/searchresult.html">
-                <img class="round" src="../Images/Handicrafts/0004.avif" alt="Handicrafts" />
-                <h3>Handicrafts</h3>
-              </a>
-              <a class="dummy-media-object search-link" data-search="Oral Traditions" href="../html/searchresult.html">
-                <img class="round" src="../Images/Oral traditions and Storytelling/0024.webp" alt="Oral Traditions and Storytelling" />
-                <h3>Oral Traditions</h3>
-              </a>
-            </div>
-          </div>
-          <span class="morphsearch-close"></span>
-        </div>
-      </div>
+    
       <div class="desktop-login-btn" id="login-container">
         <a href="/html/Login.html"><button id="login-btn" class="login-btn"><span class="login-btn-text">Login</span></button></a>
       </div>
@@ -95,8 +51,8 @@
       </ul>
     </nav>
     <!-- External JS for all navbar logic -->
-    <script src="../js/navbar.js"></script>
-    <script src="../js/classiesearch.js"></script>
+    <script src="../js/canvasnavbar.js"></script>
+  
     <script>
       // Highlight active nav link based on current page
       function setActiveNav() {
