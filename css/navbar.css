@@ -396,9 +396,16 @@ height: 64px;
     transition-delay: 0.4s;
     transition-timing-function: linear;
 }
+  /* Tan color for active nav link */
 
-
-
+ #nav-links .active,
+      #mobile-bottom-navbar .active a {
+        color: #d2b48c !important;
+      }
+      #nav-links .active i,
+      #mobile-bottom-navbar .active i {
+        color: #d2b48c !important;
+      }
 
 /* --- Mobile Bottom Navbar Styles --- */
 #mobile-bottom-navbar {
