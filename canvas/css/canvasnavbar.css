@@ -1,3 +1,33 @@
+/* Hide the new mobile-only Return button on desktop, show on mobile */
+.mobile-only-return {
+  display: none;
+}
+.mobile-only-return button {
+  height: 40px;
+  padding: 0 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 18px;
+  background: #fff;
+  color: #000;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-only-return:link, .mobile-only-return:visited {
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .mobile-only-return {
+    display: inline-block !important;
+    vertical-align: middle;
+    height: 40px;
+    margin-left: 10px;
+  }
+  #login-container { display: none !important; }
+}
 /* Force navbar to fixed position, reasonable height, and moderate z-index */
 #navbar, .navbar, .main-navbar {
   position: fixed;
@@ -130,7 +160,7 @@ background: rgba(0, 0, 0, 0.95);
 position: fixed;
 top: 0;
 left: 0;
-width: 100%;
+width: 97%;
 height: 64px;
 }
 
@@ -398,7 +428,25 @@ height: 64px;
 }
 
 
-
+      /* Tan color for active nav link */
+      #nav-links .active,
+      #mobile-bottom-navbar .active a {
+        color: #d2b48c !important;
+      }
+      #nav-links .active i,
+      #mobile-bottom-navbar .active i {
+        color: #d2b48c !important;
+      }
+.fa,.fa-brands,.fa-classic,.fa-regular,.fa-sharp,.fa-solid,.fab,.far,.fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    margin: 5px;
+    text-rendering: auto
+}
 
 /* --- Mobile Bottom Navbar Styles --- */
 #mobile-bottom-navbar {
@@ -501,6 +549,9 @@ height: 64px;
     }
     #main-navbar {
         justify-content: space-between;
+    }
+    #main-navbar button {
+        margin-left: 8vw !important;
     }
     #mobile-bottom-navbar {
         display: block;
