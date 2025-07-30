@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Arts</title>
+    <link rel="stylesheet" href="../css/canvasnavbar.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="../js/canvasnavbar.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <script>
+      fetch('../html/canvasnavbar.html')
+        .then(response => response.text())
+        .then(html => {
+          // Extract all <nav>...</nav> blocks (top and bottom navbars)
+          const navMatches = html.match(/<nav[\s\S]*?<\/nav>/g);
+          document.getElementById('navbar-container').innerHTML = navMatches ? navMatches.join('\n') : html;
+        });
+    </script>
+    <!-- ...rest of your page content... -->
+  </body>
+</html>

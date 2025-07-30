@@ -1,3 +1,40 @@
+@media (max-width: 600px) {
+  /* Fix Canvas + Return button alignment */
+  #logo > div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  .mobile-only-return {
+    display: inline-block !important;
+    vertical-align: middle;
+    height: 40px;
+    margin-left: 10px;
+  }
+  #login-container { display: none !important; }
+
+  /* Ensure bottom navbar is visible */
+  #mobile-bottom-navbar {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+  }
+}
+@media (max-width: 600px) {
+    #mobile-bottom-navbar {
+        display: block !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+    }
+}
+@font-face {
+    font-family: 'Samarkan';
+    src: url('../../assets/fonts/Samarkan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 /* Hide the new mobile-only Return button on desktop, show on mobile */
 .mobile-only-return {
   display: none;
