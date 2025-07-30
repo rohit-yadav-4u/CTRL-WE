@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Performance Arts</title>
-    <link rel="stylesheet" href="../css/canvasnavbar.css" />
+    <!-- <link rel="stylesheet" href="../css/canvasnavbar.css" /> -->
+    <link rel="stylesheet" href="../css/performancearts.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-    <script src="../js/canvasnavbar.js"></script>
+    <!-- <script src="../js/canvasnavbar.js"></script> -->
     <style>
       body { margin: 0; }
     </style>
   </head>
   <body>
-    <div id="navbar-container"></div>
+    <!-- <div id="navbar-container"></div>
     <script>
       fetch('../html/canvasnavbar.html')
         .then(response => response.text())
@@ -21,7 +22,260 @@
           const navMatches = html.match(/<nav[\s\S]*?<\/nav>/g);
           document.getElementById('navbar-container').innerHTML = navMatches ? navMatches.join('\n') : html;
         });
-    </script>
+    </script> -->
+
+ <main>
+      <div class="menu-wrap">
+        <nav class="menu">
+          <div class="menu__item">
+            <a class="menu__item-link" href="/canvas/html/paintings.html">Paintings</a>
+            <div class="marquee">
+              <div class="marquee__inner-wrap">
+                <div class="marquee__inner" aria-hidden="true">
+                  <span>Kerala Mural </span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/kerala22.jpg)"
+                  ></div>
+                  <span>Pichwai</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/pichwai6.jpg)"
+                  ></div>
+                  <span>Phad</span>
+                  <div
+                    class="marquee__img"
+                    style="
+                      background-image: url(ptimg/Akshaya-Vata-Phad-Painting-by-Kalyan-Joshi-2_1024x.jpg);
+                    "
+                  ></div>
+                  <span>Kalamkari</span>
+                  <div
+                    class="marquee__img"
+                    style="
+                      background-image: url(ptimg/Tree-of-Life-in-Kalamkari-by-Hariath-N-2_1024x.jpg);
+                    "
+                  ></div>
+                  <span>Madhubani</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/madhubani30.jpg)"
+                  ></div>
+                  <span>Mandana</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/mandana49.jpg)"
+                  ></div>
+                  <span>Kerala Mural</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/kerala22.jpg)"
+                  ></div>
+                  <span>Pichwai</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/pichwai6.jpg)"
+                  ></div>
+                  <span>Phad</span>
+                  <div
+                    class="marquee__img"
+                    style="
+                      background-image: url(ptimg/Akshaya-Vata-Phad-Painting-by-Kalyan-Joshi-2_1024x.jpg);
+                    "
+                  ></div>
+                  <span>Kalamkari</span>
+                  <div
+                    class="marquee__img"
+                    style="
+                      background-image: url(ptimg/Tree-of-Life-in-Kalamkari-by-Hariath-N-2_1024x.jpg);
+                    "
+                  ></div>
+                  <span>Madhubani</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/madhubani30.jpg)"
+                  ></div>
+                  <span>Mandana</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/mandana49.jpg)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu__item">
+            <a class="menu__item-link" href="#">Metal Arts</a>
+            <div class="marquee">
+              <div class="marquee__inner-wrap">
+                <div class="marquee__inner" aria-hidden="true">
+                  <span>Chola Bronze Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/2.jpg)"
+                  ></div>
+                  <span>Bidriware</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/3.jpg)"
+                  ></div>
+                  <span>Panchaloha Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/7.jpg)"
+                  ></div>
+                  <span>Dhokra Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/8.jpg)"
+                  ></div>
+                  <span>Chola Bronze Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/2.jpg)"
+                  ></div>
+                  <span>Bidriware</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/3.jpg)"
+                  ></div>
+                  <span>Panchaloha Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/7.jpg)"
+                  ></div>
+                  <span>Dhokra Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/8.jpg)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu__item">
+            <a class="menu__item-link" href="#">Stone And Sclupture Arts</a>
+            <div class="marquee">
+              <div class="marquee__inner-wrap">
+                <div class="marquee__inner" aria-hidden="true">
+                  <span>Nataraja Statue</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Natraj\ Statue.jpg)"
+                  ></div>
+                  <span>Lion Capital</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Lion\ Capital.jpg)"
+                  ></div>
+                  <span>Kailasa Temple</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Kailasa\ Temple.jpg)"
+                  ></div>
+                  <span>Harrapan Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Harrapan\ Art.jpg)"
+                  ></div>
+                  <span>Gandhara Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/9.jpg)"
+                  ></div>
+                  <span>Nataraja Statue</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Natraj\ Statue.jpg)"
+                  ></div>
+                  <span>Lion Capital</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Lion\ Capital.jpg)"
+                  ></div>
+                  <span>Kailasa Temple</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Kailasa\ Temple.jpg)"
+                  ></div>
+                  <span>Harrapan Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Harrapan\ Art.jpg)"
+                  ></div>
+                  <span>Gandhara Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/9.jpg)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu__item">
+            <a class="menu__item-link" href="#">Textile Arts</a>
+            <div class="marquee">
+              <div class="marquee__inner-wrap">
+                <div class="marquee__inner" aria-hidden="true">
+                  <span>Banarasi Silk</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Banarasi\ Silk.webp)"
+                  ></div>
+                  <span>Handloom Weaving</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(ptimg/Handloom\ Weaving.webp)"
+                  ></div>
+                  <span>Kalamkari Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(Kalamkari\ Art.webp)"
+                  ></div>
+                  <span>Kanjeevaram Silk</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(Kanjeevaram\ Silk.webp)"
+                  ></div>
+                  <span>Patola Weaving</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(Patola\ Weaving.webp)"
+                  ></div>
+                  <span>Banarasi Silk</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(Banarasi\ Silk.webp)"
+                  ></div>
+                  <span>Handloom Weaving</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(Handloom\ Weaving.webp)"
+                  ></div>
+                  <span>Kalamkari Art</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(Kalamkari\ Art.webp)"
+                  ></div>
+                  <span>Kanjeevaram Silk</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(Kanjeevaram\ Silk.webp)"
+                  ></div>
+                  <span>Patola Weaving</span>
+                  <div
+                    class="marquee__img"
+                    style="background-image: url(Patola\ Weaving.webp)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </main>
+    <script src="../js/performancearts.js"></script>
+
     <!-- ...rest of your page content... -->
   </body>
 </html>
