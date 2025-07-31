@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="A simple page transition where a large image animates to a content area.">
+    <meta name="keywords" content="gsap, flip, javascript, animation, page transition">
+    <link rel="stylesheet" href="https://use.typekit.net/ckf7ljy.css">
+    <link rel="stylesheet" type="text/css" href="index.d73f7ad5.css">
+    <link rel="stylesheet" href="../timeline-full.css">
+    <style>
+        .frame__title-main .mobile-title {
+            display: none;
+        }
+
+        .frame__title-main .desktop-title {
+            display: inline;
+        }
+
+        @media (max-width: 600px) {
+            .frame__title-main .mobile-title {
+                display: inline;
+                font-size: 40px;
+            }
+
+            .frame__title-main .desktop-title {
+                display: none;
+            }
+        }
+
+        .timeline .frame__title-main .desktop-title {
+            opacity: 1;
+            transform: translateY(0);
+            transition: transform 300ms ease, opacity 300ms ease;
+            display: inline-block;
+            /* Avoid transition glitches */
+        }
+    </style>
+    <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<body>
+
+    <section class="timeline">
+        <main>
+            <div class="frame">
+                <div class="frame__title">
+                    <h1 class="frame__title-main"><span class="desktop-title">30000-10000 BCE</span><span
+                            class="mobile-title">30,000 BCE to 12,000 CE</span></h1>
+                </div>
+            </div>
+            <section class="preview-wrap">
+                <div class="preview">
+                    <div class="preview__img-wrap">
+                        <div class="preview__img">
+                            <div class="preview__img-inner" style="background-image:url(timg/rock2.png)"></div>
+                        </div>
+                    </div>
+                    <div class="preview__title">
+                        <h2 class="preview__title-main"> <span class="oh"><span
+                                    class="oh__inner">Prehistoric</span></span>
+                            <span class="oh"><span class="oh__inner">rock art</span></span>
+                        </h2>
+                        <p class="preview__desc">Early humans painted animals, rituals, and stick figures using natural
+                            colors on cave walls.</p>
+                    </div>
+                </div>
+                <div class="preview">
+                    <div class="preview__img-wrap">
+                        <div class="preview__img">
+                            <div class="preview__img-inner" style="background-image:url(timg/indus1.png)"></div>
+                        </div>
+                    </div>
+                    <div class="preview__title">
+                        <h2 class="preview__title-main"> <span class="oh"><span class="oh__inner">Indus
+                                    Valley</span></span>
+                            <span class="oh"><span class="oh__inner">civilisation</span></span>
+                        </h2>
+                        <p class="preview__desc">Artworks include seals, sculptures, pottery, and jewelry with fine
+                            craftsmanship and naturalistic style.</p>
+                    </div>
+                </div>
+                <div class="preview">
+                    <div class="preview__img-wrap">
+                        <div class="preview__img">
+                            <div class="preview__img-inner" style="background-image:url(timg/m1.png)"></div>
+                        </div>
+                    </div>
+                    <div class="preview__title">
+                        <h2 class="preview__title-main"> <span class="oh"><span class="oh__inner">Mauryan</span></span>
+                            <span class="oh"><span class="oh__inner">art</span></span>
+                        </h2>
+                        <p class="preview__desc">Pillars, rock-cut caves, and polished sculptures reflected political
+                            power and religious patronage.</p>
+                    </div>
+                </div>
+                <div class="preview">
+                    <div class="preview__img-wrap">
+                        <div class="preview__img">
+                            <div class="preview__img-inner" style="background-image:url(timg/pm1.png)"></div>
+                        </div>
+                    </div>
+                    <div class="preview__title">
+                        <h2 class="preview__title-main"> <span class="oh"><span
+                                    class="oh__inner">Post-Mauryan</span></span> <span class="oh"><span
+                                    class="oh__inner">art</span></span> </h2>
+                        <p class="preview__desc">Sculptures narrated Buddhist stories through detailed reliefs and
+                            emerging human forms.</p>
+                    </div>
+                </div>
+                <div class="preview">
+                    <div class="preview__img-wrap">
+                        <div class="preview__img">
+                            <div class="preview__img-inner" style="background-image:url(timg/g6.png)"></div>
+                        </div>
+                    </div>
+                    <div class="preview__title">
+                        <h2 class="preview__title-main"> <span class="oh"><span class="oh__inner">Gupta</span></span>
+                            <span class="oh"><span class="oh__inner">period</span></span>
+                        </h2>
+                        <p class="preview__desc">Sculptures emphasized divine beauty, calm expressions, and elegant
+                            balance in temple art.</p>
+                    </div>
+                </div>
+                <div class="preview">
+                    <div class="preview__img-wrap">
+                        <div class="preview__img">
+                            <div class="preview__img-inner" style="background-image:url(timg/b1.png)"></div>
+                        </div>
+                    </div>
+                    <div class="preview__title">
+                        <h2 class="preview__title-main"> <span class="oh"><span class="oh__inner">South
+                                    Indian</span></span>
+                            <span class="oh"><span class="oh__inner">buddhist art</span></span>
+                        </h2>
+                        <p class="preview__desc">Southern stupas displayed expressive forms and dynamic narrative
+                            carvings in stone.</p>
+                    </div>
+                </div>
+                <div class="preview">
+                    <div class="preview__img-wrap">
+                        <div class="preview__img">
+                            <div class="preview__img-inner" style="background-image:url(timg/i1.png)"></div>
+                        </div>
+                    </div>
+                    <div class="preview__title">
+                        <h2 class="preview__title-main"> <span class="oh"><span
+                                    class="oh__inner">Indo-Islamic</span></span>
+                            <span class="oh"><span class="oh__inner">architecture</span></span>
+                        </h2>
+                        <p class="preview__desc">New styles emerged with arches, domes, minarets, and floral geometric
+                            designs.</p>
+                    </div>
+                </div>
+
+            </section>
+            <section class="content-wrap">
+                <div class="content">
+                    <div class="content__group">
+                        <div class="content__title"> <span class="oh"><span class="oh__inner">Prehistoric</span></span>
+                            <span class="oh"><span class="oh__inner">rock art</span></span>
+                        </div>
+                        <div class="content__meta oh"><span class="oh__inner">30,000 to 10,000 BCE</span></div>
+                        <div class="content__text">Rock shelters like Bhimbetka reveal the origins of Indian art. Simple
+                            lines and earthy pigments expressed hunting scenes, dances, and symbols. These artworks show
+                            imagination, survival instinct, and the roots of visual storytelling. </div>
+                    </div>
+                    <div class="content__thumbs">
+                        <div class="content__thumbs-item" style="background-image:url(timg/rock1.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/rock3.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/rock4.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/rock5.jpeg)"></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content__group">
+                        <div class="content__title"> <span class="oh"><span class="oh__inner">Indus Valley</span></span>
+                            <span class="oh"><span class="oh__inner">civilisation</span></span>
+                        </div>
+                        <div class="content__meta oh"><span class="oh__inner">2,500 to 1,500 BCE</span></div>
+                        <div class="content__text"> The Indus people created bronze figures like the Dancing Girl,
+                            animal seals, and red pottery. These reveal a highly organized society where art served
+                            ritual, decorative, and commercial purposes—blending beauty with daily life. </div>
+                    </div>
+                    <div class="content__thumbs">
+                        <div class="content__thumbs-item" style="background-image:url(timg/indus2.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/indus3.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/indus4.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/indus5.jpeg)"></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content__group">
+                        <div class="content__title"> <span class="oh"><span class="oh__inner">Mauryan</span></span>
+                            <span class="oh"><span class="oh__inner">period</span></span>
+                        </div>
+                        <div class="content__meta oh"><span class="oh__inner">322 to 185 BCE</span></div>
+                        <div class="content__text"> Ashokan pillars, the Lion Capital, and Yaksha figures define this
+                            phase. The Mauryan aesthetic favored polish, proportion, and symbolic strength. Caves and
+                            stupas became key in spreading Buddhist thought through powerful stone expression. </div>
+                    </div>
+                    <div class="content__thumbs">
+                        <div class="content__thumbs-item" style="background-image:url(timg/m2.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/m3.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/m4.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/m5.jpeg)"></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content__group">
+                        <div class="content__title"> <span class="oh"><span class="oh__inner">Post-Mauryan</span></span>
+                            <span class="oh"><span class="oh__inner">period</span></span>
+                        </div>
+                        <div class="content__meta oh"><span class="oh__inner">185 to 300 CE</span></div>
+                        <div class="content__text">Art at Sanchi, Bharhut, and Amaravati focused on Jataka tales and
+                            life scenes of the Buddha. Artists used natural movement and emotion in figures. This era
+                            bridged symbolism with realism, enriching temple and stupa art.</div>
+                    </div>
+                    <div class="content__thumbs">
+                        <div class="content__thumbs-item" style="background-image:url(timg/pm2.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/pm3.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/pm4.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/pm5.jpeg)"></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content__group">
+                        <div class="content__title"> <span class="oh"><span class="oh__inner">Gupta</span></span> <span
+                                class="oh"><span class="oh__inner">period</span></span> </div>
+                        <div class="content__meta oh"><span class="oh__inner">320 to 600 CE</span></div>
+                        <div class="content__text">Gupta art showcased idealized human forms, refined drapery, and
+                            spiritual depth. Buddha statues and Vishnu temples reflected harmony in architecture and
+                            sculpture, marking a golden age of classical Indian artistic expression. </div>
+                    </div>
+                    <div class="content__thumbs">
+                        <div class="content__thumbs-item" style="background-image:url(timg/g2.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/g3.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/g4.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/g5.jpeg)"></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content__group">
+                        <div class="content__title"> <span class="oh"><span class="oh__inner">South Indian</span></span>
+                            <span class="oh"><span class="oh__inner">buddhist art</span></span>
+                        </div>
+                        <div class="content__meta oh"><span class="oh__inner">200 BCE to 300 CE</span></div>
+                        <div class="content__text"> Amaravati and Nagarjunakonda introduced curving figures, deep
+                            reliefs, and visual storytelling through movement. Tribhanga postures and layered
+                            compositions gave energy to Buddhist tales, adding regional flavor to India’s sculptural
+                            tradition. </div>
+                    </div>
+                    <div class="content__thumbs">
+                        <div class="content__thumbs-item" style="background-image:url(timg/b2.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/b3.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/b4.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/b5.jpeg)"></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content__group">
+                        <div class="content__title"> <span class="oh"><span class="oh__inner">Indo-Islamic</span></span>
+                            <span class="oh"><span class="oh__inner">architecture</span></span>
+                        </div>
+                        <div class="content__meta oh"><span class="oh__inner">1,200 CE onward</span></div>
+                        <div class="content__text"> Indo-Islamic art combined Persian and Indian traditions in mosques,
+                            forts, and tombs. Elements like jali screens, inlaid calligraphy, and grand domes created
+                            sacred, symmetrical spaces that defined India’s medieval architectural legacy. </div>
+                    </div>
+                    <div class="content__thumbs">
+                        <div class="content__thumbs-item" style="background-image:url(timg/i2.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/i3.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/i4.jpeg)"></div>
+                        <div class="content__thumbs-item" style="background-image:url(timg/i5.jpeg)"></div>
+                    </div>
+                </div>
+
+                <button class="action action--back unbutton">
+                    <svg width="25px" height="25px" viewbox="0 0 25 25">
+                        <path d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z">
+                        </path>
+                    </svg> <span>Go back</span>
+                </button>
+            </section>
+        </main>
+    </section>
+
+    <section class="timeline-full">
+    <div style="margin-top: 10px; margin-bottom: 10px;" class="button-container"></div>
+		<a href="../index.html#button-timeline">
+					<button style="display: block; margin: 0 auto;" class="button button--greip"><span><span>Go Back</span></span></button>
+
+		</a>
+	</div>
+</section>
+
+
+    <script>
+        const years = [
+            "30000–10000 BCE",
+            "2500–1500 BCE",
+            "322–185 BCE",
+            "185 BCE–300 CE",
+            "320–600 CE",
+            "200 BCE–300 CE",
+            "1200 CE+"
+        ];
+
+        const title = document.querySelector(".timeline .frame__title-main .desktop-title");
+        const previews = document.querySelectorAll(".timeline .preview");
+
+        let currentYear = years[0];
+        title.textContent = currentYear; // Initial year display
+
+        function animateYear(from, to, duration = 300) {
+            if (from === to) return;
+
+            // Set initial fade+slide-out transition
+            title.style.transition = `transform ${duration}ms ease, opacity ${duration}ms ease`;
+            title.style.transform = 'translateY(-20px)';
+            title.style.opacity = 0;
+
+            // After duration, change content, then fade+slide-in
+            setTimeout(() => {
+                title.textContent = to;
+
+                // Reset to start position for slide-in
+                title.style.transition = 'none';
+                title.style.transform = 'translateY(20px)';
+                void title.offsetWidth; // Trigger reflow
+
+                // Animate to final position
+                title.style.transition = `transform ${duration}ms ease, opacity ${duration}ms ease`;
+                title.style.transform = 'translateY(0)';
+                title.style.opacity = 1;
+
+                currentYear = to;
+            }, duration);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = Array.from(previews).indexOf(entry.target);
+                    const newYear = years[index];
+                    if (newYear !== currentYear) {
+                        animateYear(currentYear, newYear, 300);
+                    }
+                }
+            });
+        }, {
+            threshold: 0.6
+        });
+
+        previews.forEach(preview => observer.observe(preview));
+    </script>
+
+
+    <script type="module" src="index.e9a2d1b4.js"></script>
+    <script src="index.b5e7c14d.js" nomodule="" defer></script>
+    <script>
+        
+  window.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "auto" }); // instant scroll
+      }
+    }
+  });
+
+    </script>
+</body>
+
+</html>

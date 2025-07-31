@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Horizontal Smooth Scroll Layout | Demo 1 | Codrops</title>
+	<meta name="description" content="A horizontal smooth scroll layout powered by Locomotive Scroll">
+	<meta name="keywords" content="locomotive scroll, smooth scroll, horizontal, layout, web design, javascript, css">
+	<meta name="author" content="Codrops">
+	<link rel="shortcut icon" href="favicon.26242483.ico">
+	<link rel="stylesheet" href="https://use.typekit.net/vxy2fer.css">
+	<link rel="stylesheet" type="text/css" href="base.98fd6c19.css">
+	<link rel="stylesheet" type="text/css" href="demo5.5199082f.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script>document.documentElement.className = "js";
+
+		var supportsCssVars = function supportsCssVars() {
+			var e,
+				t = document.createElement("style");
+			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+		};
+
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<body class="demo-1 loading">
+	<div class="frame"><!-- don't put fixed elements into the scroll container! -->
+		<div class="frame__demos">
+
+
+		</div>
+		<div class="frame__links">
+
+		</div>
+	</div>
+	<main data-scroll-container="">
+		<div class="content">
+			<div class="gallery">
+				<div class="gallery__text"><span class="gallery__text-inner" data-scroll="" data-scroll-speed="3"
+						data-scroll-direction="vertical">Folk</span><span data-scroll="" data-scroll-speed="-4"
+						data-scroll-direction="vertical" class="gallery__text-inner">Dances</span></div>
+				<figure class="gallery__item" data-scroll="" data-scroll-speed="2" data-scroll-direction="vertical">
+					<div class="gallery__item-img">
+						<div class="gallery__item-imginner" data-scroll="" data-scroll-speed="1"
+							data-scroll-direction="vertical" style="background-image: url(bihu.jpg)"></div>
+					</div>
+					<figcaption class="gallery__item-caption">
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Bihu</h2>
+						<span class="gallery__item-number">01</span>
+						<p class="gallery__item-tags">
+							<span>Assam</span>
+
+						</p>
+						<a class="gallery__item-link">explore</a>
+					</figcaption>
+				</figure>
+				<figure class="gallery__item" data-scroll="" data-scroll-speed="-2" data-scroll-direction="vertical">
+					<div class="gallery__item-img">
+						<div class="gallery__item-imginner" data-scroll="" data-scroll-speed="1"
+							data-scroll-direction="vertical" style="background-image: url(Navratri.jpg)"></div>
+					</div>
+					<figcaption class="gallery__item-caption">
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Garba</h2>
+						<span class="gallery__item-number">02</span>
+						<p class="gallery__item-tags">
+							<span>Gujarat</span>
+
+						</p>
+						<a class="gallery__item-link">explore</a>
+					</figcaption>
+				</figure>
+				<figure class="gallery__item" data-scroll="" data-scroll-speed="2" data-scroll-direction="vertical">
+					<div class="gallery__item-img">
+						<div class="gallery__item-imginner" data-scroll="" data-scroll-speed="1"
+							data-scroll-direction="vertical" style="background-image: url(gho.jpg)"></div>
+					</div>
+					<figcaption class="gallery__item-caption">
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Ghoomar</h2>
+						<span class="gallery__item-number">03</span>
+						<p class="gallery__item-tags">
+							<span>Rajasthan</span>
+
+						</p>
+						<a class="gallery__item-link">explore</a>
+					</figcaption>
+				</figure>
+				<figure class="gallery__item" data-scroll="" data-scroll-speed="-2" data-scroll-direction="vertical">
+					<div class="gallery__item-img">
+						<div class="gallery__item-imginner" data-scroll="" data-scroll-speed="1"
+							data-scroll-direction="vertical" style="background-image: url(bhangra.jpg)"></div>
+					</div>
+					<figcaption class="gallery__item-caption">
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Bhangra</h2>
+						<span class="gallery__item-number">04</span>
+						<p class="gallery__item-tags">
+							<span>Punjab</span>
+
+						</p>
+						<a class="gallery__item-link">explore</a>
+					</figcaption>
+				</figure>
+				<figure class="gallery__item" data-scroll="" data-scroll-speed="2" data-scroll-direction="vertical">
+					<div class="gallery__item-img">
+						<div class="gallery__item-imginner" data-scroll="" data-scroll-speed="1"
+							data-scroll-direction="vertical" style="background-image: url(lavn.jpg)"></div>
+					</div>
+					<figcaption class="gallery__item-caption">
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Lavani</h2>
+						<span class="gallery__item-number">05</span>
+						<p class="gallery__item-tags">
+							<span>Maharashtra</span>
+
+						</p>
+						<a class="gallery__item-link">explore</a>
+					</figcaption>
+				</figure>
+
+				<a href="index4.html">
+					<div class="gallery__text"><span class="gallery__text-outer" data-scroll="" data-scroll-speed="-4"
+							data-scroll-direction="vertical">Classical</span><span data-scroll="" data-scroll-speed="3"
+							data-scroll-direction="vertical" class="gallery__text-outer">Dances→</span></div>
+				</a>
+			</div>
+		</div>
+	</main>
+	<svg class="cursor" width="20" height="20" viewBox="0 0 20 20">
+		<circle class="cursor__inner" cx="10" cy="10" r="5"></circle>
+	</svg>
+	<script src="demo5.c1b42ce3.js"></script>
+</body>
+
+</html>

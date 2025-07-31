@@ -112,5 +112,21 @@
       <circle class="cursor__inner" cx="20" cy="20" r="10"></circle>
     </svg>
     <script src="../js/paintings.js"></script>
+
+    <script>
+      // Add click handlers for all painting menu items
+      document.addEventListener('DOMContentLoaded', function() {
+        const items = document.querySelectorAll('.menu__item');
+        items.forEach(function(item) {
+          item.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Get the painting name from the inner text
+            const name = item.querySelector('.menu__item-textinner')?.innerText?.trim() || '';
+            localStorage.setItem('searchQuery', name);
+            window.location.href = '/html/searchresult.html';
+          });
+        });
+      });
+    </script>
   </body>
 </html>

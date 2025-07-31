@@ -154,7 +154,7 @@
             </div>
           </div>
           <div class="menu__item">
-            <a class="menu__item-link" href="#">Stone And Sclupture Arts</a>
+            <a class="menu__item-link" href="#">Sculpture and Stone</a>
             <div class="marquee">
               <div class="marquee__inner-wrap">
                 <div class="marquee__inner" aria-hidden="true">
@@ -275,6 +275,27 @@
       </div>
     </main>
     <script src="../js/visualarts.js"></script>
+
+    <script>
+      // Add click handlers for Metal Arts, Stone And Sculpture Arts, Textile Arts
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuLinks = document.querySelectorAll('.menu__item-link');
+        // Paintings is index 0, so last three are 1, 2, 3
+        const queries = [
+          null,
+          'Metal Art',
+          'Sculpture and stone',
+          'Textile Arts'
+        ];
+        for (let i = 1; i < menuLinks.length; i++) {
+          menuLinks[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.setItem('searchQuery', queries[i]);
+            window.location.href = '/html/searchresult.html';
+          });
+        }
+      });
+    </script>
 
     <!-- ...rest of your page content... -->
   </body>

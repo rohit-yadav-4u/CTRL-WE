@@ -1,0 +1,160 @@
+.map {
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         min-height: 100vh;
+         width: 100vw;
+         box-sizing: border-box;
+         background: #e3e0d8;
+         position: relative;
+      }
+
+      .svg-map svg {
+         margin-left: 200px;
+         width: 800px;
+         max-width: 100%;
+      }
+
+      .map .tooltip {
+         fill: #fff;
+         font-size: 18px;
+         pointer-events: none;
+         user-select: none;
+      }
+
+      .map .tooltip_bg {
+         fill: #222;
+         opacity: 0.85;
+         pointer-events: none;
+      }
+
+      .map #title {
+         font-size: 25px;
+         fill: black;
+      }
+
+      .map .land {
+         fill: #ee8345;
+         stroke: black;
+         stroke-width: 1.4;
+         stroke-miterlimit: 1;
+      }
+
+      .map path:hover {
+         opacity: 1;
+      }
+
+      .map .state-hover {
+         fill: #2ecc40 !important;
+         opacity: 1 !important;
+         cursor: pointer;
+      }
+
+      .map .state-dim {
+         opacity: 0.08 !important;
+         pointer-events: none !important;
+         transition: opacity 0.18s;
+      }
+
+      .map .state-popout {
+         filter: drop-shadow(0 0 10px #2ecc40) drop-shadow(0 0 4px #2ecc40);
+         transform: scale(1.02) translateX(15px) translateY(10px);
+         transition: transform 0.18s cubic-bezier(0.9, 0.2, 0.2, 1), filter 0.18s;
+         z-index: 2;
+         transform-origin: center;
+
+      }
+
+      /* Details Box Styling */
+      #state-details-box {
+         position: relative;
+         /* Change from static to relative */
+         margin-top: 30px;
+         width: 360px;
+         background: #fff;
+         border: 2px solid #2ecc40;
+         border-radius: 12px;
+         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+         padding: 20px;
+         display: none;
+         font-family: 'Segoe UI', Arial, sans-serif;
+         z-index: 10;
+      }
+
+      #state-details-box h2 {
+         text-align: center;
+         color: #3f2402;
+         font-size: 26px;
+         margin-bottom: 16px;
+      }
+
+      .details-row {
+         display: flex;
+         justify-content: space-between;
+         padding: 10px 12px;
+         border-radius: 8px;
+         font-size: 16px;
+         font-weight: 500;
+         margin-bottom: 6px;
+      }
+
+      .details-row:nth-child(odd) {
+         background: #eafaf1;
+         color: #2c3e50;
+      }
+
+      .details-row:nth-child(even) {
+         background: #f9f9f9;
+         color: #6e2f22;
+      }
+
+      .details-row span:first-child {
+         font-weight: 700;
+         font-size: 16px;
+         color: rgb(194, 28, 28);
+      }
+
+      .details-row span:last-child {
+         font-weight: 600;
+         font-size: 16px;
+         color: #4e8d41;
+      }
+
+      .close-btn {
+         position: absolute;
+         top: 10px;
+         right: 14px;
+         background: #ee8345;
+         color: #fff;
+         border: none;
+         border-radius: 50%;
+         width: 25px;
+         height: 25px;
+         font-size: 20px;
+         cursor: pointer;
+         transition: background 0.2s;
+      }
+
+      .close-btn:hover {
+         background: #2ecc40;
+      }
+
+      @media (max-width: 700px) {
+         .map {
+            flex-direction: column;
+         }
+
+         .svg-map {
+            width: 100%;
+            max-width: 600px;
+         }
+
+         #state-details-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            z-index: 100;
+         }
+      }

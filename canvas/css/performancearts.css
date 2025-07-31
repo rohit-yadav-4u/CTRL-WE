@@ -10,10 +10,10 @@
 
 body {
 	margin: 0;
-	--color-text: #fff;
-	--color-bg: #000;
-	--color-link: #fff;
-	--color-link-hover: #fff;
+	--color-text: #ffffff;
+	--color-bg: #a19a75;
+	--color-link: #ffffff;
+	--color-link-hover: #ffffff;
 	--color-frame: #ff5ba4;
 	color: var(--color-text);
 	background-color: var(--color-bg);
