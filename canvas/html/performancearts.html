@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Shapes Slideshow</title>
+		<link rel="stylesheet" type="text/css" href="../css/performancearts.css">
+		<script>document.documentElement.className = "js";
+
+var supportsCssVars = function supportsCssVars() {
+  var e,
+      t = document.createElement("style");
+  return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+};
+
+supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="loading demo-1">
+		<main>
+			<div class="frame">
+				
+				<nav class="slides-nav">
+					<button class="slides-nav__button slides-nav__button--prev" aria-label="Previous slide">
+						<svg><path d="M1.176 11.532a.5.5 0 00-.352.936c5.228 1.96 9.475 5.555 12.752 10.797a.5.5 0 00.848-.53c-3.39-5.424-7.81-9.163-13.248-11.203z"></path><path d="M1.176 12.468a.5.5 0 01-.352-.936C6.052 9.572 10.3 5.978 13.576.735a.5.5 0 01.848.53c-3.39 5.424-7.81 9.163-13.248 11.203z"></path><path d="M1 12.5a.5.5 0 110-1h53a.5.5 0 110 1H1z"></path></svg>
+					</button>
+					<button class="slides-nav__button slides-nav__button--next" aria-label="Next slide">
+						<svg><path d="M53.824 11.532a.5.5 0 01.352.936c-5.228 1.96-9.475 5.555-12.752 10.797a.5.5 0 01-.848-.53c3.39-5.424 7.81-9.163 13.248-11.203z"></path><path d="M53.824 12.468a.5.5 0 00.352-.936C48.948 9.572 44.7 5.978 41.424.735a.5.5 0 00-.848.53c3.39 5.424 7.81 9.163 13.248 11.203z"></path><path d="M54 12.5a.5.5 0 100-1H1a.5.5 0 100 1h53z"></path></svg>
+					</button>
+					<div class="slides-nav__index">
+						<span class="slides-nav__index-current">
+							<span>1</span>
+						</span>
+						&mdash;
+						<span class="slides-nav__index-total">3</span>
+					</div>
+				</nav>
+			</div>
+			<div class="slideshow">
+				<figure class="slide slide--current">
+					<div class="slide__img-wrap"><div class="slide__img" style="background-image: url(dance/1.jpg)"></div></div>
+					<figcaption class="slide__caption">
+						<h2 class="slides__caption-headline">
+							<span class="text-row"><span>Classical <em>Dance</em></span></span>
+							<span class="text-row"><span><strong>emotions</strong> in <em>moves</em></span></span>
+						</h2>
+						<a class="slides__caption-link" href="/canvas/dance/index4.html"><span>Explore</span></a>
+					</figcaption>
+				</figure>
+				<figure class="slide">
+					<div class="slide__img-wrap"><div class="slide__img" style="background-image: url(dance/2.jpg)"></div></div>
+					<figcaption class="slide__caption">
+						<h2 class="slides__caption-headline">
+							<span class="text-row"><span>Folk Dance</span></span>
+							<span class="text-row"><span>a <em>desire</em> to <strong>engage</strong></span></span>
+						</h2>
+						<a class="slides__caption-link" href="/canvas/dance/index5.html"><span>Explore</span></a>
+					</figcaption>
+				</figure>
+				<figure class="slide">
+					<div class="slide__img-wrap"><div class="slide__img" style="background-image: url(dance/3.png)"></div></div>
+					<figcaption class="slide__caption">
+						<h2 class="slides__caption-headline">
+							<span class="text-row"><span>Ctrl+We's <strong>Theatre</strong></span></span>
+							<span class="text-row"><span>180 °<em>View</em></span></span>
+						</h2>
+						<a class="slides__caption-link" href="#"><span>Explore</span></a>
+					</figcaption>
+				</figure>
+				
+			</div>
+		</main>
+		<script src="../js/performancearts.js"></script>
+	</body>
+</html>
