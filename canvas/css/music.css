@@ -108,7 +108,7 @@
 .trad-music html input[type="button"],
 .trad-music input[type="reset"],
 .trad-music input[type="submit"] {
-	-webkit-appearance: button;
+	/* -webkit-appearance: button; */
 	cursor: pointer;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .trad-music input[type="search"] {
-	-webkit-appearance: textfield;
+	/* -webkit-appearance: textfield; */
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
@@ -275,9 +275,9 @@ body{
 
 .trad-music .box__title-inner[data-hover] {
 	-webkit-text-stroke: 2px #000;
-	text-stroke: 2px #000;
+	
 	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
+	/* text-fill-color: transparent; */
 	color: transparent;
 }
 
@@ -290,9 +290,9 @@ body{
 	overflow: hidden;
 	white-space: nowrap;
 	-webkit-text-stroke: 0;
-	text-stroke: 0;
+	/* text-stroke: 0; */
 	-webkit-text-fill-color: #000;
-	text-fill-color: #000;
+	/* text-fill-color: #000; */
 	color: #000;
 	transition: all 0.3s;
 }
