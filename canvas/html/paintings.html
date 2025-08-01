@@ -4,33 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Paintings</title>
-    <link rel="stylesheet" type="text/css" href="/canvas/css/paintings.css" />
-    <script>
-      document.documentElement.className = "js";
-
-      var supportsCssVars = function supportsCssVars() {
-        var e,
-          t = document.createElement("style");
-        return (
-          (t.innerHTML = "root: { --tmp-var: bold; }"),
-          document.head.appendChild(t),
-          (e = !!(
-            window.CSS &&
-            window.CSS.supports &&
-            window.CSS.supports("font-weight", "var(--tmp-var)")
-          )),
-          t.parentNode.removeChild(t),
-          e
-        );
-      };
-
-      supportsCssVars() ||
-        alert(
-          "Please view this demo in a modern browser that supports CSS Variables."
-        );
-    </script>
+      <link rel="stylesheet" href="/canvas/css/canvasnavbar.css" />
+    <link rel="stylesheet" href="/canvas/css/paintings.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="/canvas/js/canvasnavbar.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
   </head>
-  <body class="loading">
+  <body>
+  <div id="navbar-container"></div>
+    <script>
+      fetch('/canvas/html/canvasnavbar.html')
+        .then(response => response.text())
+        .then(html => {
+          // Add a wrapper class to ensure navbar styles always apply
+          const container = document.getElementById('navbar-container');
+          container.classList.add('ctrl-navbar');
+          const navMatches = html.match(/<nav[\s\S]*?<\/nav>/g);
+          container.innerHTML = navMatches ? navMatches.join('\n') : html;
+        });
+    </script>
     <main>
       <nav class="menu">
         <a

@@ -1,12 +1,4 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
 
-:root {
-  font-size: 13px;
-}
 
 body {
   margin: 0;

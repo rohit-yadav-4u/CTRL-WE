@@ -1,11 +1,4 @@
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-:root {
-  font-size: 18px;
-}
+
 body {
   margin: 0;
   --color-text: #111;
