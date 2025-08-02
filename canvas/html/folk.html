@@ -13,6 +13,12 @@
 	<link rel="stylesheet" type="text/css" href="/canvas/css/dancemix.css">
 	<link rel="stylesheet" type="text/css" href="/canvas/css/folk.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<link rel="stylesheet" type="text/css" href="/canvas/css/canvasnavbar.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <script src="/canvas/js/canvasnavbar.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
 	<script>document.documentElement.className = "js";
 
 		var supportsCssVars = function supportsCssVars() {
@@ -25,7 +31,18 @@
 </head>
 
 <body class="demo-1 loading">
-	
+	  <div id="navbar-container"></div>
+    <script>
+      fetch('/canvas/html/canvasnavbar.html')
+        .then(response => response.text())
+        .then(html => {
+          // Add a wrapper class to ensure navbar styles always apply
+          const container = document.getElementById('navbar-container');
+          container.classList.add('ctrl-navbar');
+          const navMatches = html.match(/<nav[\s\S]*?<\/nav>/g);
+          container.innerHTML = navMatches ? navMatches.join('\n') : html;
+        });
+    </script>
 	<div class="frame"><!-- don't put fixed elements into the scroll container! -->
 		<div class="frame__demos">
 
@@ -39,16 +56,18 @@
 		
 		<div class="content">
 			<div class="gallery">
+				<a href="/canvas/html/folk.html">
 				<div class="gallery__text"><span class="gallery__text-inner" data-scroll="" data-scroll-speed="3"
 						data-scroll-direction="vertical">Folk</span><span data-scroll="" data-scroll-speed="-4"
-						data-scroll-direction="vertical" class="gallery__text-inner">Dances</span></div>
+						data-scroll-direction="vertical" class="gallery__text-inner">Dances→</span></div>
+				</a>
 				<figure class="gallery__item" data-scroll="" data-scroll-speed="2" data-scroll-direction="vertical">
 					<div class="gallery__item-img">
 						<div class="gallery__item-imginner" data-scroll="" data-scroll-speed="1"
 							data-scroll-direction="vertical" style="background-image: url(/canvas/img/danceimg/bihu.jpg)"></div>
 					</div>
 					<figcaption class="gallery__item-caption">
-						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Bihu</h2>
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed=".5">Bihu</h2>
 						<span class="gallery__item-number">01</span>
 						<p class="gallery__item-tags">
 							<span>Assam</span>
@@ -63,7 +82,7 @@
 							data-scroll-direction="vertical" style="background-image: url(/canvas/img/danceimg/Navratri.jpg)"></div>
 					</div>
 					<figcaption class="gallery__item-caption">
-						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Garba</h2>
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed=".5">Garba</h2>
 						<span class="gallery__item-number">02</span>
 						<p class="gallery__item-tags">
 							<span>Gujarat</span>
@@ -78,7 +97,7 @@
 							data-scroll-direction="vertical" style="background-image: url(/canvas/img/danceimg/gho.jpg)"></div>
 					</div>
 					<figcaption class="gallery__item-caption">
-						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Ghoomar</h2>
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed=".5">Ghoomar</h2>
 						<span class="gallery__item-number">03</span>
 						<p class="gallery__item-tags">
 							<span>Rajasthan</span>
@@ -93,7 +112,7 @@
 							data-scroll-direction="vertical" style="background-image: url(/canvas/img/danceimg/bhangra.jpg)"></div>
 					</div>
 					<figcaption class="gallery__item-caption">
-						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Bhangra</h2>
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed=".5">Bhangra</h2>
 						<span class="gallery__item-number">04</span>
 						<p class="gallery__item-tags">
 							<span>Punjab</span>
@@ -108,7 +127,7 @@
 							data-scroll-direction="vertical" style="background-image: url(/canvas/img/danceimg/lavn.jpg)"></div>
 					</div>
 					<figcaption class="gallery__item-caption">
-						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed="1">Lavani</h2>
+						<h2 class="gallery__item-title" data-scroll="" data-scroll-speed=".5">Lavani</h2>
 						<span class="gallery__item-number">05</span>
 						<p class="gallery__item-tags">
 							<span>Maharashtra</span>
@@ -130,6 +149,20 @@
 		<circle class="cursor__inner" cx="10" cy="10" r="5"></circle>
 	</svg>
 	<script src="/canvas/js/folk.js"></script>
+	<script>
+  // Set searchQuery and redirect on explore click
+  document.addEventListener('DOMContentLoaded', function() {
+	document.querySelectorAll('.gallery__item-link').forEach(function(link) {
+	  link.addEventListener('click', function(e) {
+		e.preventDefault();
+		// Find the dance name from the closest .gallery__item-title
+		const danceName = link.closest('.gallery__item').querySelector('.gallery__item-title')?.innerText?.trim() || '';
+		localStorage.setItem('searchQuery', danceName);
+		window.location.href = '/html/searchresult.html';
+	  });
+	});
+  });
+</script>
 </body>
 
 </html>
