@@ -369,34 +369,8 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Bharatnatyam",
-        "src": "images/Performing Arts/Classical Dance/Bharatnatyam/001.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Bharatnatyam",
-            "dance"
-        ]
-    },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Bharatnatyam",
-        "src": "images/Performing Arts/Classical Dance/Bharatnatyam/002.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Bharatnatyam",
-            "dance"
-        ]
-    },
+
+ 
     {
         "category": "Performing Arts",
         "subTag": "Classical Dance",
@@ -453,34 +427,8 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Kathak",
-        "src": "images/Performing Arts/Classical Dance/Kathak/003.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Kathak",
-            "dance"
-        ]
-    },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Kathak",
-        "src": "images/Performing Arts/Classical Dance/Kathak/004.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Kathak",
-            "dance"
-        ]
-    },
+  
+
     {
         "category": "Performing Arts",
         "subTag": "Classical Dance",
@@ -523,34 +471,8 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Kathakali",
-        "src": "images/Performing Arts/Classical Dance/Kathakali/005.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Kathakali",
-            "dance"
-        ]
-    },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Kathakali",
-        "src": "images/Performing Arts/Classical Dance/Kathakali/006.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Kathakali",
-            "dance"
-        ]
-    },
+   
+  
     {
         "category": "Performing Arts",
         "subTag": "Classical Dance",
@@ -593,34 +515,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Kuchipudi",
-        "src": "images/Performing Arts/Classical Dance/Kuchipudi/007.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Kuchipudi",
-            "dance"
-        ]
-    },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Kuchipudi",
-        "src": "images/Performing Arts/Classical Dance/Kuchipudi/008.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Kuchipudi",
-            "dance"
-        ]
-    },
+
     {
         "category": "Performing Arts",
         "subTag": "Classical Dance",
@@ -691,34 +586,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Manipuri",
-        "src": "images/Performing Arts/Classical Dance/Manipuri/009.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Manipuri",
-            "dance"
-        ]
-    },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Manipuri",
-        "src": "images/Performing Arts/Classical Dance/Manipuri/010.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Manipuri",
-            "dance"
-        ]
-    },
+ 
     {
         "category": "Performing Arts",
         "subTag": "Classical Dance",
@@ -775,34 +643,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Mohiniyattam",
-        "src": "images/Performing Arts/Classical Dance/Mohiniyattam/011.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Mohiniyattam",
-            "dance"
-        ]
-    },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Mohiniyattam",
-        "src": "images/Performing Arts/Classical Dance/Mohiniyattam/012.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Mohiniyattam",
-            "dance"
-        ]
-    },
+
     {
         "category": "Performing Arts",
         "subTag": "Classical Dance",
@@ -859,34 +700,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Odissi",
-        "src": "images/Performing Arts/Classical Dance/Odissi/013.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Odissi",
-            "dance"
-        ]
-    },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Odissi",
-        "src": "images/Performing Arts/Classical Dance/Odissi/014.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Odissi",
-            "dance"
-        ]
-    },
+
     {
         "category": "Performing Arts",
         "subTag": "Classical Dance",
@@ -943,34 +757,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Sattriya",
-        "src": "images/Performing Arts/Classical Dance/Sattriya/015.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Sattriya",
-            "dance"
-        ]
-    },
-    {
-        "category": "Performing Arts",
-        "subTag": "Classical Dance",
-        "subTag-2": "Sattriya",
-        "src": "images/Performing Arts/Classical Dance/Sattriya/016.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "classical dance",
-            "Sattriya",
-            "dance"
-        ]
-    },
+
     {
         "category": "Performing Arts",
         "subTag": "Folk Dance",
@@ -1013,20 +800,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Folk Dance",
-        "subTag-2": "Bhangra",
-        "src": "images/Performing Arts/Folk Dance/Bhangra/017.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "folk dance",
-            "Bhangra",
-            "dance"
-        ]
-    },
+
     {
         "category": "Performing Arts",
         "subTag": "Folk Dance",
@@ -1069,34 +843,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Folk Dance",
-        "subTag-2": "Bihu",
-        "src": "images/Performing Arts/Folk Dance/Bihu/018.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "folk dance",
-            "Bihu",
-            "dance"
-        ]
-    },
-    {
-        "category": "Performing Arts",
-        "subTag": "Folk Dance",
-        "subTag-2": "Bihu",
-        "src": "images/Performing Arts/Folk Dance/Bihu/019.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "folk dance",
-            "Bihu",
-            "dance"
-        ]
-    },
+   
     {
         "category": "Performing Arts",
         "subTag": "Folk Dance",
@@ -1153,20 +900,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Folk Dance",
-        "subTag-2": "Garba",
-        "src": "images/Performing Arts/Folk Dance/Garba/020.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "folk dance",
-            "Garba",
-            "dance"
-        ]
-    },
+ 
     {
         "category": "Performing Arts",
         "subTag": "Folk Dance",
@@ -1209,20 +943,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Folk Dance",
-        "subTag-2": "Ghoomar",
-        "src": "images/Performing Arts/Folk Dance/Ghoomar/021.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "folk dance",
-            "Ghoomar",
-            "dance"
-        ]
-    },
+
     {
         "category": "Performing Arts",
         "subTag": "Folk Dance",
@@ -1279,20 +1000,7 @@
             "dance"
         ]
     },
-    {
-        "category": "Performing Arts",
-        "subTag": "Folk Dance",
-        "subTag-2": "Lavani",
-        "src": "images/Performing Arts/Folk Dance/Lavani/022.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "performing arts",
-            "folk dance",
-            "Lavani",
-            "dance"
-        ]
-    },
+
     {
         "category": "Rituals and Festival Arts",
         "subTag": "Mask",
@@ -1790,45 +1498,6 @@
             "traditional music",
             "instrument",
             "vina"
-        ]
-    },
-    {
-        "category": "Traditional Music",
-        "subTag": "Music",
-        "subTag-2": "Bhajan",
-        "src": "images/Traditional music/music/bhajan/Bhaj Le Ram Naam Sukh Dham (Classical Vocal) Full Video Song_ Bhaktimala Bhajans _ Ajit Kadkade.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "traditional music",
-            "music",
-            "bhajan"
-        ]
-    },
-    {
-        "category": "Traditional Music",
-        "subTag": "Music",
-        "subTag-2": "Bhajan",
-        "src": "images/Traditional music/music/bhajan/Padhariye Piya Paiyan _ Full Video Classical Vocal _ Bhaktimala Bhajans _ Shruti Sadolikar Katkar.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "traditional music",
-            "music",
-            "bhajan"
-        ]
-    },
-    {
-        "category": "Traditional Music",
-        "subTag": "Music",
-        "subTag-2": "Sitar Play",
-        "src": "images/Traditional music/music/sitar play/Ustad Amjad Ali Khan _ Rain Ragas _ Megh & Miyan ki Malhar _ Sarod & Double Tabla _ Music of India.mp4",
-        "isVideo": true,
-        "isPhoto": false,
-        "tags": [
-            "traditional music",
-            "music",
-            "sitar play"
         ]
     },
     {

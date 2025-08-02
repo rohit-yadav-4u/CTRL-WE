@@ -1,0 +1,315 @@
+[
+
+
+        {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Bharatnatyam",
+        "src": "/canvas/theatre/media/001.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Bharatnatyam",
+            "dance","video"
+        ]
+    },
+       {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Bharatnatyam",
+        "src": "/canvas/theatre/media/002.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Bharatnatyam",
+            "dance","video"
+        ]
+    },
+      {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Kathak",
+        "src": "/canvas/theatre/media/003.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Kathak",
+            "dance","video"
+        ]
+    },
+        {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Kathak",
+        "src": "/canvas/theatre/media/004.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Kathak",
+            "dance","video"
+        ]
+    },
+     {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Kathakali",
+        "src": "/canvas/theatre/media/005.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Kathakali",
+            "dance","video"
+        ]
+    },
+      {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Kathakali",
+        "src": "/canvas/theatre/media/006.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Kathakali",
+            "dance","video"
+        ]
+    },
+       {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Kuchipudi",
+        "src": "/canvas/theatre/media/007.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Kuchipudi",
+            "dance","video"
+        ]
+    },
+     
+    {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Kuchipudi",
+        "src": "/canvas/theatre/media/008.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Kuchipudi",
+            "dance","video"
+        ]
+    },
+       {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Manipuri",
+        "src": "/canvas/theatre/media/009.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Manipuri",
+            "dance","video"
+        ]
+    },
+    {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Manipuri",
+        "src": "/canvas/theatre/media/010.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Manipuri",
+            "dance","video"
+        ]
+    },
+        {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Mohiniyattam",
+        "src": "/canvas/theatre/media/011.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Mohiniyattam",
+            "dance","video"
+        ]
+    },
+    {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Mohiniyattam",
+        "src": "/canvas/theatre/media/012.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Mohiniyattam",
+            "dance","video"
+        ]
+    },
+        {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Odissi",
+        "src": "/canvas/theatre/media/013.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Odissi",
+            "dance","video"
+        ]
+    },
+    {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Odissi",
+        "src": "/canvas/theatre/media/014.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Odissi",
+            "dance","video"
+        ]
+    },
+        {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Sattriya",
+        "src": "/canvas/theatre/media/015.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Sattriya",
+            "dance","video"
+        ]
+    },
+    {
+        "category": "Performing Arts",
+        "subTag": "Classical Dance",
+        "subTag-2": "Sattriya",
+        "src": "/canvas/theatre/media/016.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "classical dance",
+            "Sattriya",
+            "dance","video"
+        ]
+    },
+        {
+        "category": "Performing Arts",
+        "subTag": "Folk Dance",
+        "subTag-2": "Bhangra",
+        "src": "/canvas/theatre/media/017.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "folk dance",
+            "Bhangra",
+            "dance","video"
+        ]
+    },
+     {
+        "category": "Performing Arts",
+        "subTag": "Folk Dance",
+        "subTag-2": "Bihu",
+        "src": "/canvas/theatre/media/018.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "folk dance",
+            "Bihu",
+            "dance","video"
+        ]
+    },
+    
+    {
+        "category": "Performing Arts",
+        "subTag": "Folk Dance",
+        "subTag-2": "Bihu",
+        "src": "/canvas/theatre/media/019.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "folk dance",
+            "Bihu",
+            "dance","video"
+        ]
+    },
+       {
+        "category": "Performing Arts",
+        "subTag": "Folk Dance",
+        "subTag-2": "Garba",
+        "src": "/canvas/theatre/media/020.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "folk dance",
+            "Garba",
+            "dance","video"
+        ]
+    },
+        {
+        "category": "Performing Arts",
+        "subTag": "Folk Dance",
+        "subTag-2": "Ghoomar",
+        "src": "/canvas/theatre/media/021.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "folk dance",
+            "Ghoomar",
+            "dance","video"
+        ]
+    },
+        {
+        "category": "Performing Arts",
+        "subTag": "Folk Dance",
+        "subTag-2": "Lavani",
+        "src": "/canvas/theatre/media/022.mp4",
+        "isVideo": true,
+        "isPhoto": false,
+        "tags": [
+            "performing arts",
+            "folk dance",
+            "Lavani",
+            "dance","video"
+        ]
+    }
+
+]
