@@ -58,7 +58,7 @@
 			<div class="gallery">
 				<div class="gallery__text"><span class="gallery__text-inner" data-scroll="" data-scroll-speed="3"
 						data-scroll-direction="vertical">Folk</span><span data-scroll="" data-scroll-speed="-4"
-						data-scroll-direction="vertical" class="gallery__text-inner">Dances</span></div>
+						data-scroll-direction="vertical" class="gallery__text-inner">Dances→</span></div>
 				<figure class="gallery__item" data-scroll="" data-scroll-speed="2" data-scroll-direction="vertical">
 					<div class="gallery__item-img">
 						<div class="gallery__item-imginner" data-scroll="" data-scroll-speed="1"
@@ -147,6 +147,20 @@
 		<circle class="cursor__inner" cx="10" cy="10" r="5"></circle>
 	</svg>
 	<script src="/canvas/js/folk.js"></script>
+	<script>
+  // Set searchQuery and redirect on explore click
+  document.addEventListener('DOMContentLoaded', function() {
+	document.querySelectorAll('.gallery__item-link').forEach(function(link) {
+	  link.addEventListener('click', function(e) {
+		e.preventDefault();
+		// Find the dance name from the closest .gallery__item-title
+		const danceName = link.closest('.gallery__item').querySelector('.gallery__item-title')?.innerText?.trim() || '';
+		localStorage.setItem('searchQuery', danceName);
+		window.location.href = '/html/searchresult.html';
+	  });
+	});
+  });
+</script>
 </body>
 
 </html>
