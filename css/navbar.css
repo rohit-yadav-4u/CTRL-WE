@@ -116,6 +116,7 @@ html {
 
 
 #main-navbar {
+box-sizing: border-box;
 padding: 0 32px;
 display: flex;
 flex-direction: row;

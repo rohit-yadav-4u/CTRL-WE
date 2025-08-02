@@ -76,8 +76,6 @@
           const navbarContainer = document.getElementById('navbar-container');
           navbarContainer.innerHTML = navbarHtml;
           navbarContainer.style.display = 'block'; // Show instantly, no effects
-          var mainNavbar = document.getElementById('main-navbar');
-          if (mainNavbar) mainNavbar.style.width = '96%';
           // Now inject all <script src> to <body> (after navbar is present)
           tempDiv.querySelectorAll('script[src]').forEach(script => {
             if (!document.body.querySelector(`script[src="${script.getAttribute('src')}"]`)) {
