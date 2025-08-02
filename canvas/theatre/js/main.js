@@ -394,4 +394,18 @@
 
 	init();
 
+// Global spacebar handler for 180-degree toggle
+window.addEventListener('keydown', function(e) {
+  // Only trigger if not typing in an input or textarea
+  if (
+	(e.code === 'Space' || e.key === ' ' || e.keyCode === 32) &&
+	document.activeElement &&
+	['INPUT', 'TEXTAREA'].indexOf(document.activeElement.tagName) === -1
+  ) {
+	e.preventDefault();
+	var tiltCtrl = document.querySelector('.action--lookaround');
+	if (tiltCtrl) tiltCtrl.click();
+  }
+});
+
 })(window);

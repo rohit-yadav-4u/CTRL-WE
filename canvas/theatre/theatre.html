@@ -7,7 +7,8 @@
 		<title>Theater - Kalayatra</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" type="text/css" href="theatre-dropdown.css" />
 		<script src="js/modernizr-custom.js"></script>
 			<link rel="stylesheet" type="text/css" href="/canvas/css/canvasnavbar.css">
 			   <script src="/canvas/js/canvasnavbar.js"></script>
@@ -18,6 +19,9 @@
 	</head>
 	<body>
   <div id="navbar-container"></div>
+  <button id="immersive-hide-btn" style="display:none;position:absolute;top:20px;left:30px;z-index:1002;" title="Hide seat preview & exit">Hide UI</button>
+  <button id="fullscreen-btn" style="display:none;position:absolute;top:70px;left:30px;z-index:1002;font-weight:bold;font-family:monospace;background:#fff;color:#000;border:none;width:120px;border-radius:6px;padding:8px 18px;font-size:1.1rem;cursor:pointer;opacity:0.92;transition:background 0.2s, opacity 0.2s;box-shadow:0 2px 8px rgba(0,0,0,0.07);">Fullscreen</button>
+  <button id="wallfit-btn" style="display:none;position:absolute;top:110px;left:30px;z-index:1002;font-weight:bold;font-family:monospace;background:#fff;color:#000;border:none;width:120px;border-radius:6px;padding:8px 18px;font-size:1.1rem;cursor:pointer;opacity:0.92;transition:background 0.2s, opacity 0.2s;box-shadow:0 2px 8px rgba(0,0,0,0.07);">Wall Fit</button>
 	<script>
 	  fetch('/canvas/html/canvasnavbar.html')
 		.then(response => response.text())
@@ -82,7 +86,10 @@
 	<!-- Add more options as you add more media files -->
 	<option value="custom">Other (YouTube link below)</option>
   </select>
-  <input id="youtube-link" type="text" placeholder="Paste YouTube link here" style="display:none;width:70%;margin-top:5px;" />
+  <div style="display:flex;align-items:center;gap:6px;margin-top:5px;">
+	<input id="youtube-link" type="text" placeholder="Paste YouTube link here" style="display:none;width:70%;" />
+	<button id="youtube-play-btn" style="display:none;padding:6px 12px;border-radius:6px;background:#fff;color:#000;font-weight:bold;cursor:pointer;border:1px solid #bbb;">▶</button>
+  </div>
 </div>
 							<div class="intro__side">
 								<button class="action action--seats">Select your seats</button>
@@ -835,7 +842,10 @@
 		  <option value="sample">Sample</option>
 		  <option value="custom">Other (YouTube link below)</option>
 		</select>
-		<input id="youtube-link-plan" type="text" placeholder="Paste YouTube link here" style="display:none;width:70%;margin-top:5px;" />
+	<div style="display:flex;align-items:center;gap:6px;margin-top:5px;">
+	  <input id="youtube-link-plan" type="text" placeholder="Paste YouTube link here" style="display:none;width:70%;" />
+	  <button id="youtube-play-btn-plan" style="display:none;padding:6px 12px;border-radius:6px;background:#fff;color:#000;font-weight:bold;cursor:pointer;border:1px solid #bbb;">▶</button>
+	</div>
 	  </div>
 		</div><!-- /plan -->
 		<button class="action action--lookaround action--disabled" arial-label="Unlook View"></button>
@@ -843,6 +853,141 @@
 <script src="js/main.js"></script>
 <script>
 // ...existing code...
+// Immersive Hide Button logic
+const immersiveHideBtn = document.getElementById('immersive-hide-btn');
+function updateHideBtnVisibility() {
+  // Show only if in theatre mode (plan or exit button visible)
+  const plan = document.querySelector('.plan');
+  const immersiveExitBtn = document.querySelector('.action--exit-theatre');
+  const fullscreenBtn = document.getElementById('fullscreen-btn');
+  if (
+	plan && immersiveExitBtn &&
+	(plan.offsetParent !== null || immersiveExitBtn.offsetParent !== null)
+  ) {
+	immersiveHideBtn.style.display = 'block';
+	immersiveHideBtn.textContent = document.body.classList.contains('immersive-hide') ? 'Show UI' : 'Hide UI';
+	// Place buttons in order: Hide UI (top), Fullscreen, Wall Fit, Exit Theatre (bottom)
+	immersiveHideBtn.style.position = 'absolute';
+	immersiveHideBtn.style.top = '20px';
+	immersiveHideBtn.style.left = '30px';
+	immersiveHideBtn.style.zIndex = '1002';
+	if (fullscreenBtn) {
+	  fullscreenBtn.style.display = 'block';
+	  fullscreenBtn.style.position = 'absolute';
+	  fullscreenBtn.style.top = '70px';
+	  fullscreenBtn.style.left = '30px';
+	  fullscreenBtn.style.zIndex = '1002';
+	}
+	const wallfitBtn = document.getElementById('wallfit-btn');
+	if (wallfitBtn) {
+	  wallfitBtn.style.display = 'block';
+	  wallfitBtn.style.position = 'absolute';
+	  wallfitBtn.style.top = '110px';
+	  wallfitBtn.style.left = '30px';
+	  wallfitBtn.style.zIndex = '1002';
+	}
+	immersiveExitBtn.style.position = 'absolute';
+	immersiveExitBtn.style.top = '170px';
+	immersiveExitBtn.style.left = '30px';
+	immersiveExitBtn.style.zIndex = '1001';
+	immersiveExitBtn.classList.add('immersive-exit-btn');
+  } else {
+	immersiveHideBtn.style.display = 'none';
+	if (fullscreenBtn) fullscreenBtn.style.display = 'none';
+  }
+}
+
+// Wall Fit logic (robust for both video and YouTube iframe, fixes exit for dynamic iframe)
+const wallfitBtn = document.getElementById('wallfit-btn');
+let wallfitActive = false;
+let originalParent = null;
+let nextSibling = null;
+let wallfitNodeId = null;
+if (wallfitBtn) {
+  wallfitBtn.addEventListener('click', function() {
+	const cubeBack = document.querySelector('.cube__side--back');
+	// Always check for YouTube iframe first, then video
+	const ytIframe = document.getElementById('youtube-iframe');
+	const video = document.querySelector('.video-player');
+	let node = ytIframe || video;
+	if (!wallfitActive) {
+	  if (!node) return;
+	  // Save original parent and next sibling for restore
+	  originalParent = node.parentNode;
+	  nextSibling = node.nextSibling;
+	  wallfitNodeId = node.id || (node.classList.contains('video-player') ? 'video-player' : null);
+	  cubeBack.appendChild(node);
+	  node.classList.add('wallfit-fill');
+	  cubeBack.classList.add('wallfit-onthewall');
+	  wallfitBtn.textContent = 'Exit Wall Fit';
+	  wallfitActive = true;
+  } else {
+	// Always restore to the .video container inside .screen
+	const screen = document.querySelector('.screen');
+	const videoContainer = screen ? screen.querySelector('.video') : null;
+	let restoreNode = null;
+	if (wallfitNodeId === 'youtube-iframe') {
+	  restoreNode = document.getElementById('youtube-iframe');
+	} else if (wallfitNodeId === 'video-player') {
+	  restoreNode = document.querySelector('.video-player');
+	}
+	if (restoreNode && videoContainer) {
+	  videoContainer.appendChild(restoreNode);
+	  restoreNode.classList.remove('wallfit-fill');
+	}
+	if (cubeBack) cubeBack.classList.remove('wallfit-onthewall');
+	wallfitBtn.textContent = 'Wall Fit';
+	wallfitActive = false;
+	wallfitNodeId = null;
+	originalParent = null;
+	nextSibling = null;
+  }
+  });
+}
+// Fullscreen button logic (improved: do not reload video)
+const fullscreenBtn = document.getElementById('fullscreen-btn');
+if (fullscreenBtn) {
+  fullscreenBtn.addEventListener('click', function() {
+	// Prefer YouTube iframe if present, else video
+	const ytIframe = document.getElementById('youtube-iframe');
+	const video = document.querySelector('.video-player');
+	const screen = document.querySelector('.screen');
+	let target = ytIframe || video || screen;
+	// Do not reload or reset video, just request fullscreen
+	if (target.requestFullscreen) {
+	  target.requestFullscreen();
+	} else if (target.webkitRequestFullscreen) {
+	  target.webkitRequestFullscreen();
+	} else if (target.msRequestFullscreen) {
+	  target.msRequestFullscreen();
+	}
+  });
+}
+if (immersiveHideBtn) {
+  immersiveHideBtn.addEventListener('click', function() {
+	document.body.classList.toggle('immersive-hide');
+	immersiveHideBtn.textContent = document.body.classList.contains('immersive-hide') ? 'Show UI' : 'Hide UI';
+	// Hide/show Wall Fit button as well
+	const wallfitBtn = document.getElementById('wallfit-btn');
+	if (wallfitBtn) {
+	  wallfitBtn.style.display = document.body.classList.contains('immersive-hide') ? 'none' : 'block';
+	}
+	updateHideBtnVisibility();
+  });
+}
+// Listen for seat selection, exit, or any click that might change theatre mode
+document.addEventListener('click', function(e) {
+  if (
+	e.target.classList.contains('action--seats') ||
+	e.target.classList.contains('action--exit-theatre') ||
+	e.target.classList.contains('action--play')
+  ) {
+	setTimeout(updateHideBtnVisibility, 200);
+  }
+});
+// Also update on page load and on resize (in case of responsive UI)
+window.addEventListener('DOMContentLoaded', updateHideBtnVisibility);
+window.addEventListener('resize', updateHideBtnVisibility);
 const mediaMap = {
   sintel: {
 	mp4: 'media/sintel.mp4',
@@ -871,62 +1016,50 @@ const ytInputs = [
 dropdowns.forEach((dropdown, idx) => {
   if (!dropdown) return;
   const ytInput = ytInputs[idx];
+  const ytPlayBtn = document.getElementById(idx === 0 ? 'youtube-play-btn' : 'youtube-play-btn-plan');
   dropdown.addEventListener('change', function() {
 	const val = dropdown.value;
 	const oldIframe = document.getElementById('youtube-iframe');
 	if (val === 'custom') {
 	  ytInput.style.display = 'inline-block';
+	  ytPlayBtn.style.display = 'inline-block';
 	  video.style.display = 'none';
-	  // Hide play button for YouTube
 	  playBtn.style.display = 'none';
-	  // Pause HTML5 video if playing
 	  if (!video.paused) video.pause();
-	  // Remove any existing YouTube iframe
 	  if (oldIframe) oldIframe.remove();
 	} else {
 	  ytInput.style.display = 'none';
+	  ytPlayBtn.style.display = 'none';
 	  video.style.display = '';
-	  // Show play button for regular videos
 	  playBtn.style.display = '';
-	  // Remove any existing YouTube iframe and stop it
 	  if (oldIframe) oldIframe.remove();
-	  // Pause HTML5 video and reset to start
 	  if (!video.paused) video.pause();
 	  video.currentTime = 0;
 	  if (mediaMap[val]) {
-		// Update <source> tags for best compatibility
 		const sources = video.querySelectorAll('source');
 		sources.forEach(source => {
 		  if (source.type.includes('mp4')) source.src = mediaMap[val].mp4;
 		  if (source.type.includes('ogg')) source.src = mediaMap[val].ogg;
 		});
 		video.poster = mediaMap[val].img;
-		// Remove src attribute to force reload from <source> tags
 		video.removeAttribute('src');
 		video.load();
-		// Show play button again after changing video
 		playBtn.classList.add('action--shown');
 		playBtn.classList.remove('action--hidden');
 	  }
 	}
   });
-  ytInput?.addEventListener('change', function() {
+  ytPlayBtn?.addEventListener('click', function() {
 	const url = ytInput.value.trim();
-	// Extract YouTube video ID
 	let videoId = null;
 	const ytMatch = url.match(/(?:youtu.be\/|youtube.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
 	if (ytMatch) videoId = ytMatch[1];
-	// Remove any existing YouTube iframe
 	const oldIframe = document.getElementById('youtube-iframe');
 	if (oldIframe) oldIframe.remove();
-	// Pause HTML5 video if playing
 	if (!video.paused) video.pause();
-	// Hide play button for YouTube
 	playBtn.style.display = 'none';
 	if (videoId) {
-	  // Hide the HTML5 video player
 	  video.style.display = 'none';
-	  // Create and insert YouTube iframe
 	  const iframe = document.createElement('iframe');
 	  iframe.id = 'youtube-iframe';
 	  iframe.style.width = '100%';
@@ -941,7 +1074,6 @@ dropdowns.forEach((dropdown, idx) => {
 	  iframe.allowFullscreen = true;
 	  video.parentNode.style.position = 'relative';
 	  video.parentNode.insertBefore(iframe, video);
-	  // Add transparent overlay for mouse events
 	  let overlay = document.getElementById('youtube-mouse-overlay');
 	  if (!overlay) {
 		overlay = document.createElement('div');
@@ -958,40 +1090,13 @@ dropdowns.forEach((dropdown, idx) => {
 	  } else {
 		overlay.style.display = '';
 	  }
+	  ytInput.value = '';
 	} else {
-	  // If not a valid YouTube link, show the HTML5 video player and play button
 	  video.style.display = '';
 	  playBtn.style.display = '';
-	  // Remove overlay if present
 	  const overlay = document.getElementById('youtube-mouse-overlay');
 	  if (overlay) overlay.style.display = 'none';
 	}
-// Listen for 180-degree lock/unlock button to toggle overlay for YouTube
-document.addEventListener('DOMContentLoaded', function() {
-  const lookBtn = document.querySelector('.action--lookaround');
-  function updateOverlay() {
-	const overlay = document.getElementById('youtube-mouse-overlay');
-	const iframe = document.getElementById('youtube-iframe');
-	if (!iframe || !overlay) return;
-	// If lookBtn has class action--disabled, allow mouse to YouTube (hide overlay)
-	if (lookBtn && lookBtn.classList.contains('action--disabled')) {
-	  overlay.style.display = 'none';
-	} else {
-	  overlay.style.display = '';
-	}
-  }
-  if (lookBtn) {
-	lookBtn.addEventListener('click', function() {
-	  setTimeout(updateOverlay, 10);
-	});
-  }
-  // Also update overlay on dropdown change (in case of switching videos)
-  [document.getElementById('media-dropdown'), document.getElementById('media-dropdown-plan')].forEach(function(drop) {
-	if (drop) drop.addEventListener('change', function() {
-	  setTimeout(updateOverlay, 10);
-	});
-  });
-});
   });
 });
 // ...existing code...
@@ -1023,11 +1128,11 @@ if (!exitBtn) {
   exitBtn.style.position = 'absolute';
   exitBtn.style.top = '20px';
   exitBtn.style.left = '30px'; // Move to left corner
-  exitBtn.style.zIndex = '1000';
+  exitBtn.style.zIndex = '100';
   exitBtn.style.padding = '10px 20px';
   exitBtn.style.fontWeight = 'bold';
-  exitBtn.style.background = '#222';
-  exitBtn.style.color = '#fff';
+  exitBtn.style.background = 'white';
+  exitBtn.style.color = '#000';
   exitBtn.style.border = 'none';
   exitBtn.style.borderRadius = '6px';
   exitBtn.style.cursor = 'pointer';

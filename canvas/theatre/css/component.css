@@ -1,3 +1,26 @@
+@media screen and (max-width: 900px), screen and (max-height: 600px) {
+  #immersive-hide-btn,
+  #fullscreen-btn,
+  #wallfit-btn {
+    display: none !important;
+  }
+}
+/* Wall Fit mode: fill the entire theatre wall with video/iframe */
+.cube__side--back.wallfit-onthewall {
+  /* background: #000; */
+  overflow: hidden;
+  position: relative;
+}
+.wallfit-fill {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  z-index: 20 !important;
+}
 /* Hide navbar when .navbar-hidden is on body */
 body.navbar-hidden #navbar-container {
   display: none !important;
@@ -35,7 +58,7 @@ body.navbar-hidden #navbar-container {
 
 .cube__side--left,
 .cube__side--right {
-  background: #252525;
+  /* background: #252525; */
   width: 3000px;
   /* depth */
   height: 1000px;
@@ -71,7 +94,7 @@ body.navbar-hidden #navbar-container {
 }
 
 .cube__side--top {
-  background: #141414;
+  /* background: #141414; */
   -webkit-transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -3000px, 0);
   transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -3000px, 0);
   -webkit-transform-origin: 50% 0%;
@@ -449,18 +472,18 @@ body.navbar-hidden #navbar-container {
 .intro__up {
   display: block;
   font-size: 0.65em;
-  color: #393941;
+  color: white;
 }
 
 .intro__down {
   font-size: 1.5em;
   font-weight: 700;
-  color: #adadad;
+  color: white;
 }
 
 .intro__partial {
   font-size: 0.5em;
-  color: #63636F;
+  color: white;
 }
 
 .action {
