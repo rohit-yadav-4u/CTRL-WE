@@ -77,7 +77,7 @@
         panelImg.style.backgroundSize = 'cover';
         panelImg.style.backgroundPosition = 'center';
         panelInfo.querySelector('h2').textContent = title;
-        panelInfo.querySelector('.shop-panel-price').textContent = price.toString().startsWith('$') ? price : `$${price}`;
+        panelInfo.querySelector('.shop-panel-price').textContent = price.toString().startsWith('₹') ? price : `₹${price}`;
         // Show artist, size, dimensions dynamically
         const artist = box.dataset.artist || '';
         const size = box.dataset.size || '';
