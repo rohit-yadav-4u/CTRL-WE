@@ -4,75 +4,155 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalayatra Navbar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/demosearch.css" />
     <link rel="stylesheet" href="../css/componentsearch.css" />
-    <link href="http://fonts.googleapis.com/css?family=Raleway:100,700,800" rel="stylesheet" type="text/css" />
-    <style>
-      /* Tan color for active nav link */
-      #nav-links .active,
-      #mobile-bottom-navbar .active a {
-        color: #d2b48c !important;
-      }
-      #nav-links .active i,
-      #mobile-bottom-navbar .active i {
-        color: #d2b48c !important;
-      }
-    </style>
+    <link
+      href="http://fonts.googleapis.com/css?family=Raleway:100,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
   <body>
     <!-- Navbar reusable component -->
-    <nav id="main-navbar" >
+    <nav id="main-navbar">
       <div id="logo">
         <img src="../assets/logo/logopic.png" alt="Kalayatra" id="logo-img" />
-        <p id="logo-text" class="tricolor-text" style="font-family: 'Samarkan', cursive; font-size: 2.3rem; font-weight: 700; letter-spacing: 0.01em; text-transform: uppercase; margin: 0; display: flex; align-items: center;">Kalayatra</p>
+        <p
+          id="logo-text"
+          class="tricolor-text"
+          style="
+            font-family: Samarkan, cursive;
+            font-size: 2.3rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            margin: 0;
+            display: flex;
+            align-items: center;
+          "
+        >
+          Kalayatra
+        </p>
       </div>
       <div id="navbar-items">
         <ul id="nav-links">
-          <li><a href="/index.html" id="nav-home"><i class="fas fa-home"></i> HOME</a></li>
-          <li><a href="../canvas/canvasmain.html" id="nav-canvas"><i class="fas fa-brush"></i> Canvas</a></li>
-          <li><a href="/html/about_us.html" id="nav-about"><i class="fas fa-users"></i> About Us</a></li>
-          <li><a href="/html/shop.html" id="nav-shop"><i class="fas fa-store"></i> Shop</a></li>
+          <li>
+            <a href="/index.html" id="nav-home"
+              ><i class="fas fa-home"></i> HOME</a
+            >
+          </li>
+          <li>
+            <a href="/canvas/canvasmain.html" id="nav-canvas"
+              ><i class="fas fa-brush"></i> Canvas</a
+            >
+          </li>
+          <li>
+            <a href="/html/about_us.html" id="nav-about"
+              ><i class="fas fa-users"></i> About Us</a
+            >
+          </li>
+          <li>
+            <a href="/html/shop.html" id="nav-shop"
+              ><i class="fas fa-store"></i> Shop</a
+            >
+          </li>
         </ul>
       </div>
-      <div class="container-search" style="margin-left:2em;">
+      <div class="container-search" style="margin-left: 2em">
         <div id="morphsearch" class="morphsearch">
           <form class="morphsearch-form" id="navbar-search-form">
-            <input class="morphsearch-input" type="search" placeholder="Search..." id="navbar-search-input" />
+            <input
+              class="morphsearch-input"
+              type="search"
+              placeholder="Search..."
+              id="navbar-search-input"
+            />
             <button class="morphsearch-submit" type="submit">Search</button>
           </form>
           <div class="morphsearch-content">
             <div class="dummy-column">
               <h2>Popular Search</h2>
-              <a class="dummy-media-object search-link" data-search="Handicrafts" href="../html/searchresult.html">
-                <img class="round" src="../Images/Handicrafts/0004.avif" alt="Handicrafts" />
+              <a
+                class="dummy-media-object search-link"
+                data-search="Handicrafts"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Handicrafts/0004.avif"
+                  alt="Handicrafts"
+                />
                 <h3>Handicrafts</h3>
               </a>
-              <a class="dummy-media-object search-link" data-search="Oral Traditions" href="../html/searchresult.html">
-                <img class="round" src="../Images/Oral traditions and Storytelling/0024.webp" alt="Oral Traditions and Storytelling" />
+              <a
+                class="dummy-media-object search-link"
+                data-search="Oral Traditions"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Oral traditions and Storytelling/0024.webp"
+                  alt="Oral Traditions and Storytelling"
+                />
                 <h3>Oral Traditions</h3>
               </a>
             </div>
             <div class="dummy-column">
               <h2>Past Search</h2>
-              <a class="dummy-media-object search-link" data-search="Handicrafts" href="../html/searchresult.html">
-                <img class="round" src="../Images/Handicrafts/0004.avif" alt="Handicrafts" />
+              <a
+                class="dummy-media-object search-link"
+                data-search="Handicrafts"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Handicrafts/0004.avif"
+                  alt="Handicrafts"
+                />
                 <h3>Handicrafts</h3>
               </a>
-              <a class="dummy-media-object search-link" data-search="Oral Traditions" href="../html/searchresult.html">
-                <img class="round" src="../Images/Oral traditions and Storytelling/0024.webp" alt="Oral Traditions and Storytelling" />
+              <a
+                class="dummy-media-object search-link"
+                data-search="Oral Traditions"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Oral traditions and Storytelling/0024.webp"
+                  alt="Oral Traditions and Storytelling"
+                />
                 <h3>Oral Traditions</h3>
               </a>
             </div>
             <div class="dummy-column">
               <h2>Suggestions</h2>
-              <a class="dummy-media-object search-link" data-search="Handicrafts" href="../html/searchresult.html">
-                <img class="round" src="../Images/Handicrafts/0004.avif" alt="Handicrafts" />
+              <a
+                class="dummy-media-object search-link"
+                data-search="Handicrafts"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Handicrafts/0004.avif"
+                  alt="Handicrafts"
+                />
                 <h3>Handicrafts</h3>
               </a>
-              <a class="dummy-media-object search-link" data-search="Oral Traditions" href="../html/searchresult.html">
-                <img class="round" src="../Images/Oral traditions and Storytelling/0024.webp" alt="Oral Traditions and Storytelling" />
+              <a
+                class="dummy-media-object search-link"
+                data-search="Oral Traditions"
+                href="../html/searchresult.html"
+              >
+                <img
+                  class="round"
+                  src="../Images/Oral traditions and Storytelling/0024.webp"
+                  alt="Oral Traditions and Storytelling"
+                />
                 <h3>Oral Traditions</h3>
               </a>
             </div>
@@ -81,17 +161,39 @@
         </div>
       </div>
       <div class="desktop-login-btn" id="login-container">
-        <a href="/html/Login.html"><button id="login-btn" class="login-btn"><span class="login-btn-text">Login</span></button></a>
+        <a href="/html/Login.html"
+          ><button id="login-btn" class="login-btn">
+            <span class="login-btn-text">Login</span>
+          </button></a
+        >
       </div>
     </nav>
     <!-- Mobile Bottom Navbar -->
     <nav id="mobile-bottom-navbar">
       <ul>
-        <li id="mobile-home"><a href="/index.html"><i class="fas fa-home"></i><span>HOME</span></a></li>
-        <li id="mobile-canvas"><a href="../canvas/canvasmain.html"><i class="fas fa-brush"></i><span>CANVAS</span></a></li>
-        <li id="mobile-shop"><a href="/html/shop.html"><i class="fas fa-store"></i><span>SHOP</span></a></li>
-        <li id="mobile-about"><a href="/html/about_us.html"><i class="fas fa-users"></i><span>ABOUT US</span></a></li>
-        <li id="mobile-login"><a href="/html/Login.html"><i class="fas fa-user"></i><span>LOGIN</span></a></li>
+        <li id="mobile-home">
+          <a href="/index.html"><i class="fas fa-home"></i><span>HOME</span></a>
+        </li>
+        <li id="mobile-canvas">
+          <a href="../canvas/canvasmain.html"
+            ><i class="fas fa-brush"></i><span>CANVAS</span></a
+          >
+        </li>
+        <li id="mobile-shop">
+          <a href="/html/shop.html"
+            ><i class="fas fa-store"></i><span>SHOP</span></a
+          >
+        </li>
+        <li id="mobile-about">
+          <a href="/html/about_us.html"
+            ><i class="fas fa-users"></i><span>ABOUT US</span></a
+          >
+        </li>
+        <li id="mobile-login">
+          <a href="/html/Login.html"
+            ><i class="fas fa-user"></i><span>LOGIN</span></a
+          >
+        </li>
       </ul>
     </nav>
     <!-- External JS for all navbar logic -->
@@ -102,30 +204,40 @@
       function setActiveNav() {
         var path = window.location.pathname;
         // Desktop
-        document.querySelectorAll('#nav-links a').forEach(function(link) {
-          link.classList.remove('active');
+        document.querySelectorAll("#nav-links a").forEach(function (link) {
+          link.classList.remove("active");
         });
-        if (path.endsWith('/index.html') || path === '/' || path.endsWith('/')) {
-          document.getElementById('nav-home')?.classList.add('active');
-        } else if (path.endsWith('/about_us.html')) {
-          document.getElementById('nav-about')?.classList.add('active');
-        } else if (path.endsWith('/shop.html')) {
-          document.getElementById('nav-shop')?.classList.add('active');
-        } else if (path.includes('canvas')) {
-          document.getElementById('nav-canvas')?.classList.add('active');
+        if (
+          path.endsWith("/index.html") ||
+          path === "/" ||
+          path.endsWith("/")
+        ) {
+          document.getElementById("nav-home")?.classList.add("active");
+        } else if (path.endsWith("/about_us.html")) {
+          document.getElementById("nav-about")?.classList.add("active");
+        } else if (path.endsWith("/shop.html")) {
+          document.getElementById("nav-shop")?.classList.add("active");
+        } else if (path.includes("canvas")) {
+          document.getElementById("nav-canvas")?.classList.add("active");
         }
         // Mobile
-        document.querySelectorAll('#mobile-bottom-navbar li').forEach(function(li) {
-          li.classList.remove('active');
-        });
-        if (path.endsWith('/index.html') || path === '/' || path.endsWith('/')) {
-          document.getElementById('mobile-home')?.classList.add('active');
-        } else if (path.endsWith('/about_us.html')) {
-          document.getElementById('mobile-about')?.classList.add('active');
-        } else if (path.endsWith('/shop.html')) {
-          document.getElementById('mobile-shop')?.classList.add('active');
-        } else if (path.includes('canvas')) {
-          document.getElementById('mobile-canvas')?.classList.add('active');
+        document
+          .querySelectorAll("#mobile-bottom-navbar li")
+          .forEach(function (li) {
+            li.classList.remove("active");
+          });
+        if (
+          path.endsWith("/index.html") ||
+          path === "/" ||
+          path.endsWith("/")
+        ) {
+          document.getElementById("mobile-home")?.classList.add("active");
+        } else if (path.endsWith("/about_us.html")) {
+          document.getElementById("mobile-about")?.classList.add("active");
+        } else if (path.endsWith("/shop.html")) {
+          document.getElementById("mobile-shop")?.classList.add("active");
+        } else if (path.includes("canvas")) {
+          document.getElementById("mobile-canvas")?.classList.add("active");
         }
       }
       setActiveNav();
