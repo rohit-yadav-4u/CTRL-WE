@@ -13,6 +13,12 @@
 	<link rel="stylesheet" type="text/css" href="/canvas/css/dancemix.css">
 	<link rel="stylesheet" type="text/css" href="/canvas/css/folk.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<link rel="stylesheet" type="text/css" href="/canvas/css/canvasnavbar.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <script src="/canvas/js/canvasnavbar.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
 	<script>document.documentElement.className = "js";
 
 		var supportsCssVars = function supportsCssVars() {
@@ -25,7 +31,18 @@
 </head>
 
 <body class="demo-1 loading">
-	
+	  <div id="navbar-container"></div>
+    <script>
+      fetch('/canvas/html/canvasnavbar.html')
+        .then(response => response.text())
+        .then(html => {
+          // Add a wrapper class to ensure navbar styles always apply
+          const container = document.getElementById('navbar-container');
+          container.classList.add('ctrl-navbar');
+          const navMatches = html.match(/<nav[\s\S]*?<\/nav>/g);
+          container.innerHTML = navMatches ? navMatches.join('\n') : html;
+        });
+    </script>
 	<div class="frame"><!-- don't put fixed elements into the scroll container! -->
 		<div class="frame__demos">
 

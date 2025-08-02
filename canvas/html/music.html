@@ -11,7 +11,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
-
+  		<link rel="stylesheet" type="text/css" href="/canvas/css/canvasnavbar.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <script src="/canvas/js/canvasnavbar.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
   <link rel="stylesheet" type="text/css" href="/canvas/css/music.css" />
 
 
@@ -19,9 +24,24 @@
 </head>
 
 <body>
-
-
-  <h1 style="text-align: center;">Traditional Music</h1>
+<div id="navbar-container"></div>
+    <script>
+      fetch('/canvas/html/canvasnavbar.html')
+        .then(response => response.text())
+        .then(html => {
+          // Add a wrapper class to ensure navbar styles always apply
+          const container = document.getElementById('navbar-container');
+          container.classList.add('ctrl-navbar');
+          const navMatches = html.match(/<nav[\s\S]*?<\/nav>/g);
+          container.innerHTML = navMatches ? navMatches.join('\n') : html;
+        });
+    </script>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <h1 style="text-align: center; font-size: 2.5rem;font-family: 'Courier New', Courier, monospace;">Traditional Music</h1>
 
 
   <section class="trad-music">
