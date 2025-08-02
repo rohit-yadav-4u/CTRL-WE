@@ -19,7 +19,7 @@
 	</head>
 	<body>
   <div id="navbar-container"></div>
-  <button id="immersive-hide-btn" style="display:none;position:absolute;top:20px;left:30px;z-index:1002;" title="Hide seat preview & exit">Hide UI</button>
+  <button id="immersive-hide-btn" style="display:none;position:absolute;top:20px;left:30px;z-index:1002;" title="Show seat preview & controls">Show UI</button>
   <button id="fullscreen-btn" style="display:none;position:absolute;top:70px;left:30px;z-index:1002;font-weight:bold;font-family:monospace;background:#fff;color:#000;border:none;width:120px;border-radius:6px;padding:8px 18px;font-size:1.1rem;cursor:pointer;opacity:0.92;transition:background 0.2s, opacity 0.2s;box-shadow:0 2px 8px rgba(0,0,0,0.07);">Fullscreen</button>
   <button id="wallfit-btn" style="display:none;position:absolute;top:110px;left:30px;z-index:1002;font-weight:bold;font-family:monospace;background:#fff;color:#000;border:none;width:120px;border-radius:6px;padding:8px 18px;font-size:1.1rem;cursor:pointer;opacity:0.92;transition:background 0.2s, opacity 0.2s;box-shadow:0 2px 8px rgba(0,0,0,0.07);">Wall Fit</button>
 	<script>
@@ -36,11 +36,18 @@
 	  // Hide navbar when theater experience is active
 	  document.addEventListener('DOMContentLoaded', function() {
 		// Listen for seat selection
-		document.querySelectorAll('.action--seats, .row__seat').forEach(function(btn) {
-		  btn.addEventListener('click', function() {
-			document.body.classList.add('navbar-hidden');
-		  });
-		});
+  document.querySelectorAll('.action--seats, .row__seat').forEach(function(btn) {
+	btn.addEventListener('click', function() {
+	  document.body.classList.add('navbar-hidden');
+	  // Hide UI by default when entering theatre
+	  document.body.classList.add('immersive-hide');
+	  const hideBtn = document.getElementById('immersive-hide-btn');
+	  hideBtn.textContent = 'Show UI';
+	  hideBtn.title = 'Show seat preview & controls';
+	  hideBtn.style.display = '';
+	  updateHideBtnVisibility();
+	});
+  });
 		// If you have a true exit/close button for the theater, add a handler here to show the navbar again.
 		// Example:
 		// document.querySelector('.your-exit-button')?.addEventListener('click', function() {
@@ -81,30 +88,29 @@
 						<div class="droplist" style="margin-bottom:10px;">
   <label for="media-dropdown" style="font-weight:bold;">Choose Video: </label>
   <select id="media-dropdown">
-	<option value="sintel">Sintel</option>
+	<option value="sintel">Traditional_Arts</option>
 	  <option value="bharatnatyam_1">Bharatnatyam_1</option>
-		    <option value="mohiniyattam_1">Mohiniyattam_1</option>
+			<option value="mohiniyattam_1">Mohiniyattam_1</option>
 			  <option value="bharatnatyam_2">Bharatnatyam_2</option>
-			    <option value="mohiniyattam_2">Mohiniyattam_2</option>
+				<option value="mohiniyattam_2">Mohiniyattam_2</option>
 				  <option value="kathak_1">Kathak_1</option>
-				    <option value="kathak_2">Kathak_2</option>
+					<option value="kathak_2">Kathak_2</option>
 					  <option value="kathakali_1">kathakali_1</option>
-					    <option value="kathakali_2">kathakali_2</option>
+						<option value="kathakali_2">kathakali_2</option>
 						  <option value="manipuri_1">manipuri_1</option>
-						    <option value="manipuri_2">manipuri_2</option>
+							<option value="manipuri_2">manipuri_2</option>
 							  <option value="odissi_1">odissi_1</option>
-							    <option value="odissi_2">odissi_2</option>
+								<option value="odissi_2">odissi_2</option>
 								  <option value="kuchipudi_1">kuchipudi_1</option>
-								    <option value="kuchipudi_2">kuchipudi_2</option>
+									<option value="kuchipudi_2">kuchipudi_2</option>
 								  <option value="sattriya_1">sattriya_1</option>
 								   <option value="sattriya_2">sattriya_2</option>
-								   		   <option value="Bhangra">Bhangra</option>
+										   <option value="Bhangra">Bhangra</option>
 								   <option value="bihu_1">bihu_1</option>
 								   <option value="bihu_2">bihu_2</option>
 								   <option value="garba">garba</option>
 								   <option value="ghoomar">ghoomar</option>
 								   <option value="lavani">lavani</option>
-		  <option value="custom">Other (YouTube link below)</option>
 	<!-- Add more options as you add more media files -->
 	<option value="custom">Other (YouTube link below)</option>
   </select>
@@ -860,21 +866,21 @@
 	  <div class="droplist" style="margin-top:10px;">
 		<label for="media-dropdown-plan" style="font-weight:bold;">Choose Video: </label>
 		<select id="media-dropdown-plan">
-		  <option value="sintel">Sintel</option>
-		  <option value="bharatnatyam_1">Bharatnatyam_1</option>
-		    <option value="mohiniyattam_1">Mohiniyattam_1</option>
-			  <option value="bharatnatyam_2">Bharatnatyam_2</option>
-			    <option value="mohiniyattam_2">Mohiniyattam_2</option>
-				  <option value="kathak_1">Kathak_1</option>
-				    <option value="kathak_2">Kathak_2</option>
+		  <option value="sintel">Traditional_Arts</option>
+		  <option value="bharatnatyam_1">bharatnatyam_1</option>
+			<option value="mohiniyattam_1">mohiniyattam_1</option>
+			  <option value="bharatnatyam_2">bharatnatyam_2</option>
+				<option value="mohiniyattam_2">mohiniyattam_2</option>
+				  <option value="kathak_1">kathak_1</option>
+					<option value="kathak_2">kathak_2</option>
 					  <option value="kathakali_1">kathakali_1</option>
-					    <option value="kathakali_2">kathakali_2</option>
+						<option value="kathakali_2">kathakali_2</option>
 						  <option value="manipuri_1">manipuri_1</option>
-						    <option value="manipuri_2">manipuri_2</option>
+							<option value="manipuri_2">manipuri_2</option>
 							  <option value="odissi_1">odissi_1</option>
-							    <option value="odissi_2">odissi_2</option>
+								<option value="odissi_2">odissi_2</option>
 								  <option value="kuchipudi_1">kuchipudi_1</option>
-								    <option value="kuchipudi_2">kuchipudi_2</option>
+									<option value="kuchipudi_2">kuchipudi_2</option>
 								  <option value="sattriya_1">sattriya_1</option>
 								   <option value="sattriya_2">sattriya_2</option>
 								   <option value="Bhangra">Bhangra</option>
@@ -1033,15 +1039,14 @@ window.addEventListener('DOMContentLoaded', updateHideBtnVisibility);
 window.addEventListener('resize', updateHideBtnVisibility);
 const mediaMap = {
   sintel: {
-	mp4: 'media/sintel.mp4',
-	ogg: 'media/sintel.ogg',
-	img: 'media/sintel.jpg'
+	youtube: '4qUWCAnKjHQ',
+	img: 'media/trad.png'
   },
-  Bharatnatyam_1: {
+  bharatnatyam_1: {
 	mp4: 'media/001.mp4',
 	img: 'media/001.jpg'
   },
-  Bharatnatyam_2: {
+  bharatnatyam_2: {
 	mp4: 'media/002.mp4',
 	img: 'media/002.jpg'
   },
@@ -1146,6 +1151,7 @@ dropdowns.forEach((dropdown, idx) => {
   dropdown.addEventListener('change', function() {
 	const val = dropdown.value;
 	const oldIframe = document.getElementById('youtube-iframe');
+	const overlay = document.getElementById('youtube-mouse-overlay');
 	if (val === 'custom') {
 	  ytInput.style.display = 'inline-block';
 	  ytPlayBtn.style.display = 'inline-block';
@@ -1153,12 +1159,54 @@ dropdowns.forEach((dropdown, idx) => {
 	  playBtn.style.display = 'none';
 	  if (!video.paused) video.pause();
 	  if (oldIframe) oldIframe.remove();
+	  if (overlay) overlay.style.display = 'none';
+	} else if (val === 'sintel' && mediaMap.sintel.youtube) {
+	  ytInput.style.display = 'none';
+	  ytPlayBtn.style.display = 'none';
+	  video.style.display = 'none';
+	  playBtn.style.display = 'none';
+	  if (!video.paused) video.pause();
+	  if (oldIframe) oldIframe.remove();
+	  if (overlay) overlay.style.display = '';
+	  // Insert YouTube iframe for Sintel
+	  const iframe = document.createElement('iframe');
+	  iframe.id = 'youtube-iframe';
+	  iframe.style.width = '100%';
+	  iframe.style.height = '100%';
+	  iframe.style.position = 'absolute';
+	  iframe.style.top = '0';
+	  iframe.style.left = '0';
+	  iframe.style.zIndex = '2';
+	  iframe.src = `https://www.youtube.com/embed/${mediaMap.sintel.youtube}?autoplay=1&rel=0`;
+	  iframe.frameBorder = '0';
+	  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+	  iframe.allowFullscreen = true;
+	  video.parentNode.style.position = 'relative';
+	  video.parentNode.insertBefore(iframe, video);
+	  // Add overlay if not present
+	  let overlay2 = document.getElementById('youtube-mouse-overlay');
+	  if (!overlay2) {
+		overlay2 = document.createElement('div');
+		overlay2.id = 'youtube-mouse-overlay';
+		overlay2.style.position = 'absolute';
+		overlay2.style.top = '0';
+		overlay2.style.left = '0';
+		overlay2.style.width = '100%';
+		overlay2.style.height = '100%';
+		overlay2.style.zIndex = '3';
+		overlay2.style.background = 'transparent';
+		overlay2.style.pointerEvents = 'auto';
+		video.parentNode.insertBefore(overlay2, iframe);
+	  } else {
+		overlay2.style.display = '';
+	  }
 	} else {
 	  ytInput.style.display = 'none';
 	  ytPlayBtn.style.display = 'none';
 	  video.style.display = '';
 	  playBtn.style.display = '';
 	  if (oldIframe) oldIframe.remove();
+	  if (overlay) overlay.style.display = 'none';
 	  if (!video.paused) video.pause();
 	  video.currentTime = 0;
 	  if (mediaMap[val]) {
@@ -1229,9 +1277,52 @@ dropdowns.forEach((dropdown, idx) => {
 
 // Play button logic (ensure it plays video and hides itself)
 playBtn?.addEventListener('click', function() {
-  video.play();
-  playBtn.classList.remove('action--shown');
-  playBtn.classList.add('action--hidden');
+  const selectedVal = dropdowns[0]?.value || 'sintel';
+  const oldIframe = document.getElementById('youtube-iframe');
+  const overlay = document.getElementById('youtube-mouse-overlay');
+  if (selectedVal === 'sintel' && mediaMap.sintel.youtube) {
+	// Remove any existing iframe
+	if (oldIframe) oldIframe.remove();
+	if (overlay) overlay.style.display = '';
+	video.style.display = 'none';
+	playBtn.style.display = 'none';
+	// Insert YouTube iframe for Sintel
+	const iframe = document.createElement('iframe');
+	iframe.id = 'youtube-iframe';
+	iframe.style.width = '100%';
+	iframe.style.height = '100%';
+	iframe.style.position = 'absolute';
+	iframe.style.top = '0';
+	iframe.style.left = '0';
+	iframe.style.zIndex = '2';
+	iframe.src = `https://www.youtube.com/embed/${mediaMap.sintel.youtube}?autoplay=1&rel=0`;
+	iframe.frameBorder = '0';
+	iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+	iframe.allowFullscreen = true;
+	video.parentNode.style.position = 'relative';
+	video.parentNode.insertBefore(iframe, video);
+	// Add overlay if not present
+	let overlay2 = document.getElementById('youtube-mouse-overlay');
+	if (!overlay2) {
+	  overlay2 = document.createElement('div');
+	  overlay2.id = 'youtube-mouse-overlay';
+	  overlay2.style.position = 'absolute';
+	  overlay2.style.top = '0';
+	  overlay2.style.left = '0';
+	  overlay2.style.width = '100%';
+	  overlay2.style.height = '100%';
+	  overlay2.style.zIndex = '3';
+	  overlay2.style.background = 'transparent';
+	  overlay2.style.pointerEvents = 'auto';
+	  video.parentNode.insertBefore(overlay2, iframe);
+	} else {
+	  overlay2.style.display = '';
+	}
+  } else {
+	video.play();
+	playBtn.classList.remove('action--shown');
+	playBtn.classList.add('action--hidden');
+  }
 });
 
 // Show play button if video is paused (e.g. after switching media)
