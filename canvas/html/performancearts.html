@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Shapes Slideshow</title>
+		<title>Performance Arts - KalaYatra</title>
 		<link rel="stylesheet" type="text/css" href="/canvas/css/performancearts.css">
+		<link rel="stylesheet" type="text/css" href="/canvas/css/canvasnavbar.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 		<script>document.documentElement.className = "js";
 
 var supportsCssVars = function supportsCssVars() {
@@ -14,8 +16,27 @@ var supportsCssVars = function supportsCssVars() {
 };
 
 supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	</head>
+	   <script src="/canvas/js/canvasnavbar.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+
 	<body class="loading demo-1">
+  <div id="navbar-container"></div>
+    <script>
+      fetch('/canvas/html/canvasnavbar.html')
+        .then(response => response.text())
+        .then(html => {
+          // Add a wrapper class to ensure navbar styles always apply
+          const container = document.getElementById('navbar-container');
+          container.classList.add('ctrl-navbar');
+          const navMatches = html.match(/<nav[\s\S]*?<\/nav>/g);
+          container.innerHTML = navMatches ? navMatches.join('\n') : html;
+        });
+    </script>
+
+
 		<main>
 			<div class="frame">
 				

@@ -1,11 +1,19 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
 
+:root {
+	font-size: 18px;
+}
 
 body {
 	margin: 0;
 	--color-text: #d2b48c;
 	--color-bg: #e3e0d8;
-	--color-link: #ffffff;
-	--color-link-hover: #ffffff;
+	--color-link: #000000;
+	--color-link-hover: #000000;
 	--color-frame: #ff5ba4;
 	color: var(--color-text);
 	background-color: var(--color-bg);
