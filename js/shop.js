@@ -56,7 +56,7 @@
     return path.slice(1, -1);
   }
   function bindShopItemEffect() {
-    document.querySelectorAll('.shop-item').forEach(box => {
+    document.querySelectorAll('.shop-item:not(.product-of-day-horizontal)').forEach(box => {
       if (box._effectBound) return;
       box._effectBound = true;
       box.addEventListener('click', function(e) {

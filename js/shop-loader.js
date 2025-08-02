@@ -121,9 +121,12 @@ async function loadShopProducts() {
     <div class="shop-title">${pod.name}</div>
     <div class="shop-price">
       <span class="old-price">₹${(pod.price * 2).toFixed(2)}</span>
-      <span class="new-price">₹${pod.price}</span>
+      <span class="new-price">₹${pod.price}</span><br>
+      <button class="shop-panel-buy add-to-cart">Add to cart</button>
     </div>
   </div>
+  <div class="special-offer-badge">50% OFF</div>
+  <div class="pod-rating">⭐⭐⭐⭐☆</div>
 `;
 
       shopList.appendChild(podBanner);
