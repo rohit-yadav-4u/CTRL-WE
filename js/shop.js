@@ -168,18 +168,37 @@
       }
     });
   });
-  // Buy Now button in effect panel adds to cart
+  // Add to cart button in effect panel adds to cart
+  // document.querySelector('.shop-panel-buy').addEventListener('click', function() {
+  //   const title = panelInfo.querySelector('h2').textContent;
+  //   document.querySelectorAll('.shop-item').forEach(item => {
+  //     if (item.querySelector('.shop-title').textContent === title) {
+  //       item.querySelector('.add-to-cart').click();
+  //     }
+  //   });
+  //});
   document.querySelector('.shop-panel-buy').addEventListener('click', function() {
     const title = panelInfo.querySelector('h2').textContent;
-    document.querySelectorAll('.shop-item').forEach(item => {
-      if (item.querySelector('.shop-title').textContent === title) {
-        item.querySelector('.add-to-cart').click();
-      }
-    });
+    const priceText = panelInfo.querySelector('.shop-panel-price').textContent;
+    const price = parseFloat(priceText.replace(/[^\d.]/g, ''));
+    const imgUrl = panelImg.style.backgroundImage.slice(5, -2); // strip url("...")
+  
+    if (!title || isNaN(price)) return;
+  
+    let existing = cart.find(i => i.title.toLowerCase() === title.toLowerCase());
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({ title, price, img: imgUrl, qty: 1 });
+    }
+    updateCart();
   });
+
 })();
 // --- End effect-one logic ---
 // Cart logic and animation
+
+
 
 let cart = [];
 const cartPanel = document.querySelector('.cart-panel');
