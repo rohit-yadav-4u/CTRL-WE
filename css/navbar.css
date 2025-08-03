@@ -116,7 +116,8 @@ html {
 
 
 #main-navbar {
-box-sizing: border-box;
+
+    box-sizing: border-box;
 padding: 0 32px;
 display: flex;
 flex-direction: row;
@@ -324,6 +325,7 @@ height: 64px;
     margin-left: 0;
     margin-right: 0;
     transition: color 0.18s, box-shadow 0.18s;
+    background-color: tan;
 }
 #login-btn span {
     display: block;
