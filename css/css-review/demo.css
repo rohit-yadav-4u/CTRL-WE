@@ -1,0 +1,30 @@
+@import url('reset.css');
+
+/* General Demo Style */
+.reviews {
+	background: #e3e0d8 ;
+	color:#000;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	font-size:12px;
+	margin-bottom: 40px;
+}
+.reviews a{
+	color:#000;
+	text-decoration:none;
+}
+.reviews .clr{
+	clear:both;
+}
+.reviews h1, .reviews h5{
+	margin:15px;
+	font-size:5rem;
+	color:#000;
+	font-family: 'Rochester', sans-serif;
+	text-shadow:1px 1px 1px #fff;
+	text-align:center;
+}
+.reviews h1 span, .reviews h5{
+	font-size:2rem;
+	display:block;
+	color:#60817a;
+}

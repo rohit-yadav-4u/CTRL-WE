@@ -13,6 +13,7 @@
 	padding-left: 8px;
 	padding-right: 8px;
 	margin-bottom: 24px;
+	
   }
   .gallery {
 	flex-direction: column;
@@ -509,12 +510,25 @@ body {
 }
 
 .title {
-	margin-top: 0;
-	margin-bottom: 110px;
-	font-size: var(--fz-big);
-	text-transform: uppercase;
-	color: var(--pr-color);
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--pr-color);
 }
+
+/* For search result title split color */
+.search-title-label {
+  color: #fff;
+  font-size: 3.1em;
+  font-weight: 800;
+}
+.search-title-result {
+  color: #ffb347;
+  font-size: 3.1em;
+  font-weight: 800;
+}
+
 
 /* Image Gallery **********************************/
 .gallery {

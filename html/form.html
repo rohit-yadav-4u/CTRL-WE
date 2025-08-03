@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/css/footer.css">
+		<link rel="stylesheet" type="text/css" href="../css/css-form/form-normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/css-form/form-demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/css-form/form-component.css" />
+		<link rel="stylesheet" type="text/css" href="../css/css-form/cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="../css/css-form/cs-skin-boxes.css" />
+		<script src="../js/js-form/modernizr.custom.js"></script>
+	</head>
+	<body>
+		
+		<div class="container">
+
+			<div class="fs-form-wrap" id="fs-form-wrap">
+				<div class="fs-title">
+					<h1>Feedback Form</h1>
+					
+				</div>
+				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
+					<ol class="fs-fields">
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q1">What's your  good name?</label>
+							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="KalaYatra" required/>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
+							<input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="kalaYatra@gmail.com" required/>
+						</li>
+						<li data-input-trigger>
+							<label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us to improve our site">Please rate our website!</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input required id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">3 Stars</label></span>
+								<span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">2 Stars</label></span>
+								<span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">1 Star</label></span>
+							</div>
+						</li>
+						<li data-input-trigger>
+							<label class="fs-field-label fs-anim-upper" data-info="We'll make sure to use it next time">Choose another theme for our website.</label>
+<select class="cs-select cs-skin-boxes fs-anim-lower" required>
+	<option value="" disabled selected>Pick a color</option>
+	<option value="#1a1a1a" data-class="color-1a1a1a">#1a1a1a</option>
+	<option value="#343a40" data-class="color-343a40">#343a40</option>
+	<option value="#495057" data-class="color-495057">#495057</option>
+	<option value="#6c757d" data-class="color-6c757d">#6c757d</option>
+	<option value="#007bff" data-class="color-007bff">#007bff</option>
+	<option value="#6610f2" data-class="color-6610f2">#6610f2</option>
+	<option value="#6f42c1" data-class="color-6f42c1">#6f42c1</option>
+	<option value="#e83e8c" data-class="color-e83e8c">#e83e8c</option>
+	<option value="#dc3545" data-class="color-dc3545">#dc3545</option>
+	<option value="#fd7e14" data-class="color-fd7e14">#fd7e14</option>
+	<option value="#ffc107" data-class="color-ffc107">#ffc107</option>
+	<option value="#28a745" data-class="color-28a745">#28a745</option>
+	<option value="#20c997" data-class="color-20c997">#20c997</option>
+	<option value="#17a2b8" data-class="color-17a2b8">#17a2b8</option>
+	<option value="#f8f9fa" data-class="color-f8f9fa">#f8f9fa</option>
+	<option value="#e9ecef" data-class="color-e9ecef">#e9ecef</option>
+	<option value="#dee2e6" data-class="color-dee2e6">#dee2e6</option>
+	<option value="#ced4da" data-class="color-ced4da">#ced4da</option>
+	<option value="#adb5bd" data-class="color-adb5bd">#adb5bd</option>
+	<option value="#f1f3f5" data-class="color-f1f3f5">#f1f3f5</option>
+</select>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q4">Write your feedback</label>
+							<textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here" required></textarea>
+						</li>
+						
+					</ol><!-- /fs-fields -->
+<button class="fs-submit" type="submit">Submit</button>
+</form><!-- /fs-form -->
+
+<!-- Modal Tooltip -->
+<div id="thankyou-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);z-index:9999;justify-content:center;align-items:center;">
+  <div style="background:#fff;padding:2rem 2.5rem;border-radius:16px;box-shadow:0 4px 32px rgba(0,0,0,0.18);text-align:center;max-width:90vw;">
+	<div style="font-size:1.5rem;font-weight:600;margin-bottom:1.5rem;color:green;">Thanks for Your Suggestion</div>
+	<button id="thankyou-ok-btn" style="padding:0.5rem 2rem;font-size:1.1rem;background:#222;color:#fff;border:none;border-radius:8px;cursor:pointer;">OK</button>
+  </div>
+</div>
+					
+
+</div><!-- /fs-form-wrap -->
+
+			
+
+		</div><!-- /container -->
+
+		<section class="plain-footer">
+  <footer class="plain-footer__container">
+	<div class="plain-footer__top">
+	  <div class="plain-footer__logo">
+		<span class="plain-footer__logo-text"><h1 class="tricolor-text">kalayatra</h1></span>
+	  </div>
+	  <div class="plain-footer__columns">
+		<div class="plain-footer__column">
+		  <h4 class="plain-footer__heading">Visual Arts</h4>
+		  <a href="/canvas/html/visualarts.html" class="plain-footer__link">Introduction</a>
+		  <a href="/canvas/html/paintings.html" class="plain-footer__link">Paintings</a>
+		  <a href="#" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
+		  <a href="#" class="plain-footer__link" id="footer-sculptures-link">Sculptures & Stone</a>
+		  <a href="#" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
+		</div>
+		<div class="plain-footer__column">
+		  <h4 class="plain-footer__heading">Performing Arts</h4>
+		  <a href="/canvas/html/performancearts.html" class="plain-footer__link">Introduction</a>
+		  <a href="/canvas/html/classical.html" class="plain-footer__link">Classical Dances</a>
+		  <a href="/canvas/html/folk.html" class="plain-footer__link">Folk Dances</a>
+		  <a href="#" class="plain-footer__link">Theatre Experience</a>
+		</div>
+		<div class="plain-footer__column">
+		  <h4 class="plain-footer__heading">Traditional Music</h4>
+		  <a href="/canvas/html/music.html" class="plain-footer__link">Introduction</a>
+		  <a href="#" class="plain-footer__link">Veena</a>
+		  <a href="#" class="plain-footer__link">Sitar</a>
+		  <a href="#" class="plain-footer__link">Kartal</a>
+		  <a href="#" class="plain-footer__link">Bansuri</a>
+		  <a href="#" class="plain-footer__link">Dholak</a>
+		  <a href="#" class="plain-footer__link">Ravanahatha</a>
+		  <a href="#" class="plain-footer__link">Shehnai</a>
+		  <a href="#" class="plain-footer__link">Play Instrument</a>
+		</div>
+		<div class="plain-footer__column">
+		  <h4 class="plain-footer__heading">KalaYatra's </h4>
+		  <a href="/index.html#map1" class="plain-footer__link">Interactive Map</a>
+		  <a href="/index.html#book-preview" class="plain-footer__link">Book Preview</a>
+		  <a href="/index.html#feedback" class="plain-footer__link">Feedback</a>
+		  <a href="/index.html#reviews" class="plain-footer__link">Reviews & Suggestions</a>
+		  
+		</div>
+		<div class="plain-footer__column">
+		  <h4 class="plain-footer__heading">Handicrafts</h4>
+		  <a href="/canvas/html/handicrafts.html" class="plain-footer__link">Introduction</a>
+		  
+		</div>
+	  </div>
+	</div>
+	<div class="plain-footer__bottom">
+	  <div class="plain-footer__links">
+		<a href="#" class="plain-footer__bottom-link">Home</a>
+		<a href="/canvas/canvasmain.html" class="plain-footer__bottom-link">Canvas</a>
+		<a href="/html/about_us.html" class="plain-footer__bottom-link">About Us</a>
+		<a href="/html/shop.html" class="plain-footer__bottom-link">Shop</a>
+		<a href="/html/login" class="plain-footer__bottom-link">Login</a>
+		
+	  </div>
+	  <div class="plain-footer__copyright">
+		&copy; 2025 KalaYatra &bull; Made by Ctrl + We
+	  </div>
+	</div>
+  </footer>
+</section>
+
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-metal-arts-link');
+  if (metalArtsLink) {
+	metalArtsLink.addEventListener('click', function(e) {
+	  e.preventDefault();
+	  localStorage.setItem('searchQuery', 'Metal Art');
+	  window.location.href = '/html/searchresult.html';
+	});
+  }
+
+  // Modal tooltip logic for form submission
+  var form = document.getElementById('myform');
+  var modal = document.getElementById('thankyou-modal');
+  var okBtn = document.getElementById('thankyou-ok-btn');
+  if(form && modal && okBtn) {
+	form.addEventListener('submit', function(e) {
+	  e.preventDefault();
+	  modal.style.display = 'flex';
+	});
+	okBtn.addEventListener('click', function() {
+	  window.location.href = '/index.html';
+	});
+  }
+});
+</script>
+
+		<script src="../js/js-form/classie.js"></script>
+		<script src="../js/js-form/selectFx.js"></script>
+		<script src="../js/js-form/fullscreenForm.js"></script>
+		<script>
+			(function() {
+				var formWrap = document.getElementById( 'fs-form-wrap' );
+
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+					new SelectFx( el, {
+						stickyPlaceholder: false,
+						onChange: function(val){
+							document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+						}
+					});
+				} );
+
+				new FForm( formWrap, {
+					onReview : function() {
+						classie.add( document.body, 'overview' ); // for demo purposes only
+					}
+				} );
+			})();
+		</script>
+	</body>
+</html>

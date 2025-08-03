@@ -1,0 +1,212 @@
+/* Feedback Section */
+.feedback-section {
+  background: #e3e0d8;
+  padding: 48px 0 56px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.feedback-title h2 {
+  font-size: 5rem;
+  transform: translateY(100px) translateX(240px);
+  color: #000000;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: 'Rochester', sans-serif;
+}
+.feedback-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  max-width: 800px;
+  width: 100%;
+}
+.feedback-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.feedback-image img {
+	object-position: top center;
+	transform: scale(0.85) translateY(-50px);
+}
+.feedback-image img:hover {
+	transform: scale(1.2);
+}
+.feedback-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.6s cubic-bezier(.7,0,.2,1), filter 0.5s cubic-bezier(.7,0,.2,1);
+  transform: scale(1);
+}
+.feedback-image img:hover {
+  transform: scale(1.5) rotateZ(360deg);
+  filter: saturate(1.2) brightness(1.1)  contrast(1.2);
+}
+
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 350px;
+}
+.feedback-form p {
+  font-size: 1.4rem;
+  color: #64696a;
+  margin-bottom: 24px;
+  
+}
+
+.feedback-section .button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 1.5rem 3rem;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+	margin-top: 25px;
+}
+
+.feedback-section .button::before,
+.feedback-section .button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.content__item {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	counter-increment: itemcounter;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.content__item::before {
+	color: var(--color-number);
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: counters(itemcounter, ".", decimal-leading-zero);
+}
+
+
+
+.button--telesto {
+	overflow: hidden;
+	font-family: obvia, sans-serif;
+	font-weight: 800;
+	font-style: italic;
+	font-size: 1.15rem;
+	color: #fff;
+}
+
+.button--telesto span {
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+
+.button--telesto > span {
+	overflow: hidden;
+	mix-blend-mode: difference;
+}
+
+/* Smoother text slide animation */
+.button--telesto:hover > span > span {
+	animation: MoveRightInitial 0.18s cubic-bezier(0.7,0,0.2,1) forwards, MoveRightEnd 0.32s cubic-bezier(0.7,0,0.2,1) forwards 0.18s;
+}
+
+@keyframes MoveRightInitial {
+	to {
+		transform: translate3d(105%,0,0);
+	}
+}
+
+@keyframes MoveRightEnd {
+	from {
+		transform: translate3d(-100%,0,0);
+	}
+	to {
+		transform: translate3d(0,0,0);
+	}
+}
+
+.button--telesto::before,
+.button--telesto::after {
+	content: '';
+	background: #000;
+}
+
+.button--telesto::before {
+	width: 135%;
+	-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.32s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--telesto:hover::before {
+	transform: translate3d(0,0,0);
+}
+
+.button--telesto::after {
+	width: 105%;
+	transform: translate3d(100%,0,0);
+	transition: transform 0.32s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--telesto:hover::after {
+	transform: translate3d(0,0,0);
+}
+
+
+@media (max-width: 900px) {
+  .feedback-content {
+	flex-direction: column;
+	gap: 32px;
+	align-items: center;
+  }
+  .feedback-image img {
+	width: 90vw;
+	max-width: 320px;
+  }
+  .feedback-form {
+	max-width: 98vw;
+	align-items: center;
+  }
+}
+
+.string-box svg{
+			background-color: transparent;
+		}
+
+.string-box {
+	margin-top: -10px;
+	margin-bottom: -10px;
+}

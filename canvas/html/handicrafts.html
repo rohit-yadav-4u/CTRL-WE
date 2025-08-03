@@ -5,10 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Handicrafts</title>
         <link rel="stylesheet" type="text/css" href="/canvas/css/handicrafts.css">
+        <link rel="stylesheet" href="../../css/footer.css">
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
         		<link rel="stylesheet" type="text/css" href="/canvas/css/canvasnavbar.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
   <script src="/canvas/js/canvasnavbar.js"></script>
+  <style>
+    /* Entry animation for scroll-in effect */
+.scroll-animate {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(60px);
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), filter 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+    will-change: opacity, filter, transform;
+}
+.scroll-animate.in-view {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+</style>
     <style>
       body { margin: 0; }
     </style>
@@ -82,7 +98,7 @@
                         <div class="tiles__line-img" style="background-image:url(/canvas/img/handicrafts/Gamthi-BlockPrinting.jpg)"></div>
                     </div>
                 </div>
-                <h2 class="tiles__title tiles__title--intro" data-scroll="" data-scroll-speed="4">Art of <br>Handicraft</h2>
+                <h2 class="tiles__title tiles__title--intro scroll-animate" data-scroll="" data-scroll-speed="4">Art of <br>Handicraft</h2>
             </section>
             <section class="content">
                 <p class="content__text" data-scroll="" data-scroll-speed="2">
@@ -167,7 +183,113 @@
                    
                 </div>
             </section>
+
+                   <section class="plain-footer">
+  <footer class="plain-footer__container">
+    <div class="plain-footer__top">
+      <div class="plain-footer__logo">
+        <span class="plain-footer__logo-text"><h1 class="tricolor-text">kalayatra</h1></span>
+      </div>
+      <div class="plain-footer__columns">
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">Visual Arts</h4>
+          <a href="/canvas/html/visualarts.html" class="plain-footer__link">Introduction</a>
+          <a href="/canvas/html/paintings.html" class="plain-footer__link">Paintings</a>
+          <a href="#" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
+          <a href="#" class="plain-footer__link" id="footer-sculptures-link">Sculptures & Stone</a>
+          <a href="#" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
+        </div>
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">Performing Arts</h4>
+          <a href="/canvas/html/performancearts.html" class="plain-footer__link">Introduction</a>
+          <a href="/canvas/html/classical.html" class="plain-footer__link">Classical Dances</a>
+          <a href="/canvas/html/folk.html" class="plain-footer__link">Folk Dances</a>
+          <a href="#" class="plain-footer__link">Theatre Experience</a>
+        </div>
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">Traditional Music</h4>
+          <a href="/canvas/html/music.html" class="plain-footer__link">Introduction</a>
+          <a href="#" class="plain-footer__link">Veena</a>
+          <a href="#" class="plain-footer__link">Sitar</a>
+          <a href="#" class="plain-footer__link">Kartal</a>
+          <a href="#" class="plain-footer__link">Bansuri</a>
+          <a href="#" class="plain-footer__link">Dholak</a>
+          <a href="#" class="plain-footer__link">Ravanahatha</a>
+          <a href="#" class="plain-footer__link">Shehnai</a>
+          <a href="#" class="plain-footer__link">Play Instrument</a>
+        </div>
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">KalaYatra's </h4>
+          <a href="/index.html#map1" class="plain-footer__link">Interactive Map</a>
+          <a href="/index.html#book-preview" class="plain-footer__link">Book Preview</a>
+          <a href="/index.html#feedback" class="plain-footer__link">Feedback</a>
+          <a href="/index.html#reviews" class="plain-footer__link">Reviews & Suggestions</a>
+          
+        </div>
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">Handicrafts</h4>
+          <a href="/canvas/html/handicrafts.html" class="plain-footer__link">Introduction</a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="plain-footer__bottom">
+      <div class="plain-footer__links">
+        <a href="#" class="plain-footer__bottom-link">Home</a>
+        <a href="/canvas/canvasmain.html" class="plain-footer__bottom-link">Canvas</a>
+        <a href="/html/about_us.html" class="plain-footer__bottom-link">About Us</a>
+        <a href="/html/shop.html" class="plain-footer__bottom-link">Shop</a>
+        <a href="/html/login" class="plain-footer__bottom-link">Login</a>
+        
+      </div>
+      <div class="plain-footer__copyright">
+        &copy; 2025 KalaYatra &bull; Made by Ctrl + We
+      </div>
+    </div>
+  </footer>
+</section>
         </main>
+
+
+
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-metal-arts-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Metal Art');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
         <script src="/canvas/js/handicrafts.js"></script>
+
+        <script>
+            // Entry animation on scroll for .scroll-animate elements
+document.addEventListener('DOMContentLoaded', function() {
+  function inViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight - 60 &&
+      rect.bottom > 60
+    );
+  }
+  function checkScrollAnim() {
+    document.querySelectorAll('.scroll-animate').forEach(function(el) {
+      if (inViewport(el)) {
+        el.classList.add('in-view');
+      } else {
+        el.classList.remove('in-view');
+      }
+    });
+  }
+  checkScrollAnim();
+  window.addEventListener('scroll', checkScrollAnim);
+  window.addEventListener('resize', checkScrollAnim);
+});
+        </script>
     </body>
 </html>

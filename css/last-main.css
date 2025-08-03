@@ -1,0 +1,89 @@
+  .image-section {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.image-section {
+  height: 100vh;
+  position: relative;
+  background-image: url('../assets/other-main-img/bgw.png');
+  background-size: cover;
+  background-position: center;
+   overflow-x: hidden;
+}
+
+.text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  z-index: 0;
+}
+
+.reveal-text {
+  font-size: 6.6rem;
+  font-weight: 600;
+  letter-spacing: -0px;
+  font-family: 'poppins';
+  color: transparent;
+
+  -webkit-text-stroke: 3.5px #000;
+  text-stroke: 3.5px #000;
+  fill: transparent;
+  stroke: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Dynamic masking controlled by JS */
+  mask-image: linear-gradient(to right, black 0%, transparent 0%);
+  -webkit-mask-image: linear-gradient(to right, black 0%, transparent 0%);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+.reveal-text::after {
+  content: attr(data-text); /* duplicate text */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white; /* or any base color */
+  filter: blur(400px); /* blur only inside text */
+  z-index: -1; /* keeps stroke on top */
+}
+
+.moving-image {
+  position: absolute;
+  top: 50%;
+  left: -40%;
+  transform: translateY(-50%);
+  width: 1495px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+@media (max-width: 768px) {
+  .reveal-text {
+    font-size: 9vw;
+  }
+
+  .moving-image {
+    left: -40vw;
+    width: 120vw;
+  }
+}

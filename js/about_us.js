@@ -1,3 +1,25 @@
+// Entry animation on scroll for .scroll-animate elements
+document.addEventListener('DOMContentLoaded', function() {
+  function inViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight - 60 &&
+      rect.bottom > 60
+    );
+  }
+  function checkScrollAnim() {
+    document.querySelectorAll('.scroll-animate').forEach(function(el) {
+      if (inViewport(el)) {
+        el.classList.add('in-view');
+      } else {
+        el.classList.remove('in-view');
+      }
+    });
+  }
+  checkScrollAnim();
+  window.addEventListener('scroll', checkScrollAnim);
+  window.addEventListener('resize', checkScrollAnim);
+});
 function t(t) {
     return t && t.__esModule ? t.default : t;
 }

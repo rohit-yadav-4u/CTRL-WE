@@ -7,41 +7,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title></title>
 
-
+  <link rel="stylesheet" href="../../css/footer.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
-  		<link rel="stylesheet" type="text/css" href="/canvas/css/canvasnavbar.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/canvas/css/canvasnavbar.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
   <script src="/canvas/js/canvasnavbar.js"></script>
-    <style>
-      body { margin: 0; }
-    </style>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
   <link rel="stylesheet" type="text/css" href="/canvas/css/music.css" />
+  <style>
+    /* Entry animation for scroll-in effect */
+    .scroll-animate {
+      opacity: 0;
+      filter: blur(12px);
+      transform: translateY(60px);
+      transition: opacity 0.8s cubic-bezier(.4, 0, .2, 1), filter 0.8s cubic-bezier(.4, 0, .2, 1), transform 0.8s cubic-bezier(.4, 0, .2, 1);
+      will-change: opacity, filter, transform;
+    }
 
+    .scroll-animate.in-view {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+  </style>
 
 
 </head>
 
 <body>
-<div id="navbar-container"></div>
-    <script>
-      fetch('/canvas/html/canvasnavbar.html')
-        .then(response => response.text())
-        .then(html => {
-          // Add a wrapper class to ensure navbar styles always apply
-          const container = document.getElementById('navbar-container');
-          container.classList.add('ctrl-navbar');
-          const navMatches = html.match(/<nav[\s\S]*?<\/nav>/g);
-          container.innerHTML = navMatches ? navMatches.join('\n') : html;
-        });
-    </script>
-<br>
-<br>
-<br>
-<br>
-<br>
-  <h1 style="text-align: center; font-size: 2.5rem;font-family: 'Courier New', Courier, monospace;">Traditional Music</h1>
+  <div id="navbar-container"></div>
+  <script>
+    fetch('/canvas/html/canvasnavbar.html')
+      .then(response => response.text())
+      .then(html => {
+        // Add a wrapper class to ensure navbar styles always apply
+        const container = document.getElementById('navbar-container');
+        container.classList.add('ctrl-navbar');
+        const navMatches = html.match(/<nav[\s\S]*?<\/nav>/g);
+        container.innerHTML = navMatches ? navMatches.join('\n') : html;
+      });
+  </script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 class="scroll-animate"
+    style="text-align: center; font-size: 8rem; font-weight: 900; font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;">
+    Traditional Music</h1>
 
 
   <section class="trad-music">
@@ -235,14 +254,100 @@
   </section>
 
 
-  <div style="display:flex; justify-content: center; align-items: center; margin-top: 100px;">
-    <button><a href="/canvas/html/instruments.html">Explore More</a></button>
+
+
+  <div>
+    <li class="content__item scroll-animate">
+      <a href="/canvas/html/instruments.html"><button class="button button--hyperion"><span><span>Play the
+              Instruments</span></span></button></a>
+    </li>
   </div>
   </section>
 
-				
+  <section class="plain-footer scroll-animate">
+    <footer class="plain-footer__container">
+      <div class="plain-footer__top">
+        <div class="plain-footer__logo">
+          <span class="plain-footer__logo-text">
+            <h1 class="tricolor-text">kalayatra</h1>
+          </span>
+        </div>
+        <div class="plain-footer__columns">
+          <div class="plain-footer__column">
+            <h4 class="plain-footer__heading">Visual Arts</h4>
+            <a href="/canvas/html/visualarts.html" class="plain-footer__link">Introduction</a>
+            <a href="/canvas/html/paintings.html" class="plain-footer__link">Paintings</a>
+            <a href="#" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
+            <a href="#" class="plain-footer__link" id="footer-sculptures-link">Sculptures & Stone</a>
+            <a href="#" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
+          </div>
+          <div class="plain-footer__column">
+            <h4 class="plain-footer__heading">Performing Arts</h4>
+            <a href="/canvas/html/performancearts.html" class="plain-footer__link">Introduction</a>
+            <a href="/canvas/html/classical.html" class="plain-footer__link">Classical Dances</a>
+            <a href="/canvas/html/folk.html" class="plain-footer__link">Folk Dances</a>
+            <a href="#" class="plain-footer__link">Theatre Experience</a>
+          </div>
+          <div class="plain-footer__column">
+            <h4 class="plain-footer__heading">Traditional Music</h4>
+            <a href="/canvas/html/music.html" class="plain-footer__link">Introduction</a>
+            <a href="#" class="plain-footer__link">Veena</a>
+            <a href="#" class="plain-footer__link">Sitar</a>
+            <a href="#" class="plain-footer__link">Kartal</a>
+            <a href="#" class="plain-footer__link">Bansuri</a>
+            <a href="#" class="plain-footer__link">Dholak</a>
+            <a href="#" class="plain-footer__link">Ravanahatha</a>
+            <a href="#" class="plain-footer__link">Shehnai</a>
+            <a href="#" class="plain-footer__link">Play Instrument</a>
+          </div>
+          <div class="plain-footer__column">
+            <h4 class="plain-footer__heading">KalaYatra's </h4>
+            <a href="/index.html#map1" class="plain-footer__link">Interactive Map</a>
+            <a href="/index.html#book-preview" class="plain-footer__link">Book Preview</a>
+            <a href="/index.html#feedback" class="plain-footer__link">Feedback</a>
+            <a href="/index.html#reviews" class="plain-footer__link">Reviews & Suggestions</a>
 
-          <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+          </div>
+          <div class="plain-footer__column">
+            <h4 class="plain-footer__heading">Handicrafts</h4>
+            <a href="/canvas/html/handicrafts.html" class="plain-footer__link">Introduction</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="plain-footer__bottom">
+        <div class="plain-footer__links">
+          <a href="#" class="plain-footer__bottom-link">Home</a>
+          <a href="/canvas/canvasmain.html" class="plain-footer__bottom-link">Canvas</a>
+          <a href="/html/about_us.html" class="plain-footer__bottom-link">About Us</a>
+          <a href="/html/shop.html" class="plain-footer__bottom-link">Shop</a>
+          <a href="/html/login" class="plain-footer__bottom-link">Login</a>
+
+        </div>
+        <div class="plain-footer__copyright">
+          &copy; 2025 KalaYatra &bull; Made by Ctrl + We
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script>
+    // Footer Metal Arts link: open search result with correct query
+    document.addEventListener('DOMContentLoaded', function () {
+      var metalArtsLink = document.getElementById('footer-metal-arts-link');
+      if (metalArtsLink) {
+        metalArtsLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          localStorage.setItem('searchQuery', 'Metal Art');
+          window.location.href = '/html/searchresult.html';
+        });
+      }
+    });
+  </script>
+
+
+
+  <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
@@ -254,6 +359,32 @@
 
 
   <script src="/canvas/js/music.js"></script>
+
+
+  <script>
+    // Entry animation on scroll for .scroll-animate elements
+    document.addEventListener('DOMContentLoaded', function () {
+      function inViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top < window.innerHeight - 60 &&
+          rect.bottom > 60
+        );
+      }
+      function checkScrollAnim() {
+        document.querySelectorAll('.scroll-animate').forEach(function (el) {
+          if (inViewport(el)) {
+            el.classList.add('in-view');
+          } else {
+            el.classList.remove('in-view');
+          }
+        });
+      }
+      checkScrollAnim();
+      window.addEventListener('scroll', checkScrollAnim);
+      window.addEventListener('resize', checkScrollAnim);
+    });
+  </script>
 
 
 

@@ -206,6 +206,7 @@ a.frame__demo--current:hover {
 	padding: 0 10vw;
 	cursor: default;
 	width: 100%;
+
 }
 
 .slides__caption-headline {
@@ -222,12 +223,15 @@ a.frame__demo--current:hover {
 	overflow: hidden;
 	display: block;
 	white-space: nowrap;
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif !important;
+	font-weight: 800 !important;
 }
 
 .text-row > span {
 	display: block;
 	position: relative;
 	padding: 0.5rem 0;
+	font-family: 'poppins' !important;
 }
 
 .slides__caption-headline {
@@ -254,9 +258,11 @@ a.frame__demo--current:hover {
 	display: inline-block;
 	margin-top: 1rem;
 	text-indent: 0.2vw;
-	font-size: 1.75rem;
-	font-weight: 300;
+	font-size: 2rem !important;
+	font-weight: 700 !important;
 	font-size: clamp(1rem, 5vw, 1.75rem);
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif !important;
+	
 }
 
 .slides-nav {

@@ -10,8 +10,8 @@ body {
 }
 
 .project__title-line {
-	font-family: scotch-display, serif;
-	font-weight: 400;
+	font-family: 'poppins';
+	font-weight: 700;
 	font-style: normal;
 	font-size: 7.4rem;
 	animation: float 3s ease-in-out infinite;
@@ -74,6 +74,24 @@ body {
 	align-items: center;
 	margin: 1rem auto;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.project__label.project__label--default {
+	font-family: 'Rochester', sans-serif !important;
+	font-weight: 400 !important;
+	font-size: 8rem !important;
+}
+
+.paintings-title {
+	font-family: 'poppins'!important;
+	font-weight: 600 !important;
+	font-size: 5rem !important;
+}
+
+.dance-title {
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif !important;
+	font-weight: 700 !important;
+	font-size: 5rem !important;
 }
 
 .projectn a:hover {
@@ -215,13 +233,6 @@ body {
 	display: flex;
 }
 
-/*.project p {
-	line-height: 1.4;
-	margin: 0;
-	color: var(--color-text-alt);
-	text-align: center;
-	font-size: 2rem;
-}*/
 
 .project__label {
 	color: var(--color-label);
@@ -368,7 +379,8 @@ body {
 }
 
 .caption {
-	font-size: clamp(1rem, 3vw, 2.5rem);
+
+	font-size: clamp(1rem, 4vw, 2.5rem);
 	z-index: 101;
 	color: var(--color-caption);
 	font-weight: 400;
