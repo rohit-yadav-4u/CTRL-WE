@@ -1,0 +1,144 @@
+/* What We Offer Section */
+.offers-section {
+    width: 100vw;
+    background: #d87c3a;
+    padding: 40px 0 20px 0;
+    margin-top: -60px; /* shift upward */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.offers-center-title {
+    margin-bottom: 32px;
+    text-align: center;
+}
+.offers-center-title h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #1a3c4a;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.offer-box {
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    font-family: inherit;
+    transition: box-shadow 0.2s;
+}
+.offer-box:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+}
+
+/* Unique colored outlines for each box */
+.offer-instrument { border-image: linear-gradient(90deg, #2ecc40, #1abc9c) 1; }
+.offer-cinema { border-image: linear-gradient(90deg, #3498db, #2eccfa) 1; }
+.offer-book { border-image: linear-gradient(90deg, #2eccfa, #2ecc40) 1; }
+.offer-map { border-image: linear-gradient(90deg, #2eccfa, #3498db) 1; }
+
+.offer-icon {
+    font-size: 2.8rem;
+    margin-bottom: 18px;
+    color: #2ecc40;
+    background: linear-gradient(90deg, #2ecc40, #2eccfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.offer-cinema .offer-icon { color: #3498db; background: linear-gradient(90deg, #3498db, #2eccfa); }
+.offer-book .offer-icon { color: #2eccfa; background: linear-gradient(90deg, #2eccfa, #2ecc40); }
+.offer-map .offer-icon { color: #3498db; background: linear-gradient(90deg, #3498db, #2eccfa); }
+
+.offer-box h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1a3c4a;
+    text-align: center;
+}
+.offer-box p {
+    font-size: 1.05rem;
+    color: #444;
+    text-align: center;
+    margin-bottom: 22px;
+}
+.offer-btn {
+    display: inline-block;
+    padding: 8px 28px;
+    background: linear-gradient(90deg, #2ecc40, #2eccfa);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(46,204,64,0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: auto;
+}
+.offer-btn:hover {
+    background: linear-gradient(90deg, #2eccfa, #2ecc40);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(46,204,64,0.18);
+}
+
+.rounded-tl {
+    border-top-left-radius: 40px;
+}
+.rounded-tr {
+    border-top-right-radius: 40px;
+}
+.rounded-bl {
+    border-bottom-left-radius: 40px;
+}
+.rounded-br {
+    border-bottom-right-radius: 40px;
+}
+
+.offers-desc {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 1.15rem;
+    color: #222;
+}
+
+@media (max-width: 900px) {
+    .offers-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 28px;
+    }
+    .offer-box {
+        min-width: 260px;
+        max-width: 98vw;
+    }
+}
+.offer-bg {
+    background-image: url('../assets/images-offer/offer2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+}
+
+
+

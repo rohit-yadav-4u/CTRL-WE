@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Gallery Image</title>
-	<link rel="icon" href="img/icon.jpg" type="icon/x-icon">
+    <link rel="icon" type="image/png" href="/assets/logo/logopic.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
@@ -105,7 +105,7 @@
 			gallery.innerHTML = results.map(img => `
 				<li class="gallery__item" data-fancybox="gallery" data-src="../${img.src}">
 					<img src="../${img.src}" alt="${img.title || img.category || ''}" class="gallery__img">
-					<span class="zoom">zoom</span>
+					<span class="zoom">Reveal</span>
 				</li>
 			`).join('');
 			Fancybox.bind('[data-fancybox="gallery"]', {

@@ -157,6 +157,7 @@ main {
 	font-weight: 400;
 	max-width: 800px;
 	will-change: transform;
+	color: #000 !important;
 }
 
 .content__text {

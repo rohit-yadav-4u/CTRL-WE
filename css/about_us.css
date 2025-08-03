@@ -1,3 +1,4 @@
+
 *,
 :after,
 :before {
@@ -369,7 +370,8 @@ a:focus-visible {
     --color-link: #988c6c;
     --color-link-hover: #fff;
     background: #000;
-    position: relative
+    position: relative;
+    
 }
 
 .credits {
@@ -377,7 +379,8 @@ a:focus-visible {
     padding: 10vh 0;
     font-family: scotch-display, serif;
     font-size: max(1.75rem, min(3vw, 3rem));
-    font-weight: 400
+    font-weight: 400;
+    margin-bottom: 0px !important;
 }
 
 .image-clip {

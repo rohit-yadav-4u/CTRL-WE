@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Instruments</title>
+		
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:700|Arapey" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="cssd/normalize.css">
+		
+		<link rel="stylesheet" type="text/css" href="cssd/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/instruments.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- polyfills -->
+		<script src="js/inc/shim/Base64.js" type="text/javascript"></script>
+		<script src="js/inc/shim/Base64binary.js" type="text/javascript"></script>
+		<script src="js/inc/shim/WebAudioAPI.js" type="text/javascript"></script>
+		<!-- midi.js package -->
+		<script src="js/midi/audioDetect.js" type="text/javascript"></script>
+		<script src="js/midi/gm.js" type="text/javascript"></script>
+		<script src="js/midi/loader.js" type="text/javascript"></script>
+		<script src="js/midi/plugin.audiotag.js" type="text/javascript"></script>
+		<script src="js/midi/plugin.webaudio.js" type="text/javascript"></script>
+		<script src="js/midi/plugin.webmidi.js" type="text/javascript"></script>
+		<!-- utils -->
+		<script src="js/util/dom_request_xhr.js" type="text/javascript"></script>
+
+	
+		<script>document.documentElement.className = 'js';</script>
+	</head>
+	<body class="loading">
+		
+		<main>
+			<section class="intro flexy flexy--center">
+				
+				<h1 class="intro__title">Piano</h1>
+				<p>press alpha-numeric keys to play piano</p>
+				
+				<div class="interaction"></div>
+			</section>
+<section class="content content--instrument content--piano">
+				<div class="piano instrument">
+					<svg class="piano__inner" xmlns:note="" viewBox="0 0 2080 200" preserveAspectRatio="none">
+						<g class="piano__keys piano__keys--natural">
+							<rect note:id="0" x="0" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="2" x="40" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="3" x="80" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="5" x="120" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="7" x="160" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="8" x="200" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="10" x="240" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="12" x="280" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="14" x="320" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="15" x="360" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="17" x="400" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="19" x="440" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="20" x="480" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="22" x="520" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="24" x="560" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="26" x="600" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="27" x="640" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="29" x="680" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="31" x="720" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="32" x="760" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="34" x="800" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="36" x="840" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="38" x="880" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="39" x="920" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="41" x="960" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="43" x="1000" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="44" x="1040" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="46" x="1080" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="48" x="1120" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="50" x="1160" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="51" x="1200" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="53" x="1240" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="55" x="1280" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="56" x="1320" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="58" x="1360" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="60" x="1400" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="62" x="1440" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="63" x="1480" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="65" x="1520" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="67" x="1560" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="68" x="1600" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="70" x="1640" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="72" x="1680" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="74" x="1720" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="75" x="1760" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="77" x="1800" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="79" x="1840" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="80" x="1880" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="82" x="1920" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="84" x="1960" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="86" x="2000" class="piano__key piano__key--natural" width="40" height="200"/>
+							<rect note:id="87" x="2040" class="piano__key piano__key--natural" width="40" height="200"/>
+						</g>
+						<g class="piano__keys piano__keys--flat">
+							<rect note:id="1" x="30" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="4" x="110" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="6" x="150" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="9" x="230" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="11" x="270" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="13" x="310" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="16" x="390" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="18" x="430" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="21" x="510" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="23" x="550" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="25" x="590" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="28" x="670" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="30" x="710" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="33" x="790" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="35" x="830" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="37" x="870" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="40" x="950" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="42" x="990" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="45" x="1070" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="47" x="1110" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="49" x="1150" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="52" x="1230" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="54" x="1270" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="57" x="1350" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="59" x="1390" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="61" x="1430" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="64" x="1510" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="66" x="1550" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="69" x="1630" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="71" x="1670" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="73" x="1710" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="76" x="1790" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="78" x="1830" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="81" x="1910" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="83" x="1950" class="piano__key piano__key--flat" width="20" height="130"/>
+							<rect note:id="85" x="1990" class="piano__key piano__key--flat" width="20" height="130"/>
+						</g>
+					</svg>
+				</div><!-- piano -->
+			</section>
+
+<section class="content content--related ">
+				<div class="chime chime--tiny instrument">
+					<svg class="chime__inner" width="80px" height="80px" xmlns:note="http://tympanus.net/codrops" viewBox="0 0 100 100">
+						<g class="chime__pipe-wrap">
+							<path class="chime__string" d="M24.8,9.2v8.4"/>
+							<path note:id="62" class="chime__pipe" d="M22.5,95V17.7H27V95H22.5z"/>
+						</g>
+						<g class="chime__pipe-wrap">
+							<path class="chime__string" d="M37.2,9.2v8.4"/>
+							<path note:id="65" class="chime__pipe" d="M34.9,82.1V17.7h4.5v64.4H34.9z"/>
+						</g>
+						<g class="chime__pipe-wrap">
+							<path class="chime__string" d="M49.5,9.2v8.4"/>
+							<path note:id="67" class="chime__pipe" d="M47.3,69.9V17.7h4.5v52.2H47.3z"/>
+						</g>
+						<g class="chime__pipe-wrap">
+							<path class="chime__string" d="M61.9,9.2v8.4"/>
+							<path note:id="69" class="chime__pipe" d="M59.7,59.9V17.7h4.5v42.3H59.7z"/>
+						</g>
+						<g class="chime__pipe-wrap">
+							<path class="chime__string" d="M74.3,9.2v8.4"/>
+							<path note:id="74" class="chime__pipe" d="M72,49.1V17.7h4.5v31.4H72z"/>
+						</g>
+						<path class="chime__holder" d="M82.9,9.5H17.1V5h65.7V9.5z"/>
+					</svg>
+				</div>
+				
+			</section>
+
+			<section id="wavebg" class="content content--highlight flexy flexy--center">
+				<p class="content__highlight">Music is the language of the soul &mdash; a sacred bridge which connects the heart and the divine.<br><span class="tiny">&mdash;KalaYatra</span></p>
+			</section>
+			
+<section class="content content--instrument content--guitar">
+				<div class="content__inner content__inner--medium flexy flexy--center">
+					<h2 class="content__title">Guitars</h2>
+				
+					
+				</div>
+				<div class="guitar instrument">
+					<svg class="guitar__inner" preserveAspectRatio="xMinYMax meet" xmlns:note="http://tympanus.net/codrops" viewBox="0 0 1440 780">
+						<path class="guitar__body" d="M-130.9,612.4c0-280,106.5-487.9,356.5-487.9c250,0,347.8,167.6,428.3,167.6c80.4,0,223.9-72.1,350-17
+						c126.1,55.2,132.6,275.8,132.6,333.1c0,57.3-6.5,277.9-132.6,333.1c-126.1,55.2-269.6-17-350-17c-80.4,0-178.3,167.6-428.3,167.6
+						C-24.4,1091.8-130.9,892.4-130.9,612.4z" />
+						<path class="guitar__middle" d="M575.7,608.1c0,79.1,64.5,143.6,143.6,143.6c79.1,0,143.6-64.5,143.6-143.6c0-79.1-64.5-143.6-143.6-143.6
+						C640.2,464.5,575.7,529,575.7,608.1z" />
+						<path class="guitar__neck" d="M842.7,671.9V544.3h1087.6v127.6H842.7z" />
+						<path class="guitar__stringcut" d="M223.3,487.6v249.1c0,71.5-32.3,33.9-38.7,72.9h-15.6c-7.5,0-13.6-5.4-13.6-12V427.3c0-6.6,6.1-12,13.6-12h15.6
+						C191,454.3,223.3,417,223.3,487.6z" />
+						<g class="guitar__string-wrap">
+							<rect class="guitar__string-hover" note:id="19" x="184.5" y="547.6" width="1740.7" height="13.2">
+							</rect>
+							<line class="guitar__string" x1="1925.2" y1="554.2" x2="183.6" y2="554.2" />
+						</g>
+						<g class="guitar__string-wrap">
+							<rect class="guitar__string-hover" note:id="24" x="184.5" y="569.3" width="1740.7" height="13.2">
+							</rect>
+							<line class="guitar__string" x1="1925.2" y1="575.9" x2="183.6" y2="575.8" />
+						</g>
+						<g class="guitar__string-wrap">
+							<rect class="guitar__string-hover" note:id="29" x="184.5" y="590.5" width="1740.7" height="13.2">
+							</rect>
+							<line class="guitar__string" x1="1925.2" y1="597.5" x2="183.6" y2="597.4" />
+						</g>
+						<g class="guitar__string-wrap">
+							<rect class="guitar__string-hover" note:id="34" x="184.5" y="612.5" width="1740.7" height="13.2">
+							</rect>
+							<line class="guitar__string" x1="1925.2" y1="619.1" x2="183.6" y2="619" />
+						</g>
+						<g class="guitar__string-wrap">
+							<rect class="guitar__string-hover" note:id="38" x="184.5" y="634.1" width="1740.7" height="13.2">
+							</rect>
+							<line class="guitar__string" x1="1925.2" y1="640.7" x2="183.6" y2="640.6" />
+						</g>
+						<g class="guitar__string-wrap">
+							<rect class="guitar__string-hover" note:id="43" x="184.5" y="655.7" width="1740.7" height="13.2">
+							</rect>
+							<line class="guitar__string" x1="1925.2" y1="662.3" x2="183.6" y2="662.2" />
+						</g>
+					</svg>
+				</div><!-- /guitar -->
+
+			</section>
+
+
+
+
+<section class="content content--instrument content--instrument-alt content--kalimba flexy">
+				<div class="content__inner content__inner--medium flexy flexy--center">
+					<h2 class="content__title">Kalimbas</h2>
+					
+					
+				</div>
+				<div class="kalimba instrument">
+					<svg class="kalimba__inner" xmlns:note="http://tympanus.net/codrops" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMin meet">
+						<path note:id="51" class="kalimba__tine" d="M217.4,438.8c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V438.8z"/>
+						<path note:id="48" class="kalimba__tine" d="M350.5,503c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V503z"/>
+						<path note:id="44" class="kalimba__tine" d="M483.2,567.2c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V567.2z"/>
+						<path note:id="41" class="kalimba__tine" d="M616.4,631.5c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V631.5z"/>
+						<path note:id="39" class="kalimba__tine" d="M749.1,681.1c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V681.1z"/>
+						<path note:id="43" class="kalimba__tine" d="M882.6,590.4c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V590.4z"/>
+						<path note:id="46" class="kalimba__tine" d="M1015.4,517.3c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V517.3z"/>
+						<path note:id="50" class="kalimba__tine" d="M1148.5,462c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V462z"/>
+					</svg>
+				</div><!-- /kalimba -->
+
+			</section>
+
+			
+
+<section class="drumm">
+	<div style="padding-top:100px;" class="content__inner content__inner--medium flexy flexy--center">
+					<h2 class="content__title"  >Drum</h2>
+					<p>Press num keys to play</p>
+					
+					
+				</div>
+		<div class="container seq">
+			
+			<div class="content" style="padding:0px;">
+				<div id="container-sequencer" class="container-sequencer collapse">
+					<div id="sequencer" class="sequencer">
+						<div class="row" data-target-drum="crash">
+							<img src="img/crash.png" alt="Crash">
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+						</div>
+						<div class="row" data-target-drum="hiHat">
+							<img src="img/hi-hat.png" alt="Hi hat">
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+						</div>
+						<div class="row" data-target-drum="snare">
+							<img src="img/snare.png" alt="Snare">
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+						</div>
+						<div class="row" data-target-drum="rightTom">
+							<img src="img/right-tom.png" alt="Right tom">
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+						</div>
+						<div class="row" data-target-drum="leftTom">
+							<img src="img/left-tom.png" alt="Left tom">
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+						</div>
+						<div class="row" data-target-drum="floorTom">
+							<img src="img/floor-tom.png" alt="Floor tom">
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+						</div>
+						<div class="row" data-target-drum="kick">
+							<img src="img/kick.png" alt="Kick">
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+							<label><input type="checkbox"><span></span></label>
+						</div>
+						<div class="sequencer-controls">
+							<button id="sequencer-active-btn" class="btn" aria-label="Play"><i class="fa fa-play"></i></button>
+							<div class="sequencer-controls-tempo">
+								<button id="bpm-decrease-btn" class="btn" aria-label="Decrease bpm"><i class="fa fa-minus"></i></button>
+								<input id="bpm-indicator" type="number" min="100" max="300" size="3" value="150" readonly>
+								<button id="bpm-increase-btn" class="btn" aria-label="Iecrease bpm"><i class="fa fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="container-drums" class="container-drums">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 790" preserveAspectRatio="xMidYMid meet">
+						<g id="Drums">
+							<path id="Drum-Shadow" d="M999.77,656.9c0,36.16-223.73,65.48-499.77,65.48S0.23,693.06.23,656.9,224,591.42,500,591.42,999.77,620.65,999.77,656.9Z" transform="translate(-0.23)" fill="#b0bcc5"/>
+							<g id="Snare">
+								<g id="Snare-Drum">
+									<path d="M655.47,320.79H843.88v92.94H655.47V320.79Z" transform="translate(-0.23)" fill="#eb495d" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+									<path d="M840.5,345.29H658.84" transform="translate(-0.23)" fill="none" stroke="#e61c35" stroke-miterlimit="10" stroke-width="8"/>
+									<g>
+										<path d="M662.22,375.71a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,1,1,13.52,0v16.9Zm188.42,0a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,1,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M718,393.45v-11m0-30.42v-11" transform="translate(-0.23)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+										<path d="M724.75,375.71a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<g>
+											<path d="M781.36,393.45v-11m0-30.42v-11" transform="translate(-0.23)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M788.12,375.71a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										</g>
+									</g>
+									<path d="M647,320.79H850.64v17.74H647V320.79Zm0,75.2H850.64v17.74H647V396Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+									<path d="M650.4,333.46H847.26M650.4,408.66H847.26" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+								</g>
+								<g id="Snare-Stand">
+									<path d="M741.65,491.46H756v80.27H741.65V491.46Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<g>
+										<path d="M811.18,634.25a7.14,7.14,0,0,1-10.22-.08L744.6,577.81a7.17,7.17,0,1,1,10.14-10.14L811.1,624A7.29,7.29,0,0,1,811.18,634.25Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M804.42,631.55l-56.78-56.78" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										<path d="M811.52,624.45l-10.14,10.14s5.41,9.13,6.76,10.48c4,4,10.05,3.63,14-.34s4.31-10.05.42-14C821.24,629.52,811.52,624.45,811.52,624.45Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<g>
+										<path d="M687.91,634a7.14,7.14,0,0,1,.08-10.22l56.36-56.36a7.17,7.17,0,1,1,10.14,10.14l-56.36,56.36A7.14,7.14,0,0,1,687.91,634Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M694.84,631.55l54.75-54.84" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										<path d="M697.63,634.34L687.49,624.2S678.36,629.61,677,631c-4,4-3.63,10.05.34,14s10.05,4.31,14,.42C692.56,644.14,697.63,634.34,697.63,634.34Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<path d="M738.27,572.41a11.41,11.41,0,1,1,11.41,11.41A11.36,11.36,0,0,1,738.27,572.41Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M751.7,569.62a3.39,3.39,0,1,0,.76,4.73A3.38,3.38,0,0,0,751.7,569.62Z" transform="translate(-0.23)" fill="#333"/>
+									<g>
+										<path d="M647.86,400.72a5.49,5.49,0,1,0-11,0V411.2h11V400.72Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M647.86,415.67V411.2h-11v8.45c0,3,2.11,6,5.15,6.34l103.33,11.49,1-10.9-98.52-10.9h0Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M642.54,423.53l100.38,11.24,0.17-1.69L640.34,421.59a2.86,2.86,0,0,0,2.2,1.94h0Z" transform="translate(-0.23)" fill="#bcece8"/>
+										<g>
+											<path d="M860.78,411.2h-11v4.48l-96.91,10.81,1.35,10.9L856.13,426c3-.34,4.73-3.38,4.73-6.34V411.2h-0.08Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+											<path d="M756.35,432.91l0.17,1.69L856,423.53a2.88,2.88,0,0,0,2.11-1.61Z" transform="translate(-0.23)" fill="#bcece8"/>
+											<path d="M860.78,400.72a5.49,5.49,0,1,0-11,0V411.2h11V400.72Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										</g>
+										<g>
+											<path d="M744,432.3l11,0.06-0.36,63.37-11-.06Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+											<circle cx="749.44" cy="432.15" r="7.18" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+											<circle cx="749.44" cy="432.15" r="1.69" fill="#333"/>
+											<g>
+												<path d="M823.86,421.84a5.48,5.48,0,0,0-7.77-.08l-70.8,70,7.69,7.77,70.8-70A5.38,5.38,0,0,0,823.86,421.84Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												<path d="M815.83,432.32l-54.67,54.07" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="2"/>
+												<circle cx="820.42" cy="424.55" r="7.18" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												<circle cx="820.42" cy="424.55" r="1.69" fill="#333"/>
+											</g>
+											<g>
+												<path d="M676.25,421a5.48,5.48,0,0,0-.08,7.77l70,70.8,7.77-7.69-70-70.8a5.38,5.38,0,0,0-7.69-.08h0Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												<path d="M679.71,427.25l58.55,59.14" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="2"/>
+												<circle cx="680.16" cy="424.55" r="7.18" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												<circle cx="680.16" cy="424.55" r="1.69" fill="#333"/>
+											</g>
+										</g>
+										<path d="M764.46,493.24a7.54,7.54,0,0,1-7.52,7.52H741.56a7.54,7.54,0,0,1-7.52-7.52v-3.55a7.54,7.54,0,0,1,7.52-7.52h15.38a7.54,7.54,0,0,1,7.52,7.52v3.55Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+								</g>
+							</g>
+							<g id="Floor-Tom">
+								<g id="Floor-Tom-Drum">
+									<path d="M160.34,314.87H402.83V585.25H160.34V314.87Z" transform="translate(-0.23)" fill="#eb495d" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+									<path d="M399.45,339.38H163.72" transform="translate(-0.23)" fill="none" stroke="#e61c35" stroke-miterlimit="10" stroke-width="8"/>
+									<g>
+										<path d="M167.1,367.26a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Zm242.49,0a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M241.45,343.6v-11" transform="translate(-0.23)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+										<path d="M248.21,367.26a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<g>
+											<path d="M321.72,343.6v-11" transform="translate(-0.23)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M328.48,367.26a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										</g>
+									</g>
+									<path d="M152.74,314.87H409.59v17.74H152.74V314.87Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+									<path d="M156.12,327.55h250.1" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+									<g>
+										<g>
+											<path d="M409.59,549.76a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Zm-242.49,0a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+											<path d="M321.72,556.52v11" transform="translate(-0.23)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M328.48,549.76a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+											<g>
+												<path d="M241.45,556.52v11" transform="translate(-0.23)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+												<path d="M248.21,549.76a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+											</g>
+										</g>
+										<path d="M153.58,567.51H410.44v17.74H153.58V567.51Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+										<path d="M157,580.18h250.1" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+									</g>
+								</g>
+								<g id="Floor-Tom-Legs">
+									<path d="M147.92,521.71l-9.55,44.53v64.38a4.73,4.73,0,0,0,4.65,4.82,4.67,4.67,0,0,0,4.65-4.82V567.25l9.55-44.53,9.38-44.53,3-14-9.21-1.86-12.42,59.4h0Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M153.92,625l-5.75-9.29h-9.29L133.3,625a11.43,11.43,0,0,0-1.69,6.17,12,12,0,0,0,12,12,12.13,12.13,0,0,0,12-12.17,14.12,14.12,0,0,0-1.69-6h0Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M170.48,429.78a8.88,8.88,0,0,0-17.74,0v49h17.74v-49Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<g>
+										<path d="M278.63,630.62a4.73,4.73,0,0,0,4.65,4.82,4.67,4.67,0,0,0,4.65-4.82V477.1h-9.29V630.62Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M294.18,625l-5.75-9.29h-9.29L273.56,625a11.43,11.43,0,0,0-1.69,6.17,12,12,0,0,0,12,12,12.13,12.13,0,0,0,12-12.17,14.12,14.12,0,0,0-1.69-6h0Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M292.15,429.78a8.88,8.88,0,0,0-17.74,0v49h17.74v-49Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<g>
+										<path d="M416,521.71l-12-59.57L395,464l2.87,14,9,44.53,8.79,44.53v63.37a4.73,4.73,0,0,0,4.65,4.82,4.67,4.67,0,0,0,4.65-4.82V566.07L416,521.71h0Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M431.05,625l-5.75-9.29H416L410.44,625a11.43,11.43,0,0,0-1.69,6.17,12,12,0,0,0,12,12,12.13,12.13,0,0,0,12-12.17,14.12,14.12,0,0,0-1.69-6h0Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M392.7,429.78a8.88,8.88,0,0,1,17.74,0v49H392.7v-49Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+								</g>
+							</g>
+							<g id="Hi-Hat">
+								<g id="Hi-Hat-Stand-Top">
+									<path d="M887.82,290.37V190.84a4.73,4.73,0,0,0-4.65-4.82,4.67,4.67,0,0,0-4.65,4.82v99.53h9.29Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M890.35,416.94a6.91,6.91,0,0,1-6.93,6.93H883a6.91,6.91,0,0,1-6.93-6.93V216.19a6.91,6.91,0,0,1,6.93-6.93h0.42a6.91,6.91,0,0,1,6.93,6.93V416.94h0Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M878.52,249h9.29v65.9h-9.29V249Z" transform="translate(-0.23)" fill="#bcece8"/>
+									<path d="M895.08,227.85c0-.84-0.51-0.51-0.51-0.59v-0.42a6.23,6.23,0,0,0-6.51-6.59H879.2c-3.89,0-7.44,2.7-7.44,6.59v0.42c0,0.08.51-.25,0.51,0.59h22.81Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<g id="Hi-Hat-Top">
+										<path d="M960.23,240.27l-27.88-.68c-19.43-.42-27.8-3.8-33.37-7.6v0.17a16.91,16.91,0,0,0-10.73-3.55h-10a17.15,17.15,0,0,0-10.82,3.55v-0.08c-5.58,3.8-14,7.1-33.46,7.52l-28.3.59a5.6,5.6,0,0,0-5.83,5.41v0.08c0,3.13,3,5.66,6.08,5.66H960.4c3.13,0,5-2.53,5-5.66v-0.08a5,5,0,0,0-5.15-5.32h0Z" transform="translate(-0.23)" fill="#fde74c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M875.14,234.61h15.21" transform="translate(-0.23)" fill="none" stroke="#fef5b7" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+									</g>
+								</g>
+								<g id="Hi-Hat-Bottom">
+									<path d="M805.78,264.43l27.8,0.68c19.43,0.42,28.05,3.8,33.12,7.6,3.38,2.37,7.52,4.14,11.58,4.14h10a17.51,17.51,0,0,0,10.82-4V272.8c5.58-3.8,14-7.18,33.46-7.69l27.8-.68a5.24,5.24,0,0,0,5.32-5.49v-0.08c0-3.13-1.94-4.9-5-4.9H806.2c-3.13,0-6.08,1.77-6.08,4.9v0.08c-0.17,3.21,2.53,5.49,5.66,5.49h0Z" transform="translate(-0.23)" fill="#fde74c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M875.14,270.94h15.21" transform="translate(-0.23)" fill="none" stroke="#bead39" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" opacity="0.3"/>
+								</g>
+								<g id="Hi-Hat-Stand">
+									<path d="M876,276.85h14.36V586.94H876V276.85Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<g>
+										<path d="M945,647.77a7.14,7.14,0,0,1-10.22-.08l-56.36-56.36a7.17,7.17,0,1,1,10.14-10.14l56.36,56.36A7.14,7.14,0,0,1,945,647.77Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M938.34,645.07l-56.78-56.78" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										<path d="M945.36,638l-10.14,10.14s5.41,9.13,6.76,10.48c4,4,10.05,3.63,14-.34s4.31-10.05.42-14C955.16,643,945.36,638,945.36,638Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<g>
+										<path d="M821.83,647.52a7.14,7.14,0,0,1,.08-10.22l56.36-56.36a7.17,7.17,0,1,1,10.14,10.14l-56.36,56.36A7.14,7.14,0,0,1,821.83,647.52Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M828.76,645.07l54.75-54.84" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										<path d="M831.55,647.86l-10.14-10.14s-9.13,5.41-10.48,6.76c-4,4-3.63,10.05.34,14s10.05,4.31,14,.42C826.48,657.66,831.55,647.86,831.55,647.86Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<path d="M872.19,585.92a11.41,11.41,0,1,1,11.41,11.41A11.36,11.36,0,0,1,872.19,585.92Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M885.62,583.14a3.39,3.39,0,1,0,.76,4.73A3.38,3.38,0,0,0,885.62,583.14Z" transform="translate(-0.23)" fill="#333"/>
+									<g>
+										<circle cx="896.54" cy="416.69" r="8.45" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M894.58,426.49a9.23,9.23,0,0,1-9.21,9.21h-4.31a9.23,9.23,0,0,1-9.21-9.21V407.82a9.23,9.23,0,0,1,9.21-9.21h4.31a9.23,9.23,0,0,1,9.21,9.21v18.67Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<path d="M872.27,276.85a1.2,1.2,0,0,0-.51-0.17v0.42a7.72,7.72,0,0,0,7.44,7.35h8.87c3.89,0,6.51-3.55,6.51-7.35v-0.42a1.2,1.2,0,0,1,.51.17H872.27Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+								</g>
+							</g>
+							<g id="Main-Kit">
+								<g id="Toms">
+									<g id="Tom-Rack">
+										<path d="M478,215.85a8.51,8.51,0,0,1,8.45,8.62v85.34c0,5.07-16.9,5.07-16.9,0V224.47A8.51,8.51,0,0,1,478,215.85Zm36.33,94V224.47a8.45,8.45,0,1,1,16.9,0v85.34C531.26,314.54,514.36,314.54,514.36,309.81Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M540.22,309.81a9.27,9.27,0,0,1-9.29,9.29H470.09a9.29,9.29,0,0,1,0-18.59h60.83A9.27,9.27,0,0,1,540.22,309.81Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<g id="Tom-Left-All">
+										<g id="Tom-Left-Drum">
+											<path d="M259.2,146.74H445.93V302.2H259.2V146.74Z" transform="translate(-0.23)" fill="#eb495d" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M262.58,171.24h180" transform="translate(-0.23)" fill="none" stroke="#e61c35" stroke-miterlimit="10" stroke-width="8"/>
+											<g>
+												<path d="M265.11,197.43a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Zm187.57,0a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												<path d="M320.88,173.77v-11" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+												<path d="M327.64,197.43a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												<g>
+													<path d="M383.4,173.77v-11" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+													<path d="M390.16,197.43a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												</g>
+											</g>
+											<path d="M251.59,146.74H452.68v17.74H251.59V146.74Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M449.3,159.41H255" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+											<g>
+												<g>
+													<path d="M452.68,268.4a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,1,1,13.52,0v16.9Zm-187.57,0a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+													<path d="M383.4,275.16v11" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+													<path d="M390.16,268.4a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,1,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+													<g>
+														<path d="M320.88,275.16v11" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+														<path d="M327.64,268.4a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,1,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+													</g>
+												</g>
+												<path d="M251.59,284.46H452.68V302.2H251.59V284.46Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+												<path d="M449.3,298H255" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+											</g>
+										</g>
+										<path d="M435.79,233.85a9.23,9.23,0,0,1-9.21,9.21h-4.31a9.23,9.23,0,0,1-9.21-9.21V215.17a9.23,9.23,0,0,1,9.21-9.21h4.31a9.23,9.23,0,0,1,9.21,9.21v18.67Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M432.83,237.14h-16a6.68,6.68,0,0,0,5.83,3.38H427A6.58,6.58,0,0,0,432.83,237.14Z" transform="translate(-0.23)" fill="#bcece8"/>
+										<path d="M431.65,232.92h45.54c5.07,0,9-3.72,9-8.45A8.16,8.16,0,0,0,478,216H431.65A8.45,8.45,0,1,0,431.65,232.92Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M483.36,227H426.07a6,6,0,0,0,5.49,3.38h46A6.08,6.08,0,0,0,483.36,227Z" transform="translate(-0.23)" fill="#bcece8"/>
+										<circle cx="477.8" cy="224.3" r="11.24" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M480.06,221.6a3.39,3.39,0,1,0,.76,4.73A3.38,3.38,0,0,0,480.06,221.6Z" transform="translate(-0.23)" fill="#333"/>
+									</g>
+									<g id="Tom-Right-All">
+										<g id="Tom-Right-Drum">
+											<path d="M555.76,146.74H742.49V302.2H555.76V146.74Z" transform="translate(-0.23)" fill="#eb495d" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M559.14,171.24h180" transform="translate(-0.23)" fill="none" stroke="#e61c35" stroke-miterlimit="10" stroke-width="8"/>
+											<g>
+												<path d="M561.68,197.43a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Zm187.57,0a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												<path d="M617.44,173.77v-11" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+												<path d="M624.2,197.43a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												<g>
+													<path d="M680,173.77v-11" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+													<path d="M686.73,197.43a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+												</g>
+											</g>
+											<path d="M548.16,146.74H749.25v17.74H548.16V146.74Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M745.87,159.41H551.54" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+											<g>
+												<g>
+													<path d="M749.25,268.4a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,1,1,13.52,0v16.9Zm-187.57,0a6.76,6.76,0,0,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+													<path d="M680,275.16v11" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+													<path d="M686.73,268.4a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,1,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+													<g>
+														<path d="M617.44,275.16v11" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+														<path d="M624.2,268.4a6.76,6.76,0,1,1-13.52,0v-16.9a6.76,6.76,0,0,1,13.52,0v16.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+													</g>
+												</g>
+												<path d="M548.16,284.46H749.25V302.2H548.16V284.46Z" transform="translate(-0.23)" fill="#f8fdfd" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+												<path d="M745.87,298H551.54" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+											</g>
+										</g>
+										<path d="M587.87,215.09a9.23,9.23,0,0,0-9.21-9.21h-4.31a9.23,9.23,0,0,0-9.21,9.21v18.67a9.23,9.23,0,0,0,9.21,9.21h4.31a9.23,9.23,0,0,0,9.21-9.21V215.09Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M568.78,237.14h16a6.68,6.68,0,0,1-5.83,3.38h-4.31A6.78,6.78,0,0,1,568.78,237.14Z" transform="translate(-0.23)" fill="#bcece8"/>
+										<path d="M570,232.92H523.66a8.31,8.31,0,0,1-8.62-8.45,8.51,8.51,0,0,1,8.62-8.45H570A8.45,8.45,0,1,1,570,232.92Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M518.25,227h57.29a6,6,0,0,1-5.49,3.38H524a6.16,6.16,0,0,1-5.75-3.38h0Z" transform="translate(-0.23)" fill="#bcece8"/>
+										<circle cx="523.34" cy="224.3" r="11.24" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M521.63,221.6a3.39,3.39,0,1,1-.76,4.73A3.38,3.38,0,0,1,521.63,221.6Z" transform="translate(-0.23)" fill="#333"/>
+									</g>
+								</g>
+								<g id="Kick">
+									<g id="Kick-Stand">
+										<path d="M314.29,460.45a8.89,8.89,0,0,1,17.74.84l-2.28,49L312,509.46Zm11.24,49.68L319,651.58a4.68,4.68,0,0,1-4.9,4.56,4.61,4.61,0,0,1-4.39-5l6.51-141.44Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M304.23,645.24l6.17-9,9.29,0.34,5.15,9.46c1,2.53,1.52,4.06,1.44,6.34a12,12,0,0,1-12.5,11.41,12.19,12.19,0,0,1-11.41-12.67A12.83,12.83,0,0,1,304.23,645.24Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<g>
+											<path d="M686.81,460.45a8.89,8.89,0,0,0-17.74.84l2.28,49,17.74-.84Zm-11.24,49.68,6.51,141.44a4.68,4.68,0,0,0,4.9,4.56,4.61,4.61,0,0,0,4.39-5l-6.51-141.44Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+											<path d="M696.87,645.24l-6.17-9-9.29.34-5.15,9.46c-1,2.53-1.52,4.06-1.44,6.34a12,12,0,0,0,12.5,11.41,12.19,12.19,0,0,0,11.41-12.67,13.91,13.91,0,0,0-1.86-5.91h0Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										</g>
+									</g>
+									<g id="Kick-Drum">
+										<circle cx="500.28" cy="489.77" r="177.43" fill="#eb495d" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+										<circle id="Inner-Drum-Wobble" cx="500.28" cy="489.77" r="170" fill="none"/>
+										<circle id="Inner-Drum" cx="500.28" cy="489.77" r="162.73" fill="#fdfffc" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+										<g id="Drum-Logo-Wobble">
+											<path d="M454,369.12l-3.63,16.81H451c6,0,10.31-7,10.31-12.67,0-4.06-2.28-7.6-7.94-7.6-11.74,0-19.52,6.59-19.52,17.57a9.43,9.43,0,0,0,1,4.9c-5,0-7.77-1.77-7.77-7,0-9.63,13.35-18.84,25.43-18.84,11.41,0,16.39,5.66,16.39,11.58,0,4.39-2.79,9.46-7.77,12.34,3.8,1.1,5,3.8,5,7.27,0,5.91-3.55,13.86-3.55,18.33a5,5,0,0,0,2.79,4.82,28.5,28.5,0,0,1-7.18,1.27c-4.73,0-5.66-2.45-5.66-4.82,0-4.82,3.8-13.52,3.8-19,0-2.87-1.1-4.9-4.31-4.9a11.75,11.75,0,0,0-2.28.25l-5.83,27.29H433.5l9.89-46Zm74.44,11.15a10.5,10.5,0,0,0-6.25,2.11L525.6,366l-10.73,1.44-8,37.6a17.54,17.54,0,0,0-.42,3.38,7.55,7.55,0,0,1-3.8,1.61c-2.87,0-3.63-1.18-3.63-2.79,0-.68.17-1.69,0.25-2.45l5.24-24.84H494.09l-5.24,24.84a14.42,14.42,0,0,0-.42,2.53c-1.77,1.44-3.63,2.7-5.15,2.7-2.87,0-3.63-1.1-3.63-2.7,0-.68.17-1.69,0.25-2.45L485.13,380H474.74l-5.24,24.84a21.76,21.76,0,0,0-.42,3.8c0,5.41,3.46,7.94,9,7.94,3.13,0,7-2.87,10.39-6.08,0.68,4.22,4,6.08,8.87,6.08,2.79,0,6.25-2.37,9.38-5.15,1.27,4,5.58,5.41,11.49,5.41,12.93,0,19.18-16,19.18-27.38C537.51,385.17,535.32,380.27,528.39,380.27Zm-8.53,31.35c-2.2,0-3.21-.51-3.21-2.7a23.67,23.67,0,0,1,.59-4l4.14-19.43a11.05,11.05,0,0,1,3.89-1c1.77,0,4.14,1,4.14,5.32,0,5.32-3.55,21.8-9.55,21.8h0Zm34.22-31.26-5.32,24.59a7.47,7.47,0,0,0-.34,2.28c0,1.61.76,2.7,3.63,2.7,1.69,0,3.63-1.27,5.49-2.87l5.66-26.7h10.48l-8.87,42c-2.2,10.31-8.36,12.34-13.18,12.34-4.39,0-8.53-3.13-8.53-7.86,0-6.76,5.66-8.87,12.5-10.81l1.1-5c-3.3,3-6.93,5.58-9.8,5.58-5.66,0-9-2.45-9-7.86a20.88,20.88,0,0,1,.42-3.72l5.07-24.59h10.65v-0.08ZM550,428.26c1.44,0,3.38-1.35,4.31-5.66l0.84-4.31c-4.56,1.52-8,3.63-8,7.52C547.06,426.83,548.41,428.26,550,428.26Zm-117.61-2.7H536.33" transform="translate(-0.23)" fill="none"/>
+										</g>
+										<g id="KalaYatra">
+											<path xmlns="http://www.w3.org/2000/svg" d="M75.904 79.888C72.768 79.888 69.952 79.216 67.456 77.872C65.024 76.528 62.816 74.768 60.832 72.592C58.912 70.416 57.152 68.112 55.552 65.68C53.952 63.12 52.32 60.304 50.656 57.232C48.992 54.096 47.424 51.248 45.952 48.688C48 45.424 50.496 42.128 53.44 38.8C56.384 35.408 59.552 32.144 62.944 29.008C66.4 25.808 69.888 22.832 73.408 20.08C76.992 17.328 80.384 14.896 83.584 12.784C86.464 10.928 89.696 9.2 93.28 7.6C96.864 6 100.448 5.2 104.032 5.2C106.144 5.2 108.224 5.52 110.272 6.16C112.32 6.8 113.984 7.888 115.264 9.424C116.608 10.896 117.152 12.944 116.896 15.568C116.832 16.528 116.576 17.072 116.128 17.2C115.744 17.328 115.584 17.136 115.648 16.624C115.904 14.448 115.456 12.816 114.304 11.728C113.152 10.64 111.712 9.904 109.984 9.51999C108.256 9.136 106.688 8.944 105.28 8.944C101.632 8.944 97.984 9.744 94.336 11.344C90.752 12.88 87.584 14.512 84.832 16.24C80.352 18.992 75.84 22.16 71.296 25.744C66.816 29.328 62.624 32.976 58.72 36.688C54.88 40.4 51.68 43.792 49.12 46.864C51.168 49.552 53.152 52.304 55.072 55.12C56.992 57.872 58.976 60.592 61.024 63.28C62.432 65.136 64.096 67.12 66.016 69.232C68 71.344 70.112 73.136 72.352 74.608C74.656 76.08 76.992 76.816 79.36 76.816C81.024 76.816 82.464 76.4 83.68 75.568C84.896 74.8 85.824 73.872 86.464 72.784C87.168 71.568 87.52 70.032 87.52 68.176C87.52 66.704 87.328 65.232 86.944 63.76C86.56 62.224 86.112 60.88 85.6 59.728C84.96 58 84.288 56.688 83.584 55.792C83.264 55.408 83.104 55.056 83.104 54.736C83.104 54.544 83.232 54.448 83.488 54.448C83.936 54.448 84.48 54.704 85.12 55.216C88.064 58.032 89.536 61.648 89.536 66.064C89.536 67.408 89.344 68.752 88.96 70.096C88.64 71.44 88.064 72.72 87.232 73.936C86.08 75.728 84.544 77.168 82.624 78.256C80.704 79.344 78.464 79.888 75.904 79.888ZM3.136 78.448C2.432 78.064 1.856 77.488 1.408 76.72C0.959999 76.016 0.735999 75.312 0.735999 74.608C0.735999 73.968 0.927999 73.424 1.312 72.976C1.568 72.72 1.824 72.56 2.08 72.496C2.336 72.496 2.4 72.656 2.272 72.976C2.08 73.936 2.528 74.832 3.616 75.664C4.704 76.56 5.664 77.104 6.496 77.296C7.392 77.488 8.32 77.584 9.28 77.584C10.24 77.584 11.2 77.488 12.16 77.296C13.056 77.168 13.888 76.976 14.656 76.72C17.024 75.888 19.328 74.288 21.568 71.92C23.872 69.552 26.016 66.896 28 63.952C30.048 60.816 32.096 57.2 34.144 53.104C36.192 48.944 38.304 44.624 40.48 40.144C42.656 35.664 44.992 31.44 47.488 27.472C49.728 23.952 52.096 20.816 54.592 18.064C57.088 15.248 59.776 13.072 62.656 11.536C64.64 10.512 66.624 10 68.608 10C66.624 9.168 64.256 8.464 61.504 7.888C58.816 7.312 56.544 7.024 54.688 7.024C49.12 7.024 43.776 8.528 38.656 11.536C36.096 13.008 33.664 14.96 31.36 17.392C29.056 19.824 27.136 22.544 25.6 25.552C24.128 28.496 23.264 31.504 23.008 34.576C22.944 36.112 23.104 37.52 23.488 38.8C23.936 40.08 24.736 41.072 25.888 41.776C26.784 42.416 27.968 42.736 29.44 42.736C30.592 42.736 31.68 42.544 32.704 42.16C32.896 42.096 33.12 42.064 33.376 42.064C33.76 42.064 33.952 42.192 33.952 42.448C33.952 42.768 33.6 43.056 32.896 43.312C31.616 43.952 30.08 44.272 28.288 44.272C27.392 44.272 26.464 44.176 25.504 43.984C24.608 43.792 23.744 43.472 22.912 43.024C21.312 42.192 20.16 40.912 19.456 39.184C18.752 37.392 18.4 35.568 18.4 33.712C18.4 29.936 19.328 26.416 21.184 23.152C23.04 19.888 25.408 17.008 28.288 14.512C31.232 12.016 34.336 10.096 37.6 8.752C40.416 7.536 43.296 6.672 46.24 6.16C49.184 5.648 52.032 5.392 54.784 5.392C57.6 5.392 60.544 5.808 63.616 6.64C66.752 7.408 69.408 8.624 71.584 10.288C71.84 10.48 71.968 10.672 71.968 10.864C71.968 11.056 71.872 11.184 71.68 11.248C71.488 11.312 71.264 11.28 71.008 11.152C70.368 10.96 69.696 10.864 68.992 10.864C67.2 10.864 65.408 11.472 63.616 12.688C61.888 13.84 60.224 15.344 58.624 17.2C57.088 19.056 55.68 21.04 54.4 23.152C53.12 25.2 52 27.12 51.04 28.912C49.312 32.176 47.648 35.76 46.048 39.664C44.448 43.504 42.752 47.408 40.96 51.376C39.168 55.28 37.12 59.024 34.816 62.608C32.512 66.192 29.824 69.36 26.752 72.112C23.68 74.864 20.032 76.976 15.808 78.448C13.824 79.152 11.456 79.504 8.704 79.504C7.616 79.504 6.592 79.408 5.632 79.216C4.672 79.088 3.84 78.832 3.136 78.448ZM113.865 70.672C111.817 70.672 110.409 70.032 109.641 68.752C108.873 67.408 108.489 65.936 108.489 64.336C108.489 64.016 108.521 63.472 108.585 62.704C108.713 61.872 108.841 61.104 108.969 60.4C108.073 61.616 106.985 62.96 105.705 64.432C104.489 65.904 103.241 67.152 101.961 68.176C99.9125 69.84 98.0565 70.672 96.3925 70.672C94.7925 70.672 93.5445 70 92.6485 68.656C91.8165 67.312 91.4005 65.616 91.4005 63.568C91.4005 60.944 91.9765 58.288 93.1285 55.6C94.2805 52.912 95.7845 50.384 97.6405 48.016C99.5605 45.584 101.673 43.504 103.977 41.776C105.321 40.816 106.953 40.048 108.873 39.472C110.857 38.832 112.841 38.512 114.825 38.512C117.065 38.512 119.017 38.864 120.681 39.568C122.409 40.208 123.593 41.136 124.233 42.352C122.889 44.08 121.513 46.224 120.105 48.784C118.697 51.28 117.481 53.552 116.457 55.6C115.753 57.008 114.985 58.768 114.153 60.88C113.321 62.928 112.905 64.688 112.905 66.16C112.905 66.8 113.065 67.44 113.385 68.08C113.705 68.72 114.313 69.04 115.209 69.04C116.233 69.04 117.225 68.656 118.185 67.888C119.145 67.12 119.945 66.352 120.585 65.584C122.057 63.984 123.401 62.224 124.617 60.304C125.833 58.384 127.049 56.336 128.265 54.16C128.457 53.904 128.649 53.776 128.841 53.776C129.097 53.776 129.225 53.968 129.225 54.352C129.225 54.672 129.161 54.928 129.033 55.12C127.945 57.232 126.729 59.344 125.385 61.456C124.041 63.568 122.441 65.552 120.585 67.408C119.689 68.304 118.633 69.072 117.417 69.712C116.201 70.352 115.017 70.672 113.865 70.672ZM98.5045 67.696C99.7205 67.696 101.033 67.056 102.441 65.776C103.913 64.432 105.321 62.832 106.665 60.976C108.073 59.056 109.321 57.232 110.409 55.504C111.561 53.712 112.457 52.336 113.097 51.376C114.441 49.264 115.689 47.504 116.841 46.096C117.993 44.688 119.785 43.6 122.217 42.832C122.345 42.832 122.441 42.832 122.505 42.832C122.633 42.768 122.761 42.736 122.889 42.736C122.313 41.84 121.353 41.168 120.009 40.72C118.665 40.272 117.353 40.048 116.073 40.048C114.089 40.048 112.169 40.592 110.312 41.68C108.457 42.768 106.761 44.144 105.225 45.808C103.753 47.536 102.313 49.424 100.905 51.472C99.4965 53.52 98.3445 55.6 97.4485 57.712C96.6165 59.824 96.2005 61.84 96.2005 63.76C96.2005 64.784 96.3605 65.712 96.6805 66.544C97.0645 67.312 97.6725 67.696 98.5045 67.696ZM132.625 70.576C130.321 70.576 128.721 69.904 127.825 68.56C126.929 67.216 126.481 65.52 126.481 63.472C126.481 61.36 126.801 59.056 127.441 56.56C128.145 54.064 128.945 51.632 129.841 49.264C130.801 46.896 131.697 44.816 132.529 43.024C133.425 41.232 134.033 39.984 134.353 39.28C135.505 36.848 136.913 34.096 138.577 31.024C140.305 27.952 142.225 24.816 144.337 21.616C146.513 18.416 148.785 15.376 151.153 12.496C153.585 9.616 156.081 7.12 158.641 5.008C161.265 2.896 163.857 1.456 166.417 0.687994C167.121 0.495996 167.761 0.399998 168.337 0.399998C169.425 0.399998 170.321 0.719997 171.025 1.36C171.793 1.936 172.177 2.96 172.177 4.432C172.177 5.456 171.921 6.736 171.409 8.272C170.577 10.512 169.169 13.008 167.185 15.76C165.201 18.448 162.865 21.264 160.177 24.208C157.489 27.088 154.641 29.936 151.633 32.752C148.689 35.568 145.809 38.192 142.993 40.624C140.177 43.056 137.681 45.136 135.505 46.864C134.929 48.08 134.385 49.264 133.873 50.416C133.425 51.568 133.009 52.688 132.625 53.776C132.433 54.352 132.145 55.216 131.761 56.368C131.377 57.52 131.025 58.8 130.705 60.208C130.385 61.616 130.225 62.96 130.225 64.24C130.225 65.52 130.481 66.64 130.993 67.6C131.505 68.496 132.433 68.944 133.777 68.944C134.865 68.944 135.857 68.592 136.753 67.888C137.713 67.184 138.577 66.416 139.345 65.584C142.033 62.512 144.433 58.96 146.545 54.928C146.801 54.48 146.993 54.256 147.121 54.256C147.249 54.256 147.313 54.448 147.313 54.832C147.313 55.408 147.185 56.016 146.929 56.656C145.713 58.896 144.593 60.784 143.569 62.32C142.609 63.856 141.201 65.552 139.345 67.408C138.513 68.24 137.521 68.976 136.369 69.616C135.281 70.256 134.033 70.576 132.625 70.576ZM136.561 44.656C138.545 42.928 140.849 40.88 143.473 38.512C146.097 36.08 148.785 33.488 151.537 30.736C154.289 27.984 156.881 25.232 159.313 22.48C161.809 19.728 163.953 17.136 165.745 14.704C167.601 12.272 168.849 10.16 169.489 8.368C170.065 6.704 170.353 5.424 170.353 4.528C170.353 2.864 169.617 2.032 168.145 2.032C167.313 2.032 166.321 2.352 165.169 2.992C164.017 3.568 162.961 4.336 162.001 5.296C160.401 6.832 158.513 9.04 156.337 11.92C154.225 14.736 151.985 17.968 149.617 21.616C147.249 25.264 144.913 29.072 142.609 33.04C140.369 37.008 138.353 40.88 136.561 44.656ZM166.927 70.672C164.879 70.672 163.471 70.032 162.703 68.752C161.935 67.408 161.551 65.936 161.551 64.336C161.551 64.016 161.583 63.472 161.647 62.704C161.775 61.872 161.903 61.104 162.031 60.4C161.135 61.616 160.047 62.96 158.767 64.432C157.551 65.904 156.303 67.152 155.023 68.176C152.975 69.84 151.119 70.672 149.455 70.672C147.855 70.672 146.607 70 145.711 68.656C144.879 67.312 144.463 65.616 144.463 63.568C144.463 60.944 145.039 58.288 146.191 55.6C147.343 52.912 148.847 50.384 150.703 48.016C152.623 45.584 154.735 43.504 157.039 41.776C158.383 40.816 160.015 40.048 161.935 39.472C163.919 38.832 165.903 38.512 167.887 38.512C170.127 38.512 172.079 38.864 173.743 39.568C175.471 40.208 176.655 41.136 177.295 42.352C175.951 44.08 174.575 46.224 173.167 48.784C171.759 51.28 170.543 53.552 169.519 55.6C168.815 57.008 168.047 58.768 167.215 60.88C166.383 62.928 165.967 64.688 165.967 66.16C165.967 66.8 166.127 67.44 166.447 68.08C166.767 68.72 167.375 69.04 168.271 69.04C169.295 69.04 170.287 68.656 171.247 67.888C172.207 67.12 173.007 66.352 173.647 65.584C175.119 63.984 176.463 62.224 177.679 60.304C178.895 58.384 180.111 56.336 181.327 54.16C181.519 53.904 181.711 53.776 181.903 53.776C182.159 53.776 182.287 53.968 182.287 54.352C182.287 54.672 182.223 54.928 182.095 55.12C181.007 57.232 179.791 59.344 178.447 61.456C177.103 63.568 175.503 65.552 173.647 67.408C172.751 68.304 171.695 69.072 170.479 69.712C169.263 70.352 168.079 70.672 166.927 70.672ZM151.567 67.696C152.783 67.696 154.095 67.056 155.503 65.776C156.975 64.432 158.383 62.832 159.727 60.976C161.135 59.056 162.383 57.232 163.471 55.504C164.623 53.712 165.519 52.336 166.159 51.376C167.503 49.264 168.751 47.504 169.903 46.096C171.055 44.688 172.847 43.6 175.279 42.832C175.407 42.832 175.503 42.832 175.567 42.832C175.695 42.768 175.823 42.736 175.951 42.736C175.375 41.84 174.415 41.168 173.071 40.72C171.727 40.272 170.415 40.048 169.135 40.048C167.151 40.048 165.231 40.592 163.375 41.68C161.519 42.768 159.823 44.144 158.287 45.808C156.815 47.536 155.375 49.424 153.967 51.472C152.559 53.52 151.407 55.6 150.511 57.712C149.679 59.824 149.263 61.84 149.263 63.76C149.263 64.784 149.423 65.712 149.743 66.544C150.127 67.312 150.735 67.696 151.567 67.696ZM200.76 101.2C199.608 101.2 198.392 101.008 197.112 100.624C195.896 100.24 194.872 99.664 194.04 98.896C193.208 98.128 192.792 97.2 192.792 96.112C192.792 95.344 192.952 94.672 193.272 94.096C193.4 93.904 193.56 93.68 193.752 93.424C194.008 93.232 194.2 93.136 194.328 93.136C194.584 93.136 194.68 93.392 194.616 93.904C194.424 95.568 195.128 96.88 196.728 97.84C198.392 98.864 200.216 99.376 202.2 99.376C204.504 99.376 206.936 98.672 209.496 97.264C212.056 95.92 214.584 93.648 217.08 90.448C219.384 87.44 221.592 84.144 223.704 80.56C225.816 76.976 227.768 73.328 229.56 69.616C231.416 65.84 233.08 62.256 234.552 58.864C236.024 55.408 237.304 52.336 238.392 49.648L240.792 43.696C238.552 47.408 236.12 51.056 233.496 54.64C230.936 58.224 228.216 61.488 225.336 64.432C222.456 67.376 219.416 69.712 216.216 71.44C213.016 73.232 209.72 74.128 206.328 74.128C202.872 74.128 200.248 73.136 198.456 71.152C196.728 69.232 195.864 66.704 195.864 63.568C195.864 62.608 195.96 61.552 196.152 60.4C196.728 56.816 197.752 53.424 199.224 50.224C200.76 47.024 202.488 43.92 204.408 40.912C206.392 37.904 208.344 34.896 210.264 31.888C211.288 30.224 212.472 28.272 213.816 26.032C215.16 23.728 216.312 21.328 217.272 18.832C218.296 16.272 218.808 13.84 218.808 11.536C218.808 10.448 218.648 9.392 218.328 8.368C218.072 7.344 217.592 6.416 216.888 5.584C215.928 4.368 214.616 3.504 212.952 2.992C211.288 2.48 209.368 2.224 207.192 2.224C203.48 2.224 199.704 3.056 195.864 4.72C192.024 6.32 188.472 8.496 185.208 11.248C181.944 13.936 179.32 16.912 177.336 20.176C176.312 21.904 175.48 23.696 174.84 25.552C174.2 27.408 173.88 29.264 173.88 31.12C173.88 31.568 173.912 32.048 173.976 32.56C174.104 33.072 174.2 33.584 174.264 34.096C174.712 35.888 175.576 37.232 176.855 38.128C178.136 39.024 179.576 39.472 181.176 39.472C183.032 39.472 184.856 38.864 186.648 37.648C188.504 36.368 189.976 34.704 191.064 32.656C192.152 30.608 192.696 28.4 192.696 26.032C192.696 24.624 192.44 23.152 191.928 21.616C191.8 21.104 191.576 20.624 191.256 20.176C190.936 19.664 190.616 19.376 190.296 19.312C189.976 19.184 189.816 19.024 189.816 18.832C189.88 18.64 190.2 18.544 190.776 18.544C191.992 18.544 192.952 19.248 193.656 20.656C194.424 22 194.904 23.216 195.096 24.304C195.16 24.624 195.192 24.944 195.192 25.264C195.256 25.584 195.288 25.904 195.288 26.224C195.288 28.528 194.712 30.768 193.56 32.944C192.408 35.12 190.904 36.848 189.048 38.128C186.488 39.984 183.832 40.912 181.08 40.912C179.032 40.912 177.144 40.368 175.416 39.28C173.752 38.128 172.567 36.4 171.863 34.096C171.415 32.752 171.191 31.28 171.191 29.68C171.191 27.824 171.479 25.968 172.055 24.112C172.631 22.256 173.367 20.528 174.264 18.928C176.376 15.088 179.224 11.824 182.808 9.136C186.456 6.384 190.424 4.272 194.712 2.8C199.064 1.328 203.32 0.591995 207.48 0.591995C210.104 0.591995 212.472 0.975996 214.584 1.744C216.76 2.512 218.456 3.696 219.672 5.296C220.632 6.512 221.304 7.792 221.688 9.136C222.072 10.416 222.264 11.76 222.264 13.168C222.264 15.536 221.816 18 220.92 20.56C220.024 23.056 218.936 25.488 217.656 27.856C216.376 30.16 215.16 32.24 214.008 34.096C212.088 37.296 210.072 40.752 207.96 44.464C205.912 48.112 204.152 51.696 202.68 55.216C201.272 58.672 200.568 61.808 200.568 64.624C200.568 67.696 201.176 69.808 202.392 70.96C203.672 72.176 205.24 72.784 207.096 72.784C210.104 72.784 213.144 71.728 216.216 69.616C219.352 67.504 222.424 64.752 225.432 61.36C228.44 57.904 231.288 54.16 233.976 50.128C236.664 46.096 239.096 42.128 241.272 38.224C243.448 34.32 245.208 30.864 246.552 27.856C247.832 24.976 249.304 22.128 250.968 19.312C252.632 16.432 254.456 13.936 256.44 11.824C258.488 9.712 260.664 8.4 262.968 7.888C263.16 7.824 263.352 7.792 263.544 7.792C263.736 7.792 263.896 7.792 264.024 7.792C264.92 7.792 265.592 8.016 266.04 8.464C266.552 8.912 266.808 9.392 266.808 9.904C266.808 10.416 266.584 10.928 266.136 11.44C265.688 11.888 265.016 12.112 264.12 12.112C262.008 12.176 260.12 12.88 258.456 14.224C256.792 15.504 255.32 17.136 254.04 19.12C252.76 21.104 251.672 23.184 250.776 25.36C249.88 27.472 249.112 29.392 248.472 31.12C246.488 36.688 244.664 42.288 243 47.92C241.4 53.488 239.576 59.088 237.528 64.72C235.48 70.288 232.792 75.856 229.464 81.424C225.944 87.248 221.88 91.984 217.272 95.632C212.664 99.344 207.16 101.2 200.76 101.2ZM270.24 70.672C268.192 70.672 266.784 70.032 266.016 68.752C265.248 67.408 264.864 65.936 264.864 64.336C264.864 64.016 264.896 63.472 264.96 62.704C265.088 61.872 265.216 61.104 265.344 60.4C264.448 61.616 263.36 62.96 262.08 64.432C260.864 65.904 259.616 67.152 258.336 68.176C256.288 69.84 254.432 70.672 252.768 70.672C251.168 70.672 249.92 70 249.023 68.656C248.192 67.312 247.776 65.616 247.776 63.568C247.776 60.944 248.352 58.288 249.504 55.6C250.656 52.912 252.16 50.384 254.016 48.016C255.936 45.584 258.048 43.504 260.352 41.776C261.696 40.816 263.328 40.048 265.248 39.472C267.232 38.832 269.216 38.512 271.2 38.512C273.44 38.512 275.392 38.864 277.056 39.568C278.784 40.208 279.968 41.136 280.608 42.352C279.264 44.08 277.888 46.224 276.48 48.784C275.072 51.28 273.856 53.552 272.832 55.6C272.128 57.008 271.36 58.768 270.528 60.88C269.696 62.928 269.28 64.688 269.28 66.16C269.28 66.8 269.44 67.44 269.76 68.08C270.08 68.72 270.688 69.04 271.584 69.04C272.608 69.04 273.6 68.656 274.56 67.888C275.52 67.12 276.32 66.352 276.96 65.584C278.432 63.984 279.776 62.224 280.992 60.304C282.208 58.384 283.424 56.336 284.64 54.16C284.832 53.904 285.024 53.776 285.216 53.776C285.472 53.776 285.6 53.968 285.6 54.352C285.6 54.672 285.536 54.928 285.408 55.12C284.32 57.232 283.104 59.344 281.76 61.456C280.416 63.568 278.816 65.552 276.96 67.408C276.064 68.304 275.008 69.072 273.792 69.712C272.576 70.352 271.392 70.672 270.24 70.672ZM254.88 67.696C256.096 67.696 257.408 67.056 258.816 65.776C260.288 64.432 261.696 62.832 263.04 60.976C264.448 59.056 265.696 57.232 266.784 55.504C267.936 53.712 268.832 52.336 269.472 51.376C270.816 49.264 272.064 47.504 273.216 46.096C274.368 44.688 276.16 43.6 278.592 42.832C278.72 42.832 278.816 42.832 278.88 42.832C279.008 42.768 279.136 42.736 279.264 42.736C278.688 41.84 277.728 41.168 276.384 40.72C275.04 40.272 273.728 40.048 272.448 40.048C270.464 40.048 268.544 40.592 266.688 41.68C264.832 42.768 263.136 44.144 261.6 45.808C260.128 47.536 258.688 49.424 257.28 51.472C255.872 53.52 254.72 55.6 253.824 57.712C252.992 59.824 252.576 61.84 252.576 63.76C252.576 64.784 252.736 65.712 253.056 66.544C253.44 67.312 254.048 67.696 254.88 67.696ZM287.944 70.672C286.344 70.672 284.904 70.224 283.624 69.328C282.408 68.368 281.8 66.832 281.8 64.72C281.8 62.48 282.344 60.016 283.432 57.328C284.52 54.64 285.544 52.24 286.504 50.128C287.016 49.104 287.688 47.728 288.52 46C289.416 44.208 290.376 42.448 291.4 40.72H286.888C286.696 40.72 286.6 40.56 286.6 40.24C286.6 39.984 286.696 39.728 286.888 39.472C287.08 39.152 287.304 38.992 287.56 38.992C289.352 38.992 290.696 38.832 291.592 38.512C292.488 38.192 293.256 37.744 293.896 37.168C294.92 36.272 295.912 35.12 296.872 33.712C297.896 32.304 298.888 31.088 299.848 30.064C300.552 29.168 301.416 28.496 302.44 28.048C303.528 27.6 304.232 27.44 304.552 27.568C304.232 28.016 303.72 28.784 303.016 29.872C302.312 30.96 301.576 32.144 300.808 33.424C300.04 34.704 299.336 35.888 298.696 36.976C298.056 38.064 297.64 38.8 297.448 39.184H303.784C303.976 39.184 304.072 39.248 304.072 39.376C304.072 39.632 303.912 39.92 303.592 40.24C303.336 40.56 303.08 40.72 302.824 40.72H296.584C295.432 42.704 294.056 45.296 292.456 48.496C290.92 51.632 289.544 54.672 288.328 57.616C288.072 58.192 287.624 59.344 286.984 61.072C286.408 62.8 286.12 64.4 286.12 65.872C286.12 66.832 286.312 67.632 286.696 68.272C287.144 68.912 287.88 69.232 288.904 69.232C289.992 69.232 291.176 68.848 292.456 68.08C293.736 67.248 294.728 66.416 295.432 65.584C296.904 63.984 298.248 62.224 299.464 60.304C300.68 58.384 301.896 56.336 303.112 54.16C303.304 53.904 303.496 53.776 303.688 53.776C303.944 53.776 304.072 53.968 304.072 54.352C304.072 54.672 304.008 54.928 303.88 55.12C302.728 57.232 301.48 59.344 300.136 61.456C298.856 63.568 297.288 65.552 295.432 67.408C294.6 68.24 293.48 69.008 292.072 69.712C290.664 70.352 289.288 70.672 287.944 70.672ZM316.013 70.672C313.709 70.672 312.013 70.128 310.925 69.04C309.901 67.888 309.389 66.512 309.389 64.912C309.389 63.632 309.677 62.32 310.253 60.976C311.021 58.992 312.013 57.168 313.229 55.504C314.509 53.84 315.789 52.176 317.069 50.512C318.349 48.784 319.405 46.928 320.237 44.944C320.365 44.688 320.429 44.336 320.429 43.888C320.429 43.376 320.205 42.896 319.757 42.448C319.373 41.936 318.733 41.648 317.837 41.584C317.325 41.456 316.749 41.392 316.109 41.392C315.469 41.392 314.829 41.392 314.189 41.392H311.501C311.117 41.392 310.765 41.392 310.445 41.392C310.125 41.392 309.837 41.36 309.581 41.296C309.325 42.896 308.781 44.688 307.949 46.672C307.181 48.656 306.285 50.64 305.261 52.624C304.237 54.608 303.245 56.4 302.285 58C302.029 58.384 301.805 58.576 301.613 58.576C301.421 58.576 301.325 58.384 301.325 58C301.325 57.552 301.421 57.2 301.613 56.944C302.957 54.32 304.237 51.76 305.453 49.264C306.733 46.704 307.597 44.048 308.045 41.296C307.597 39.888 307.373 38.736 307.373 37.84C307.373 36.624 307.661 36.016 308.237 36.016C308.685 36.016 309.069 36.368 309.389 37.072C309.773 37.712 309.869 38.544 309.677 39.568C310.125 39.696 310.701 39.792 311.405 39.856C312.173 39.92 313.005 39.952 313.901 39.952C315.245 39.952 316.653 39.92 318.125 39.856C319.597 39.728 320.845 39.664 321.869 39.664C323.085 39.664 323.917 39.92 324.365 40.432C324.813 40.944 325.037 41.584 325.037 42.352C325.037 43.312 324.781 44.368 324.269 45.52C323.821 46.608 323.373 47.536 322.925 48.304C322.221 49.712 321.293 51.28 320.141 53.008C318.989 54.736 317.901 56.496 316.877 58.288C315.853 60.08 315.149 61.776 314.765 63.376C314.573 64.208 314.477 64.944 314.477 65.584C314.477 66.8 314.733 67.664 315.245 68.176C315.821 68.688 316.493 68.944 317.261 68.944C318.349 68.944 319.501 68.624 320.717 67.984C321.933 67.28 322.893 66.512 323.597 65.68C325.069 64.08 326.413 62.288 327.629 60.304C328.845 58.32 330.061 56.24 331.277 54.064C331.405 53.872 331.533 53.776 331.661 53.776C331.917 53.776 332.045 54.032 332.045 54.544C332.045 54.928 331.949 55.28 331.757 55.6C330.605 57.712 329.421 59.792 328.205 61.84C326.989 63.824 325.453 65.744 323.597 67.6C322.701 68.496 321.613 69.232 320.333 69.808C319.053 70.384 317.613 70.672 316.013 70.672ZM351.146 70.672C349.098 70.672 347.69 70.032 346.922 68.752C346.154 67.408 345.77 65.936 345.77 64.336C345.77 64.016 345.802 63.472 345.866 62.704C345.994 61.872 346.122 61.104 346.25 60.4C345.354 61.616 344.266 62.96 342.986 64.432C341.77 65.904 340.522 67.152 339.242 68.176C337.194 69.84 335.338 70.672 333.674 70.672C332.074 70.672 330.826 70 329.93 68.656C329.098 67.312 328.682 65.616 328.682 63.568C328.682 60.944 329.258 58.288 330.41 55.6C331.562 52.912 333.066 50.384 334.922 48.016C336.842 45.584 338.954 43.504 341.258 41.776C342.602 40.816 344.234 40.048 346.154 39.472C348.138 38.832 350.122 38.512 352.106 38.512C354.346 38.512 356.298 38.864 357.962 39.568C359.69 40.208 360.874 41.136 361.514 42.352C360.17 44.08 358.794 46.224 357.386 48.784C355.978 51.28 354.762 53.552 353.738 55.6C353.034 57.008 352.266 58.768 351.434 60.88C350.602 62.928 350.186 64.688 350.186 66.16C350.186 66.8 350.346 67.44 350.666 68.08C350.986 68.72 351.594 69.04 352.49 69.04C353.514 69.04 354.506 68.656 355.466 67.888C356.426 67.12 357.226 66.352 357.866 65.584C359.338 63.984 360.682 62.224 361.898 60.304C363.114 58.384 364.33 56.336 365.546 54.16C365.738 53.904 365.93 53.776 366.122 53.776C366.378 53.776 366.506 53.968 366.506 54.352C366.506 54.672 366.442 54.928 366.314 55.12C365.226 57.232 364.01 59.344 362.666 61.456C361.322 63.568 359.722 65.552 357.866 67.408C356.97 68.304 355.914 69.072 354.698 69.712C353.482 70.352 352.298 70.672 351.146 70.672ZM335.786 67.696C337.002 67.696 338.314 67.056 339.722 65.776C341.194 64.432 342.602 62.832 343.946 60.976C345.354 59.056 346.602 57.232 347.69 55.504C348.842 53.712 349.738 52.336 350.378 51.376C351.722 49.264 352.97 47.504 354.122 46.096C355.274 44.688 357.066 43.6 359.498 42.832C359.626 42.832 359.722 42.832 359.786 42.832C359.914 42.768 360.042 42.736 360.17 42.736C359.594 41.84 358.634 41.168 357.29 40.72C355.946 40.272 354.634 40.048 353.354 40.048C351.37 40.048 349.45 40.592 347.594 41.68C345.738 42.768 344.042 44.144 342.506 45.808C341.034 47.536 339.594 49.424 338.186 51.472C336.778 53.52 335.626 55.6 334.73 57.712C333.898 59.824 333.482 61.84 333.482 63.76C333.482 64.784 333.642 65.712 333.962 66.544C334.346 67.312 334.954 67.696 335.786 67.696Z" fill="black"/>
+										</g>
+										<path d="M319.19,481.07a8.87,8.87,0,1,0,0,17.74v7.86h16.9v-33.8h-16.9v8.2Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+										<path d="M318.17,490a1.69,1.69,0,1,0,1.69-1.69A1.69,1.69,0,0,0,318.17,490Z" transform="translate(-0.23)" fill="#333"/>
+										<path d="M331,503.29v-27" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										<path d="M402.58,641.94a8.84,8.84,0,1,0,15.29,8.87l6.84,4,8.45-14.62-29.23-16.9-8.45,14.62Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+										<path d="M409.59,647.77a1.71,1.71,0,0,0,2.28-.59,1.67,1.67,0,0,0-2.87-1.69A1.57,1.57,0,0,0,409.59,647.77Z" transform="translate(-0.23)" fill="#333"/>
+										<path d="M427.84,642.87l-23.4-13.52" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										<g>
+											<path d="M583.39,650.73a8.84,8.84,0,0,0,15.29-8.87l6.76-3.89L597,623.35l-29.23,16.9,8.45,14.62,7.18-4.14h0Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M591.93,647.52a1.67,1.67,0,1,0-2.28-.59A1.68,1.68,0,0,0,591.93,647.52Z" transform="translate(-0.23)" fill="#333"/>
+											<path d="M596.74,629.35l-23.49,13.52" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										</g>
+										<g>
+											<path d="M680.81,498.48a8.87,8.87,0,1,0,0-17.74v-7.86h-16.9v33.8h16.9v-8.2Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M682.93,489.44a1.69,1.69,0,1,0-1.69,1.69A1.69,1.69,0,0,0,682.93,489.44Z" transform="translate(-0.23)" fill="#333"/>
+											<path d="M669,476.25v27" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										</g>
+										<g>
+											<path d="M598.52,337.43a8.84,8.84,0,0,0-15.29-8.87l-6.76-3.89L568,339.29l29.23,16.9,8.45-14.62-7.18-4.14h0Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M591.5,331.69a1.71,1.71,0,0,0-2.28.59A1.67,1.67,0,1,0,592.1,334,1.66,1.66,0,0,0,591.5,331.69Z" transform="translate(-0.23)" fill="#333"/>
+											<path d="M573.42,336.67l23.4,13.52" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										</g>
+										<g>
+											<path d="M417.7,328.82a8.84,8.84,0,1,0-15.29,8.87l-6.84,4L404,356.28l29.23-16.9-8.45-14.62Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+											<path d="M409.09,331.94a1.68,1.68,0,0,0-.59,2.28,1.67,1.67,0,0,0,2.87-1.69A1.64,1.64,0,0,0,409.09,331.94Z" transform="translate(-0.23)" fill="#333"/>
+											<path d="M404.27,350.19l23.49-13.52" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										</g>
+									</g>
+								</g>
+							</g>
+							<g id="Crash">
+								<g id="Crash-Stand-Top">
+									<path d="M173.78,121.64l17.15-47.15a4.64,4.64,0,1,0-8.7-3.21l-17.15,47.15Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M188.48,88.61a7,7,0,0,0-4.14-9l-0.42-.17a7,7,0,0,0-9,4.14L119.87,235.11l13.52,4.9Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M157.81,118.6a0.3,0.3,0,0,1-.08.17l-0.17.42a7,7,0,0,0,4.14,9l8.36,3a7,7,0,0,0,9-4.14l0.17-.42c0-.08,0-0.17.08-0.17l-21.46-7.86h0Zm30.92-18.42a0.3,0.3,0,0,1,.08-0.17l0.17-.42a7,7,0,0,0-4.14-9l-8.36-3a7,7,0,0,0-9,4.14l-0.17.42c0,0.08,0,.17-0.08.17l21.46,7.86h0Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<g id="Crash-Cymbol">
+										<path d="M286.91,151.47l-41.15-15.8c-28.64-11-39.63-19.26-46.3-26.61-2.79-2.87-8.28-8-14.28-10.22l-7.35-2.7h-0.17s-5.58-2-7.35-2.7c-6-2.2-13.6-1.77-17.49-1.35-9.89,1.27-23.66.59-52.64-9.38L58.53,68.33c-4.56-1.69-9-.25-10.22,3.3l-0.08.08c-1.27,3.55.93,7.27,5.58,9l114.4,41.65h0.17L282.77,164c4.56,1.69,8.7.25,10.05-3.3l0.08-.08c1-3.55-1.44-7.44-6-9.13h0Z" transform="translate(-0.23)" fill="#fde74c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M185.86,105.42l-21.71-7.86" transform="translate(-0.23)" fill="none" stroke="#fef5b7" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+									</g>
+								</g>
+								<g id="Crash-Stand">
+									<path d="M118.94,238H133.3V583.56H118.94V238Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<g>
+										<path d="M188,645.24a7.14,7.14,0,0,1-10.22-.08L121.39,588.8a7.17,7.17,0,1,1,10.14-10.14L187.89,635A7.14,7.14,0,0,1,188,645.24Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M181.3,642.53l-56.78-56.78" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										<path d="M188.31,635.44l-10.14,10.14s5.41,9.13,6.76,10.48c4,4,10.05,3.63,14-.34s4.31-10.05.42-14C198.11,640.51,188.31,635.44,188.31,635.44Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<g>
+										<path d="M64.78,645a7.14,7.14,0,0,1,.08-10.22l56.36-56.36a7.17,7.17,0,1,1,10.14,10.14L75,644.9A7.14,7.14,0,0,1,64.78,645Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M71.71,642.53l54.75-54.84" transform="translate(-0.23)" fill="none" stroke="#bcece8" stroke-miterlimit="10" stroke-width="4"/>
+										<path d="M74.5,645.32L64.36,635.18s-9.13,5.41-10.48,6.76c-4,4-3.63,10.05.34,14s10.05,4.31,14,.42C69.43,655.12,74.5,645.32,74.5,645.32Z" transform="translate(-0.23)" fill="#5c5c5c" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<path d="M115.14,583.39a11.41,11.41,0,1,1,11.41,11.41A11.36,11.36,0,0,1,115.14,583.39Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									<path d="M128.57,580.6a3.39,3.39,0,1,0,.76,4.73A3.38,3.38,0,0,0,128.57,580.6Z" transform="translate(-0.23)" fill="#333"/>
+									<g>
+										<circle cx="139.5" cy="413.31" r="8.45" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M137.53,423.11a9.23,9.23,0,0,1-9.21,9.21H124a9.23,9.23,0,0,1-9.21-9.21V404.44a9.23,9.23,0,0,1,9.21-9.21h4.31a9.23,9.23,0,0,1,9.21,9.21v18.67Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+									</g>
+									<g>
+										<path d="M115,237.82a11.41,11.41,0,1,1,11.41,11.41A11.36,11.36,0,0,1,115,237.82Z" transform="translate(-0.23)" fill="#eefaf9" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+										<path d="M128.4,235a3.39,3.39,0,1,0,.76,4.73A3.38,3.38,0,0,0,128.4,235Z" transform="translate(-0.23)" fill="#333"/>
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="All-Keys" opacity="0.9">
+							<g id="Key-66" class="key-wrap">
+								<path d="M554.5,779.86A10.17,10.17,0,0,1,544.36,790H454a10.17,10.17,0,0,1-10.14-10.14V689.45A10.17,10.17,0,0,1,454,679.32h90.41a10.17,10.17,0,0,1,10.14,10.14v90.41Z" transform="translate(-0.23)"/>
+								<text transform="translate(476.83 753.85)" class="key-text">B</text>
+							</g>
+							<g id="Key-74" class="key-wrap">
+								<path d="M933,779.86A10.17,10.17,0,0,1,922.88,790H832.48a10.17,10.17,0,0,1-10.14-10.14V689.45a10.17,10.17,0,0,1,10.14-10.14h90.41A10.17,10.17,0,0,1,933,689.45v90.41Z" transform="translate(-0.23)"/>
+								<text transform="translate(860.77 753.85)" class="key-text">J</text>
+							</g>
+							<g id="Key-72" class="key-wrap">
+								<path d="M799.52,779.86A10.17,10.17,0,0,1,789.39,790H699a10.17,10.17,0,0,1-10.14-10.14V689.45A10.17,10.17,0,0,1,699,679.32h90.41a10.17,10.17,0,0,1,10.14,10.14v90.41Z" transform="translate(-0.23)"/>
+								<text transform="translate(720.27 753.85)" class="key-text">H</text>
+							</g>
+							<g id="Key-71" class="key-wrap">
+								<path d="M311.16,779.86A10.17,10.17,0,0,1,301,790H210.61a10.17,10.17,0,0,1-10.14-10.14V689.45a10.17,10.17,0,0,1,10.14-10.14H301a10.17,10.17,0,0,1,10.14,10.14v90.41Z" transform="translate(-0.23)"/>
+								<text transform="translate(231.99 753.72)" class="key-text">G</text>
+							</g>
+							<g id="Key-70" class="key-wrap">
+								<path d="M177.66,779.86A10.17,10.17,0,0,1,167.52,790H77.12A10.17,10.17,0,0,1,67,779.86V689.45a10.17,10.17,0,0,1,10.14-10.14h90.41a10.17,10.17,0,0,1,10.14,10.14v90.41Z" transform="translate(-0.23)"/>
+								<text transform="translate(103.7 753.85)" class="key-text">F</text>
+							</g>
+							<g id="Key-89" class="key-wrap">
+								<path d="M702.36,100.55a10.17,10.17,0,0,1-10.14,10.14H601.81a10.17,10.17,0,0,1-10.14-10.14V10.14A10.17,10.17,0,0,1,601.81,0h90.41a10.17,10.17,0,0,1,10.14,10.14v90.41Z" transform="translate(-0.23)"/>
+								<text transform="translate(627.75 74.53)" class="key-text">Y</text>
+							</g>
+							<g id="Key-84" class="key-wrap">
+								<path d="M406.64,100.55a10.17,10.17,0,0,1-10.14,10.14H306.09A10.17,10.17,0,0,1,296,100.55V10.14A10.17,10.17,0,0,1,306.09,0H396.5a10.17,10.17,0,0,1,10.14,10.14v90.41Z" transform="translate(-0.23)"/>
+								<text transform="translate(332.68 74.53)" class="key-text">T</text>
+							</g>
+						</g>
+					</svg>
+				</div>
+			</div>
+			
+		</div>
+		</section>
+
+
+<section class="content content--instrument content--chime flexy">
+				<div class="content__inner content__inner--medium flexy flexy--center">
+					<h2 class="content__title">Chimes</h2>
+					
+					
+				</div>
+				<div class="chime chime--large instrument">
+					<svg class="chime__inner" xmlns:note="http://tympanus.net/codrops" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMin meet">
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="105.9" y1="0" x2="105.9" y2="107.4" />
+							<rect note:id="50" class="chime__pipe" x="71.3" y="87.3" width="69.2" height="618.5" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="217.5" y1="0" x2="217.5" y2="107.4" />
+							<rect note:id="51" class="chime__pipe" x="182.9" y="87.3" width="69.2" height="606.1" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="329.2" y1="0" x2="329.2" y2="107.4" />
+							<rect note:id="52" class="chime__pipe" x="294.6" y="87.3" width="69.2" height="593.8" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="440.9" y1="0" x2="440.9" y2="107.4" />
+							<rect note:id="53" class="chime__pipe" x="406.3" y="87.3" width="69.2" height="581.4" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="552.5" y1="0" x2="552.5" y2="107.4" />
+							<rect note:id="54" class="chime__pipe" x="517.9" y="87.3" width="69.2" height="569" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="664.2" y1="0" x2="664.2" y2="107.4" />
+							<rect note:id="55" class="chime__pipe" x="629.6" y="87.3" width="69.2" height="556.6" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="775.8" y1="0" x2="775.8" y2="107.4" />
+							<rect note:id="56" class="chime__pipe" x="741.2" y="87.3" width="69.2" height="544.3" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="887.5" y1="0" x2="887.5" y2="107.4" />
+							<rect note:id="57" class="chime__pipe" x="852.9" y="87.3" width="69.2" height="531.9" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="999.1" y1="0" x2="999.1" y2="107.4" />
+							<rect note:id="58" class="chime__pipe" x="964.5" y="87.3" width="69.2" height="519.5" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="1110.8" y1="0" x2="1110.8" y2="107.4" />
+							<rect note:id="59" class="chime__pipe" x="1076.2" y="87.3" width="69.2" height="507.2" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="1222.5" y1="0" x2="1222.5" y2="107.4" />
+							<rect note:id="60" class="chime__pipe" x="1187.9" y="87.3" width="69.2" height="494.8" />
+						</g>
+						<g class="chime__pipe-wrap">
+							<line class="chime__string" x1="1334.1" y1="0" x2="1334.1" y2="107.4" />
+							<rect note:id="61" class="chime__pipe" x="1299.5" y="87.3" width="69.2" height="482.4" />
+						</g>
+					</svg>
+				</div>
+				
+			</section>
+			<section class="content content--instrument content--harp content--instrument-alt content--cursor-dark">
+				<div class="content__inner content__inner--medium flexy flexy--center">
+					<h2 class="content__title">Harps</h2>
+					
+				</div>
+				<div class="harp instrument">
+					<svg class="harp__inner" xmlns:note="http://tympanus.net/codrops" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid meet">
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--c" d="M162.5,1462V84.2V81"/>
+							<polygon note:id="3" class="harp__string-hover" points="171,85.9 171,1452.2 162.5,1461.3 162,1461.8 153,1471.4 152.4,82.6 162,84.1 162.5,84.2 170.5,85.5"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M180.5,1442V88.7v-0.1V84"/>
+							<polygon note:id="5" class="harp__string-hover" points="190,91.6 190,1431.8 180,1442 180,1442 179.9,1442.4 171,1452.2 171,86 171.7,86 180.1,88.6 180.5,88.7 189.8,91.6"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M198.5,90v4.2V1423"/>
+							<polygon note:id="7" class="harp__string-hover" points="210,98 210,1410.4 198.5,1422.7 190,1431.8 190,91.5 198.5,94.2 208.1,97.3"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--f" d="M217.5,96v4.8V1402"/>
+							<polygon note:id="8" class="harp__string-hover" points="229,105.2 229,1390.1 217.5,1402.4 210,1410.4 210,98 217.5,100.8 228.3,105"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M237.5,104v4.1V1381"/>
+							<polygon note:id="10" class="harp__string-hover" points="248,112 248,1369.7 237.5,1381 229,1390.1 229,105.2 237.5,108 246.8,111.2"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M255.5,114v1.5v0.5v1246"/>
+							<polygon note:id="12" class="harp__string-hover" points="267,123.7 267,1349.4 255.5,1361.7 248,1369.7 248,112 255.5,116 261.6,119.3"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M275.5,129v1.4v0.8V1340"/>
+							<polygon note:id="14" class="harp__string-hover" points="286,140.7 286,1329.1 275.5,1340.3 267,1349.4 267,123.7 275.5,131.1 282.4,137.1 285.9,140.4"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--c" d="M294.5,1320V149v-1.9V147"/>
+							<polygon note:id="15" class="harp__string-hover" points="305,159 305,1308.7 294,1319.9 294,1319.9 286,1329.1 286,140.7 294.5,149 301.7,156"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M313.5,164v0.7v2.6V1300"/>
+							<polygon note:id="17" class="harp__string-hover" points="324,177.7 324,1288.4 313.5,1299.6 305,1308.7 305,159 313.5,167.4 319.3,173.1 322.8,176.6"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M332.5,187v0.2V1279"/>
+							<polygon note:id="19" class="harp__string-hover" points="343,198.8 343,1268 332.5,1279.3 324,1288.4 324,177.7 332.5,187.2"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--f" d="M350.5,203v3.8v1052.7v-0.5"/>
+							<polygon note:id="20" class="harp__string-hover" points="362,218.9 362,1247.7 361.3,1248.2 350,1259.5 350,1259.5 350,1260 350,1260 347.9,1262.4 343,1268 343,198.8 350.5,206.8"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M370.5,225v4.1V1239"/>
+							<polygon note:id="22" class="harp__string-hover" points="381,243.2 381,1227.1 380.8,1227.3 370.5,1238.6 362,1247.7 362,218.9 364,221.1 367.8,225.5 370.5,229.1"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M389.5,247v6.2v964v-0.2"/>
+							<polygon note:id="24" class="harp__string-hover" points="401,267.8 401,1205.9 398.9,1207.9 397.8,1208.9 397.8,1208.9 396.8,1209.9 389.5,1216.8 389,1217.2 
+								389,1217.7 388.8,1218.2 381,1227.1 381,243.2 383.8,246 389.5,253.2"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M409.5,1197V279.5v-7V269"/>
+							<polygon note:id="26" class="harp__string-hover" points="420,293.6 420,1185.6 409,1196.8 409,1196.8 401,1205.9 401,267.8 404.8,273.2 409.5,279.5"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--c" d="M427.5,294v4v6.1v874"/>
+							<polygon note:id="27" class="harp__string-hover" points="438,318.1 438,1166.3 427.5,1177.6 420,1185.6 420,293.6 424.9,300.5 427.5,304"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M447.5,322v1.4v6.9V1156"/>
+							<polygon note:id="29" class="harp__string-hover" points="458,344.3 458,1144.9 447.5,1156.2 438,1166.3 438,318.1 442.4,323.7 445.5,327.7 447.5,330.3"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M465.5,351v3.7v781.7v-0.4"/>
+							<polygon note:id="31" class="harp__string-hover" points="476,369.1 476,1125.6 475.3,1126.1 465,1136.4 465,1136.4 465,1136.9 465,1136.9 462.9,1139.3 
+								458,1144.9 458,344.3 464.9,353.9 465.5,354.7"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--f" d="M485.5,379v1.9V1115"/>
+							<polygon note:id="32" class="harp__string-hover" points="497,395.2 497,1103.2 485.5,1115.5 476,1125.6 476,369.1 485.5,380.9 486,381.5"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M504.5,1095V406"/>
+							<polygon note:id="34" class="harp__string-hover" points="515,420 515,1083.9 504.5,1095.1 497,1103.2 497,395.2 507,409"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M523.5,1074L523.5,1074v-0.2V429.6V427"/>
+							<polygon note:id="36" class="harp__string-hover" points="535,440.5 535,1062.5 535,1062.5 534.3,1062.9 534.3,1063 523.5,1073.8 523,1074.3 523,1074.8 521,1077.1 519.9,1078.3 515,1083.9 515,420 519,425.3 523.5,429.6 527.6,433.5"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M542.5,1054V450"/>
+							<polygon note:id="38" class="harp__string-hover" points="553,458.4 553,1042.9 552.8,1043.2 542.5,1054.5 535,1062.5 535,440.5 548.1,453.4"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--c" d="M560.5,1034V469"/>
+							<polygon note:id="39" class="harp__string-hover" points="571,471.6 571,1024 571,1024 567.4,1027.4 567.3,1027.5 567.2,1027.7 566.7,1028.1 566.5,1028.3 565.2,1029.6 565.1,1029.7 560.5,1034.2 560,1034.7 560,1034.7 559.8,1035.2 553,1042.9 553,458.4 558.4,463.5 567.2,469.1"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M580.5,1013.8l-0.3-532.4"/>
+							<polygon note:id="41" class="harp__string-hover" points="592,483.5 592,1001.5 581,1013.8 581,1013.8 581,1013.8 580.8,1014 580.8,1014 580.6,1014.1 571,1023.9 571,471.6 588.2,481.7"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M599.5,993V495"/>
+							<polygon note:id="43" class="harp__string-hover" points="610,494.8 610,981.9 609.8,982.2 599.5,993.4 592,1001.5 592,483.5 609.3,494.2"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--f" d="M618.5,505v466.6v0.4"/>
+							<polygon note:id="44" class="harp__string-hover" points="630,506.1 630,960.8 629.5,961.2 627.7,962.9 626.6,964 626.5,964 625.7,964.8 618.5,971.6 618,972.1 618,972.6 617.8,973.1 610,981.9 610,494.8 627.8,505.5"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M637.5,514v0.7V953"/>
+							<polygon note:id="46" class="harp__string-hover" points="648,511.4 648,941.5 637.5,952.8 630,960.8 630,506.1"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M656.5,932V521"/>
+							<polygon note:id="48" class="harp__string-hover" points="667,517 667,921.2 659.1,929.6 656.5,932.4 652.2,937 648,941.5 648,511.4 648.7,511.7"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M676.5,528v381.5v0v0v0.5"/>
+							<polygon note:id="50" class="harp__string-hover" points="687,521.3 687,899.8 685,901.6 684.1,902.4 683.1,903.3 676.5,909.5 676,910 676,911 674.5,912.8 672.9,914.7 672.8,914.8 671.7,916.1 671.2,916.6 671,917.1 671,917.1 670.4,917.5 667.7,920.5 667,921.2 667,517 669.6,517.6 679.1,520.1"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--c" d="M695.5,891V534"/>
+							<polygon note:id="51" class="harp__string-hover" points="706,524.3 706,879.4 695.5,890.7 687,899.8 687,521.3 690.8,521.9"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M715.5,869V536"/>
+							<polygon note:id="53" class="harp__string-hover" points="725,527.2 725,859.1 715.5,869.2 706,879.4 706,524.3 711.4,525.1"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M733.5,850V536"/>
+							<polygon note:id="55" class="harp__string-hover" points="744,526.9 744,838.7 733.5,850 725,859.1 725,527.2 729.7,528 730.8,527.9"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--f" d="M751.5,831V535"/>
+							<polygon note:id="56" class="harp__string-hover" points="764,525.6 764,817.3 751.5,830.7 744,838.7 744,526.9"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M772.5,809V529"/>
+							<polygon note:id="58" class="harp__string-hover" points="783,523.9 783,797 772.5,808.2 764,817.3 764,525.6 772.9,524.9 776.4,524.6"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M791.5,790V528"/>
+							<polygon note:id="60" class="harp__string-hover" points="801,519.5 801,777.7 791.5,787.9 783,797 783,523.9 793,522.6"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M810.5,770V524"/>
+							<polygon note:id="62" class="harp__string-hover" points="820,512.5 820,757.4 801,777.7 801,519.5"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--c" d="M829.5,750V521"/>
+							<polygon note:id="63" class="harp__string-hover" points="839,505.1 839,737 829.5,747.2 820,757.4 820,512.5"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M848.5,730V514"/>
+							<polygon note:id="65" class="harp__string-hover" points="859,498.1 859,715.6 848.5,726.9 839,737 839,505.1"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M868.5,710V509"/>
+							<polygon note:id="67" class="harp__string-hover" points="878,490.8 878,695.3 868.5,705.5 859,715.6 859,498.1"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--f" d="M886.5,690V501"/>
+							<polygon note:id="68" class="harp__string-hover" points="897,483.8 897,675 886.5,686.2 878,695.3 878,490.8"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M906.5,670V495"/>
+							<polygon note:id="70" class="harp__string-hover" points="916,475.8 916,654.6 906.5,664.8 897,675 897,483.8 903,481.4 906.6,480.4"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M924.5,650V486"/>
+							<polygon note:id="72" class="harp__string-hover" points="934,467 934,635.3 924.5,645.5 916,654.6 916,475.8 922.9,472.4"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M944.5,629V477"/>
+							<polygon note:id="74" class="harp__string-hover" points="955,457.6 955,612.9 934,635.3 934,467 944,462.5"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--c" d="M963.5,610V466"/>
+							<polygon note:id="75" class="harp__string-hover" points="973,448.7 973,593.6 963.5,603.8 955,612.9 955,457.6"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M981.5,590V456"/>
+							<polygon note:id="77" class="harp__string-hover" points="993,438.4 993,572.2 981.5,584.5 973,593.6 973,448.7 984.4,443.3 987.3,442"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M1001.5,569V444"/>
+							<polygon note:id="79" class="harp__string-hover" points="1011,426.3 1011,552.9 1001.5,563.1 993,572.2 993,438.4 1005.1,430.4"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string harp__string--f" d="M1019.5,550V430"/>
+							<polygon note:id="80" class="harp__string-hover" points="1031,413.5 1031,531.5 1019.5,543.8 1011,552.9 1011,426.3 1025.4,417"/>
+						</g>
+						<g class="harp__string-wrap">
+							<path class="harp__string" d="M1039.5,530V415"/>
+							<polygon note:id="82" class="harp__string-hover" points="1050,401.6 1050,511.2 1039.5,522.4 1031,531.5 1031,413.5"/>
+						</g>
+						<path class="harp__body" d="M1205.8,331.5c-80.1-50.9-218.6,9.7-304.5,37.1c-85.9,27.3-204.2,135.3-328.7-191.4C448.1-149.5,102.9-163.1,102.9-163.1l1.7,254.3c26.9,0.8,91.8,14.2,128.8,35c37,20.7,145.6,136,188.6,203.2c43,67.1,124.4,227.9,309.5,217.8c185-10.1,283.3-106.8,315.6-126.7c32.3-19.9,32.3,0.9,32.3,0.9l-0.8,33.9L70.2,1539.8c0,0-56.7,58,59.3,61.4c116,3.4,307.4,3.4,307.4,3.4l753.5-1146C1190.3,458.5,1285.8,382.4,1205.8,331.5z"/>
+						<path class="harp__body" d="M142.1,1544.6c0,0-63.5,55.9-79.9,38.8c-26.4-27.6-14.3-195.5-14.3-195.5l2.3-1557.1l94.4,4.1L142.1,1544.6z"/>
+					</svg>
+				</div>
+				
+			</section>
+<section class="content content--instrument content--xylophone content--instrument-alt">
+				<div class="content__inner content__inner--medium flexy flexy--center">
+					<h2 class="content__title">Xylophones</h2>
+					
+					
+				</div>
+				<div class="xylophone instrument">
+					<svg class="xylophone__inner" xmlns:note="http://tympanus.net/codrops" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax meet">
+						<g class="xylophone__base xylophone__base--lower">
+							<rect x="-0.5" y="445.4" width="1441.2" height="34.5"/>
+							<polygon points="1440.8,577.1 -0.5,692.7 -0.5,727.3 1440.8,611.7"/>
+						</g>
+						<g class="xylophone__base xylophone__base--lower">
+							<rect x="-0.5" y="311.3" width="1441.2" height="34.5"/>
+							<polygon points="1440.8,204.8 -0.5,112.1 -0.5,146.7 1440.8,239.4"/>
+						</g>
+						<g class="xylophone__keys xylophone__keys--natural">
+							<rect note:id="44" y="380" class="xylophone__key xylophone__key--natural" width="42" height="405"/>
+							<rect note:id="46" x="55" y="380" class="xylophone__key xylophone__key--natural" width="43" height="400"/>
+							<rect note:id="48" x="112" y="380" class="xylophone__key xylophone__key--natural" width="42" height="395"/>
+							<rect note:id="50" x="167" y="380" class="xylophone__key xylophone__key--natural" width="43" height="389"/>
+							<rect note:id="51" x="223" y="380" class="xylophone__key xylophone__key--natural" width="44" height="385"/>
+							<rect note:id="53" x="279" y="380" class="xylophone__key xylophone__key--natural" width="43" height="380"/>
+							<rect note:id="55" x="336" y="380" class="xylophone__key xylophone__key--natural" width="41" height="375"/>
+							<rect note:id="56" x="391" y="380" class="xylophone__key xylophone__key--natural" width="43" height="369"/>
+							<rect note:id="58" x="447" y="380" class="xylophone__key xylophone__key--natural" width="43" height="364"/>
+							<rect note:id="60" x="503" y="380" class="xylophone__key xylophone__key--natural" width="43" height="359"/>
+							<rect note:id="62" x="558" y="380" class="xylophone__key xylophone__key--natural" width="44" height="354"/>
+							<rect note:id="63" x="616" y="380" class="xylophone__key xylophone__key--natural" width="41" height="349"/>
+							<rect note:id="65" x="671" y="380" class="xylophone__key xylophone__key--natural" width="43" height="344"/>
+							<rect note:id="67" x="726" y="380" class="xylophone__key xylophone__key--natural" width="43" height="339"/>
+							<rect note:id="68" x="783" y="380" class="xylophone__key xylophone__key--natural" width="42" height="335"/>
+							<rect note:id="70" x="838" y="380" class="xylophone__key xylophone__key--natural" width="44" height="330"/>
+							<rect note:id="72" x="895" y="380" class="xylophone__key xylophone__key--natural" width="42" height="324"/>
+							<rect note:id="74" x="950" y="380" class="xylophone__key xylophone__key--natural" width="44" height="319"/>
+							<rect note:id="75" x="1007" y="380" class="xylophone__key xylophone__key--natural" width="42" height="314"/>
+							<rect note:id="77" x="1062" y="380" class="xylophone__key xylophone__key--natural" width="42" height="309"/>
+							<rect note:id="79" x="1117" y="380" class="xylophone__key xylophone__key--natural" width="44" height="305"/>
+							<rect note:id="80" x="1174" y="380" class="xylophone__key xylophone__key--natural" width="43" height="299"/>
+							<rect note:id="82" x="1230" y="380" class="xylophone__key xylophone__key--natural" width="43" height="294"/>
+							<rect note:id="84" x="1286" y="380" class="xylophone__key xylophone__key--natural" width="42" height="289"/>
+							<rect note:id="86" x="1342" y="380" class="xylophone__key xylophone__key--natural" width="42" height="284"/>
+							<rect note:id="87" x="1398" y="380" class="xylophone__key xylophone__key--natural" width="42" height="278"/>
+						</g>
+						<g class="xylophone__keys xylophone__keys--flat">
+							<rect note:id="45" x="27" y="16" class="xylophone__key xylophone__key--flat" width="43" height="400"/>
+							<rect note:id="47" x="84" y="21" class="xylophone__key xylophone__key--flat" width="42" height="395"/>
+							<rect note:id="49" x="139" y="27" class="xylophone__key xylophone__key--flat" width="43" height="389"/>
+							<rect note:id="52" x="253" y="36" class="xylophone__key xylophone__key--flat" width="43" height="380"/>
+							<rect note:id="54" x="310" y="41" class="xylophone__key xylophone__key--flat" width="41" height="375"/>
+							<rect note:id="57" x="421" y="52" class="xylophone__key xylophone__key--flat" width="43" height="364"/>
+							<rect note:id="59" x="477" y="57" class="xylophone__key xylophone__key--flat" width="43" height="359"/>
+							<rect note:id="61" x="532" y="62" class="xylophone__key xylophone__key--flat" width="44" height="354"/>
+							<rect note:id="64" x="643" y="72" class="xylophone__key xylophone__key--flat" width="43" height="344"/>
+							<rect note:id="66" x="698" y="77" class="xylophone__key xylophone__key--flat" width="43" height="339"/>
+							<rect note:id="69" x="811" y="86" class="xylophone__key xylophone__key--flat" width="44" height="330"/>
+							<rect note:id="71" x="868" y="92" class="xylophone__key xylophone__key--flat" width="42" height="324"/>
+							<rect note:id="73" x="923" y="97" class="xylophone__key xylophone__key--flat" width="44" height="319"/>
+							<rect note:id="76" x="1038" y="107" class="xylophone__key xylophone__key--flat" width="42" height="309"/>
+							<rect note:id="78" x="1093" y="111" class="xylophone__key xylophone__key--flat" width="44" height="305"/>
+							<rect note:id="81" x="1205" y="122" class="xylophone__key xylophone__key--flat" width="43" height="294"/>
+							<rect note:id="83" x="1261" y="127" class="xylophone__key xylophone__key--flat" width="42" height="289"/>
+							<rect note:id="85" x="1317" y="132" class="xylophone__key xylophone__key--flat" width="42" height="284"/>
+						</g>
+					</svg>
+				</div>
+				
+			</section>	
+			
+			<!-- Violin background section removed -->
+			<section class="content content--instrument content--tiny flexy flexy--center">
+				<div class="content__inner flexy flexy--center">
+					<h2 class="content__title">And More</h2>
+					
+				</div>
+				<div class="flexy flexy--row flexy--center flexy--stretch flexy--padding">
+					<div class="tiny-instrument tiny-instrument--flute"><img class="tiny-instrument__image" src="img/instruments/panflute.svg" alt="Pan Flute"/></div>
+					<div class="tiny-instrument tiny-instrument--tuba"><img class="tiny-instrument__image" src="img/instruments/tuba.svg" alt="Tuba"/></div>
+					<div class="tiny-instrument tiny-instrument--sax"><img class="tiny-instrument__image" src="img/instruments/saxophone.svg" alt="Saxophone"/></div>
+				</div>
+			</section>
+			<!-- Related demos -->
+			
+		</main>
+
+
+
+
+
+		<!-- keyboard events : used for the piano - assign keyboard keys to piano keys -->
+		<script src="js/mousetrap.min.js"></script>
+		<!-- the canvas wave animation -->
+		<script src="js/siriwave.js"></script>
+		<!-- js media queries : display the different sizes of pianos for different screen sizes -->
+		<script src="js/enquire.min.js"></script>
+		<!-- for some animations -->
+		<script src="js/anime.min.js"></script>
+		<!-- helper functions -->
+		<script src="js/helper.js"></script>
+		<!-- the piano -->
+		<script src="js/piano.js"></script>
+		<!-- the guitar -->
+		<script src="js/guitar.js"></script>
+		<!-- the kalimba -->
+		<script src="js/kalimba.js"></script>
+		<!-- the chimes -->
+		<script src="js/chimes.js"></script>
+		<!-- the timpani -->
+		<!-- timpani.js removed -->
+		<!-- the harp -->
+		<script src="js/harp.js"></script>
+		<!-- the xylophone -->
+		<script src="js/xylophone.js"></script>
+		<!-- the sax, tuba and pan flute -->
+		<script src="js/tinyinstrument.js"></script>
+		<!-- the microphone effect -->
+		<script src="js/mic.js"></script>
+		<!-- the violin effect -->
+		<!-- violin.js removed -->
+		<!-- main script -->
+		<script src="js/main.js"></script>
+
+
+<audio id="Big-Rack-Tom-Audio" preload="auto">
+			<source src="mp3/Big-Rack-Tom.mp3" type="audio/mp3">
+		</audio>
+		<audio id="Crash-Audio" preload="auto">
+			<source src="mp3/Crash.mp3" type="audio/mp3">
+		</audio>
+		<audio id="Floor-Tom-Audio" preload="auto">
+			<source src="mp3/Floor-Tom.mp3" type="audio/mp3">
+		</audio>
+		<audio id="Hi-Hat-Closed-Audio" preload="auto">
+			<source src="mp3/Hi-Hat-Closed.mp3" type="audio/mp3">
+		</audio>
+		<audio id="Kick-Audio" preload="auto">
+			<source src="mp3/Kick.mp3" type="audio/mp3">
+		</audio>
+		<audio id="Small-Rack-Tom-Audio" preload="auto">
+			<source src="mp3/Small-Rack-Tom.mp3" type="audio/mp3">
+		</audio>
+		<audio id="Snare-Audio" preload="auto">
+			<source src="mp3/Snare.mp3" type="audio/mp3">
+		</audio>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+		<script src="jsd/script.js"></script>
+
+
+	</body>
+</html>

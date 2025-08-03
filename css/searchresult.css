@@ -13,6 +13,7 @@
 	padding-left: 8px;
 	padding-right: 8px;
 	margin-bottom: 24px;
+	
   }
   .gallery {
 	flex-direction: column;
@@ -89,20 +90,6 @@
 	}
 }
 
-/* 1.1.general-setting-pages *************************/
-/****************************************************/
-
-
-/*! normalize.css v8.0.1 */
-
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
 html {
 	line-height: 1.15;
 	/* 1 */
@@ -162,7 +149,7 @@ hr {
  */
 
 pre {
-	font-family: monospace, monospace;
+	
 	/* 1 */
 	font-size: 1em;
 	/* 2 */
@@ -479,16 +466,16 @@ template {
 
 
 :root {
-	--pr-color: #fff;
-	--second-color: #0a0a0a;
+	--pr-color: #000000;
+	--second-color: #e3e0d8;
 	--cubicbz: cubic-bezier(.9, 0, .1, 1);
 	--fz-big: 60px;
 }
 
 * {
 	box-sizing: border-box;
-	font-family: 'Syne', sans-serif;
-	font-weight: 800;
+	font-family: 'poppins', sans-serif;
+	font-weight: 900;
 	margin: 0;
 	padding: 0;
 	/* font-feature-settings: 'pnum' on, 'lnum' on; */
@@ -509,12 +496,25 @@ body {
 }
 
 .title {
-	margin-top: 0;
-	margin-bottom: 110px;
-	font-size: var(--fz-big);
-	text-transform: uppercase;
-	color: var(--pr-color);
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--pr-color);
 }
+
+/* For search result title split color */
+.search-title-label {
+  color: #fff;
+  font-size: 3.1em;
+  font-weight: 800;
+}
+.search-title-result {
+  color: #ffb347;
+  font-size: 3.1em;
+  font-weight: 800;
+}
+
 
 /* Image Gallery **********************************/
 .gallery {
@@ -556,8 +556,8 @@ body {
 	top: 0;
 	left: 0;
 	opacity: 0;
-	backdrop-filter: blur(20px);
-	background: rgba(0, 0, 0, 0.614);
+	backdrop-filter: blur(30px);
+	background: rgba(0, 0, 0, 0.01);
 	will-change: opacity;
 	pointer-events: none;
 	z-index: 2;

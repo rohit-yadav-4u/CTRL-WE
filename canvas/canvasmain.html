@@ -4,12 +4,28 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Canvas main</title>
-		
+		 <link rel="stylesheet" href="../css/footer.css">
 		<link rel="stylesheet" href="https://use.typekit.net/cch1nog.css">
 		<link rel="stylesheet" type="text/css" href="/canvas/canvasmain.css" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 		<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
 		 <link rel="stylesheet" href="/canvas/css/canvasnavbar.css" />
+		       <link href='http://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css' />
+<style>
+    /* Entry animation for scroll-in effect */
+.scroll-animate {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(60px);
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), filter 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+    will-change: opacity, filter, transform;
+}
+.scroll-animate.in-view {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+</style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="/canvas/js/canvasnavbar.js"></script>
 	</head>
@@ -28,14 +44,9 @@
 		<main>
 			<!--<section class="project project--intro">-->
 				<h2 class="project__title">
-					<span class="project__title-line">Glimpse of Indian Art</span>
+					<span class="project__title-line scroll-animate">Glimpse of Indian Art</span>
 				</h2>
-				<!--<div class="project__mission">
-					<p> Indian traditional arts reflect rich cultural heritage through vibrant visual and performing forms. Visual arts include Madhubani, Warli paintings, Bandhani, Kalamkari textiles, and intricate carvings. They often depict nature, mythology, and daily life. Performing arts like Bharatanatyam, Kathak, Garba, Bihu, and Yakshagana express stories and emotions through graceful dance and rhythm.</p>
-					<p> Handicrafts such as Dhokra metalwork, blue pottery, Zardozi embroidery, and Rogan art showcase the skilled craftsmanship passed through generations. Oral traditions and storytelling, including puppetry and Baul songs, preserve folklore and wisdom, making Indian traditional arts a living legacy of creativity and cultural identity.</p>
-
-				</div>-->
-			<!--</section>-->
+				
 			<div class="gallery-wrap">
 				<div class="gallery gallery--row" id="gallery-1">
 
@@ -47,14 +58,19 @@
 					<div class="gallery__item gallery__item--m" style="background-image:url(img/canvasmainimg/2.jpg)"></div>
 					<div class="gallery__item gallery__item--s" style="background-image:url(img/canvasmainimg/6.jpg)"></div>
 					<div class="caption">
-						Traditional Indian music includes classical forms like Hindustani and Carnatic, featuring instruments such as the sitar, tabla, and veena. It also embraces devotional songs, bhajans, and folk tunes, reflecting India’s deep spiritual roots and rich cultural diversity.
+						Traditional Indian music includes classical forms like Hindustani and Carnatic, featuring instruments such as the sitar, tabla, and veena.
+						
+      <a class="content__item btn1-a" href="/canvas/Musical-Instruments/index.html"><button class="button button--hyperion"><span><span>Play the Instruments</span></span></button></a>
+      <a class="content__item btn1-b" href="/canvas/html/music.html"><button class="button button--hyperion"><span><span>More Info</span></span></button></a>
+  
 					</div>
 				</div>
 			</div>
 						
 			<section class="project project--details">
-				<div class="project__label project__label--default">Indian Handicrafts</div>
-				<p>Indian handicrafts are a testament to the country's rich heritage and skilled artistry. Each region offers unique crafts like Dhokra metalwork, Jaipur blue pottery, Kashmir’s Pashmina, and Northeast bamboo art. Embroidered textiles such as Phulkari and Zardozi, along with wood carving and terracotta, reflect cultural traditions passed through generations. Blending utility with beauty, these crafts preserve India’s diverse artistic legacy.</p>
+				<div class="project__label project__label--default scroll-animate">Indian Handicrafts</div>
+				<p class="scroll-animate">Indian handicrafts are a testament to the country's rich heritage and skilled artistry. Each region offers unique crafts like Dhokra metalwork, Jaipur blue pottery, Kashmir’s Pashmina, and Northeast bamboo art. Embroidered textiles such as Phulkari and Zardozi, along with wood carving and terracotta, reflect cultural traditions passed through generations. Blending utility with beauty, these crafts preserve India’s diverse artistic legacy.</p>
+			
 			</section>
 			
 			<div class="gallery-wrap gallery-wrap--large">
@@ -70,13 +86,15 @@
 					<div class="gallery__item gallery__item-cut"><div class="gallery__item-inner" style="background-image:url(img/canvasmainimg/11.jpg)"></div></div>
 					<div class="caption">
 						<p>Indian handicrafts are deeply tied to local traditions, festivals, and beliefs. Made using natural, sustainable methods, they carry cultural stories and heritage. Today, they gain global recognition while supporting artisan communities and preserving age-old skills.</p>
+						      <a class="content__item btn2" href="/canvas/html/handicrafts.html"><button class="button button--hyperion"><span><span>More Info</span></span></button></a>
+
 					</div>
 				</div>
 			</div>
 
 			<section class="project project--details project--right">
-				<span class="project__label project__label--default">Indian Traditional Paintings</span>
-				<p>Indian paintings are a vibrant part of the country’s cultural heritage, with each region offering unique styles. Madhubani, Warli, and Gond depict nature and folklore, while Tanjore and Pattachitra focus on deities and myths. Miniature paintings, Kalamkari, and Phad tell historic and epic tales with intricate detail. These traditional arts use natural colors, symbolic motifs, and storytelling, preserving India's rich legacy through visual expression.</p>
+				<span class="project__label project__label--default scroll-animate">Indian Traditional Paintings</span>
+				<p class="scroll-animate">Indian paintings are a vibrant part of the country’s cultural heritage, with each region offering unique styles. Madhubani, Warli, and Gond depict nature and folklore, while Tanjore and Pattachitra focus on deities and myths. Miniature paintings, Kalamkari, and Phad tell historic and epic tales with intricate detail. These traditional arts use natural colors, symbolic motifs, and storytelling, preserving India's rich legacy through visual expression.</p>
 			</section>
 
 
@@ -98,14 +116,14 @@
 					<div class="gallery__item pos-14" style="background-image:url(img/canvasmainimg/29.jpg)"></div>
 					<div class="gallery__item pos-15" style="background-image:url(img/canvasmainimg/19.jpg)"></div>
 					<div class="gallery__item pos-16" style="background-image:url(img/canvasmainimg/23.jpg)"></div>
-					<div class="caption" style="color: black; text-shadow: 2px 2px 4px white;">Paintings that portray legacy!</div>
+					<div class="caption paintings-title" style="color: black; text-shadow: 2px 2px 4px white;">Paintings that portray legacy!</div>
 				</div>
 			</div>
 
 			
 			<section class="project project--details">
-				<span class="project__label project__label--default">Visual Arts</span>
-				<p>India’s textile, metal, and stone arts reflect its rich cultural heritage and craftsmanship. Textile traditions like Bandhani, Kalamkari, and Chikankari showcase intricate patterns and natural dyes. Metal arts such as Dhokra and Bidriware blend utility with beauty. Stone carvings and sculptures, seen in temples like Khajuraho and Konark, highlight spiritual and artistic excellence.</p>
+				<span class="project__label project__label--default scroll-animate">Visual Arts</span>
+				<p class="scroll-animate">India’s textile, metal, and stone arts reflect its rich cultural heritage and craftsmanship. Textile traditions like Bandhani, Kalamkari, and Chikankari showcase intricate patterns and natural dyes. Metal arts such as Dhokra and Bidriware blend utility with beauty. Stone carvings and sculptures, seen in temples like Khajuraho and Konark, highlight spiritual and artistic excellence.</p>
 			</section>
 			<div class="gallery-wrap gallery-wrap--dense">
 				<div class="gallery gallery--stack gallery--stack-inverse gallery--stack-dark" id="gallery-4">
@@ -116,25 +134,15 @@
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/37.jpg)"></div>
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/38.jpg)"></div>
 					<div class="caption">
-						<p>Indian textile arts like Bandhani, Kalamkari, Chikankari, and Pashmina showcase intricate handwork, natural dyes, cultural stories, and regional traditions.</p>
+						<p>Indian textile arts like Bandhani, Kalamkari, Chikankari, and Pashmina showcase intricate handwork, natural dyes, cultural stories, and regional traditions.
+							<a class="content__item btn3" id="footer-textiless-link" href=""><button class="button button--hyperion"><span><span>More Info</span></span></button></a>
+
+						</p>
+						
 					</div>
 				</div>
 			</div>
-			<!--<div class="gallery-wrap gallery-wrap--dense">
-				<div class="gallery gallery--stack gallery--stack-glass" id="gallery-5">
-					<div class="gallery__item" style="background-image:url(img/canvasmainimg/39.jpg)"></div>
-					<div class="gallery__item" style="background-image:url(img/canvasmainimg/40.jpg)"></div>
-					<div class="gallery__item" style="background-image:url(img/canvasmainimg/41.jpg)"></div>
-					<div class="gallery__item" style="background-image:url(img/canvasmainimg/42.jpg)"></div>
-					<div class="gallery__item" style="background-image:url(img/canvasmainimg/43.jpg)"></div>
-					<div class="gallery__item" style="background-image:url(img/canvasmainimg/44.jpg)"></div>
-					<div class="caption">
-						<p>Indian metal arts like Dhokra, Bidriware, and temple brassware reflect traditional craftsmanship, cultural motifs, utility, and decorative excellence.
-							Indian sculpture and stone arts reflect centuries of devotion and craftsmanship. Temples like Khajuraho, Konark, and Mahabalipuram feature intricate carvings, mythological scenes, and spiritual symbolism, showcasing India's artistic excellence.
-						</p>
-					</div>
-				</div>
-			</div>-->
+		
 			<div class="gallery-wrap gallery-wrap--dense">
 				<div class="gallery gallery--stack gallery--stack-inverse gallery--stack-scale gallery--stack-dark" id="gallery-6">
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/45.jpg)"></div>
@@ -144,13 +152,18 @@
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/42.jpg)"></div>
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/43.jpg)"></div>
 					<div class="caption">
-						<p>Indian sculpture and stone arts reflect centuries of devotion and craftsmanship. Indian metal arts like Dhokra, Bidriware, and temple brassware reflect traditional craftsmanship, cultural motifs, utility, and decorative excellence.</p>
+						<p>Indian sculpture and stone arts reflect centuries of devotion and craftsmanship. Indian metal arts like Dhokra, Bidriware, and temple brassware reflect traditional craftsmanship, cultural motifs, utility, and decorative excellence.
+																				      <a class="content__item btn3"  id="footer-sculpturess-link" href=""><button class="button button--hyperion"><span><span>More Info</span></span></button></a>
+
+						</p>
 					</div>
 				</div>
 			</div>
 			<section class="project project--details project--right">
-				<span class="project__label project__label--default">Indian Traditional Dances</span>
-				<p>Indian classical and folk dances beautifully represent the country’s cultural richness. Classical forms like Bharatanatyam, Kathak, Kuchipudi, Kathakali, Mohiniyattam, Manipuri, Sattriya and Odissi are rooted in tradition and storytelling, using precise movements and expressions. Folk dances such as Bihu, Garba, and Ghoomar are lively, community-based performances tied to festivals and local life. Together, they showcase India's deep artistic heritage through rhythm, emotion, and tradition.</p>
+				<span class="project__label project__label--default scroll-animate">Indian Traditional Dances</span>
+				<p class="scroll-animate">Indian classical and folk dances beautifully represent the country’s cultural richness. Classical forms like Bharatanatyam, Kathak, Kuchipudi, Kathakali, Mohiniyattam, Manipuri, Sattriya and Odissi are rooted in tradition and storytelling, using precise movements and expressions. Folk dances such as Bihu, Garba, and Ghoomar are lively, community-based performances tied to festivals and local life. Together, they showcase India's deep artistic heritage through rhythm, emotion, and tradition.
+
+				</p>
 			</section>
 			<div class="gallery-wrap">
 				<div class="gallery gallery--gridtiny" id="gallery-7">
@@ -234,12 +247,12 @@
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/56.jpg)"></div>
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/57.jpg)"></div>
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/58.jpg)"></div>
-					<div class="caption" style="color: black; text-shadow: 2px 2px rgb(255, 255, 255);">The Rhythm of India</div>
+					<div class="caption dance-title" style="color: black; text-shadow: 2px 2px rgb(255, 255, 255);">The Rhythm of India</div>
 				</div>
 			</div>
 			<section class="project project--details project--left">
-				<span class="project__label project__label--default">Rituals & Festival Arts</span>
-				<p>Ritual and festival arts in India are vibrant expressions of faith, culture, and community. From colorful rangoli and flower carpets to intricately crafted idols, masks, and decorative pandals, these art forms are created during festivals and sacred events. Each region brings its own style—like Durga Puja idols in Bengal or Torans during Diwali—blending symbolism, tradition, and beauty. These arts not only enhance festive celebrations but also preserve cultural values and unite people through shared creativity and devotion. </p>
+				<span class="project__label project__label--default scroll-animate">Rituals & Festival Arts</span>
+				<p class="scroll-animate">Ritual and festival arts in India are vibrant expressions of faith, culture, and community. From colorful rangoli and flower carpets to intricately crafted idols, masks, and decorative pandals, these art forms are created during festivals and sacred events. Each region brings its own style—like Durga Puja idols in Bengal or Torans during Diwali—blending symbolism, tradition, and beauty. These arts not only enhance festive celebrations but also preserve cultural values and unite people through shared creativity and devotion. </p>
 			</section>
 			<div class="gallery-wrap">
 				<div class="gallery gallery--bento" id="gallery-8">
@@ -255,8 +268,8 @@
 				</div>
 			</div>
 			<section class="project project--details project--right">
-				<span class="project__label project__label--default">Oral Tradition & Storytelling</span>
-				<p>Oral traditions and storytelling are vital aspects of India's cultural heritage. They encompass a rich tapestry of myths, legends, folktales, and epics passed down through generations. These narratives often convey moral lessons, cultural values, and historical events, serving as a means of preserving collective memory. Storytelling is not just a form of entertainment; it fosters community bonds and keeps traditions alive in an ever-changing world.</p>
+				<span class="project__label project__label--default scroll-animate">Oral Tradition & Storytelling</span>
+				<p class="scroll-animate">Oral traditions and storytelling are vital aspects of India's cultural heritage. They encompass a rich tapestry of myths, legends, folktales, and epics passed down through generations. These narratives often convey moral lessons, cultural values, and historical events, serving as a means of preserving collective memory. Storytelling is not just a form of entertainment; it fosters community bonds and keeps traditions alive in an ever-changing world.</p>
 			</section>
 			
 			<div class="gallery-wrap">
@@ -266,10 +279,114 @@
 				</div>
 			</div>
 			<section ><!--class="project project--details project--left"-->
-<p> <a href="#" id="go-to-top">Go to Top</a></p>
+<p> <a href="#" id="go-to-top"  class="scroll-animate">Go to Top</a></p>
 			</section>
 		</main>
 </section>	
+<section class="plain-footer scroll-animate">
+  <footer class="plain-footer__container">
+    <div class="plain-footer__top">
+      <div class="plain-footer__logo">
+        <span class="plain-footer__logo-text"><h1 class="tricolor-text">kalayatra</h1></span>
+      </div>
+      <div class="plain-footer__columns">
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">Visual Arts</h4>
+          <a href="/canvas/html/visualarts.html" class="plain-footer__link">Introduction</a>
+          <a href="/canvas/html/paintings.html" class="plain-footer__link">Paintings</a>
+          <a href="" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
+          <a href="" class="plain-footer__link" id="footer-sculpture-link">Sculptures & Stone</a>
+          <a href="" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
+        </div>
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">Performing Arts</h4>
+          <a href="/canvas/html/performancearts.html" class="plain-footer__link">Introduction</a>
+          <a href="/canvas/html/classical.html" class="plain-footer__link">Classical Dances</a>
+          <a href="/canvas/html/folk.html" class="plain-footer__link">Folk Dances</a>
+          <a href="#" class="plain-footer__link">Theatre Experience</a>
+        </div>
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">Traditional Music</h4>
+          <a href="/canvas/html/music.html" class="plain-footer__link">Introduction</a>
+          <a href="#" class="plain-footer__link">Veena</a>
+          <a href="#" class="plain-footer__link">Sitar</a>
+          <a href="#" class="plain-footer__link">Kartal</a>
+          <a href="#" class="plain-footer__link">Bansuri</a>
+          <a href="#" class="plain-footer__link">Dholak</a>
+          <a href="#" class="plain-footer__link">Ravanahatha</a>
+          <a href="#" class="plain-footer__link">Shehnai</a>
+          <a href="#" class="plain-footer__link">Play Instrument</a>
+        </div>
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">KalaYatra's </h4>
+          <a href="/index.html#map1" class="plain-footer__link">Interactive Map</a>
+          <a href="/index.html#book-preview" class="plain-footer__link">Book Preview</a>
+          <a href="/index.html#feedback" class="plain-footer__link">Feedback</a>
+          <a href="/index.html#reviews" class="plain-footer__link">Reviews & Suggestions</a>
+          
+        </div>
+        <div class="plain-footer__column">
+          <h4 class="plain-footer__heading">Handicrafts</h4>
+          <a href="/canvas/html/handicrafts.html" class="plain-footer__link">Introduction</a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="plain-footer__bottom">
+      <div class="plain-footer__links">
+        <a href="#" class="plain-footer__bottom-link">Home</a>
+        <a href="/canvas/canvasmain.html" class="plain-footer__bottom-link">Canvas</a>
+        <a href="/html/about_us.html" class="plain-footer__bottom-link">About Us</a>
+        <a href="/html/shop.html" class="plain-footer__bottom-link">Shop</a>
+        <a href="/html/login" class="plain-footer__bottom-link">Login</a>
+        
+      </div>
+      <div class="plain-footer__copyright">
+        &copy; 2025 KalaYatra &bull; Made by Ctrl + We
+      </div>
+    </div>
+  </footer>
+</section>
+
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-metal-arts-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Metal Art');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-sculptures-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Sculpture');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-textile-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Textile Art');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
 	
 		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -281,5 +398,57 @@
 
   <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
 		<script type="module" src="/canvas/canvasmain.js"></script>
+		<script>
+			// Entry animation on scroll for .scroll-animate elements
+document.addEventListener('DOMContentLoaded', function() {
+  function inViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight - 60 &&
+      rect.bottom > 60
+    );
+  }
+  function checkScrollAnim() {
+    document.querySelectorAll('.scroll-animate').forEach(function(el) {
+      if (inViewport(el)) {
+        el.classList.add('in-view');
+      } else {
+        el.classList.remove('in-view');
+      }
+    });
+  }
+  checkScrollAnim();
+  window.addEventListener('scroll', checkScrollAnim);
+  window.addEventListener('resize', checkScrollAnim);
+});
+		</script>
 	</body>
+
+
+	<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-textiless-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Textile Art');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
+	<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-sculpturess-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Sculpture');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
 </html>

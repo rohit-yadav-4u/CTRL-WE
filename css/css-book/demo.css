@@ -1,0 +1,154 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Sacramento|Abril+Fatface|Six+Caps|Cardo:400italic,700);
+@font-face {
+	font-family: 'codropsicons';
+	src:url('../../assets/fonts-extra/codropsicons/codropsicons.eot');
+	src:url('../../assets/fonts-extra/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../../assets/fonts-extra/codropsicons/codropsicons.woff') format('woff'),
+		url('../../assets/fonts-extra/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../../assets/fonts-extra/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.library  {
+	font-family: 'Lato', Arial, sans-serif;
+	color: #64696a;
+	background: #e3e0d8;
+}
+
+.library a {
+	color: #ddd;
+	text-decoration: none;
+}
+
+.library a:hover, a:focus {
+	color: #fff;
+}
+
+.library .codrops-header {
+	position: relative;
+	margin: 0 auto;
+	padding: 3em 1em;
+	color: #fff;
+	text-align: center;
+	background: url(../../assets/img-book/bgheader.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.library .codrops-header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.library .codrops-header h1 span {
+	display: block;
+	font-size: 60%;
+	opacity: 0.7;
+	padding: 0 0 0.6em 0.1em;
+}
+
+/* To Navigation Style */
+.library .codrops-top {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	text-transform: uppercase;
+	font-size: 0.69em;
+	line-height: 2.2;
+	text-align: justify;
+}
+
+.library .codrops-top a {
+	color: #f0f0f0;
+	text-decoration: none;
+	padding: 0 1em;
+	letter-spacing: 0.1em;
+	display: inline-block;
+}
+
+.library .codrops-top a:hover {
+	color: #fff;
+}
+
+.library .codrops-top span.right {
+	float: right;
+}
+
+.library .codrops-top span.right a {
+	float: left;
+	display: block;
+}
+
+.library .codrops-icon:before {
+	font-family: 'codropsicons';
+	margin: 0 4px;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.library .codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.library .codrops-icon-prev:before {
+	content: "\e004";
+}
+
+.library .related {
+	margin-top: 5em;
+	color: #fff;
+	background: #333;
+	text-align: center;
+	font-size: 1.25em;
+	padding: 3em 0;
+	overflow: hidden;
+}
+
+.library .related a {
+	display: inline-block;
+	text-align: left;
+	margin: 20px auto;
+	padding: 10px 20px;
+	opacity: 0.8;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	-webkit-backface-visibility: hidden;
+}
+
+.library .related a:hover,
+.library .related a:active {
+	opacity: 1;
+}
+
+.library .related a img {
+	max-width: 100%;
+}
+
+.library .related a h3 {
+	font-weight: 300;
+	margin-top: 0.15em;
+	color: #fff;
+}
+
+@media screen and (max-width: 40em) {
+
+	.library .codrops-icon span {
+		display: none;
+	}
+
+	.library .codrops-icon:before {
+		font-size: 160%;
+		line-height: 2;
+	}
+
+}
