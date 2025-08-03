@@ -5,7 +5,7 @@
   font-style: normal;
 }
 
-.tricolor-text {
+footer .tricolor-text {
   font-family: "Samarkan", cursive;
   display: inline-block;
   background: linear-gradient(90deg, orange 0%, #fff 45%, #fff 55%, green 100%);
