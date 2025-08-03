@@ -1,0 +1,337 @@
+.command-input {
+    color: #CCCCCC;
+    margin-left: 2px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Consolas', monospace;
+    font-size: 13px;
+    flex: 1;
+    min-width: 1px;
+    caret-color: #CCCCCC;
+    padding: 0;
+}
+
+.command-input:focus {
+    outline: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    width: 85%;
+    max-width: 900px;
+    height: 80vh; /* Set a fixed height for the container on desktop */
+    min-height: 500px;
+}
+
+.card {
+    width: 300px;
+    background: #151515;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    max-height: 500px; /* Fixed height for card on desktop */
+    overflow-y: auto;
+}
+
+.profile-header {
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    background: #1a1a1a;
+}
+
+.profile-image {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+    padding: 6px;
+    background: #151515;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #222;
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.profile-image:hover img {
+    border-color: #2ecc71;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
+}
+
+.online-indicator {
+    width: 12px;
+    height: 12px;
+    background: #2ecc71;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 25px;
+    right: 85px;
+    border: 2px solid #151515;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
+}
+
+.profile-content {
+    padding: 20px;
+    color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.title {
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social a {
+    color: #666;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.social a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.contact-btn:hover {
+    background: rgba(255, 255, 255, 0.034);
+}
+
+.terminal {
+    flex-grow: 1;
+    background: #151515;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    height: 100%; /* Terminal fills remaining height */
+}
+
+.terminal-header {
+    background: #1a1a1a;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    left: 12px;
+}
+
+.terminal-button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.close {
+    background: #FF5F56;
+}
+
+.minimize {
+    background: #FFBD2E;
+}
+
+.maximize {
+    background: #2ecc71;
+}
+
+.terminal-title {
+    color: #666;
+    font-size: 12px;
+    font-family: 'Consolas', monospace;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.terminal-content {
+    padding: 15px;
+    font-family: 'Consolas', monospace;
+    font-size: 13px;
+    color: #fff;
+    flex-grow: 1;
+    min-height: 350px;
+    line-height: 1.4;
+    overflow-y: auto;
+    background: #151515;
+}
+
+.line {
+    margin-bottom: 8px;
+    display: flex;
+    white-space: pre-wrap;
+}
+
+.prompt {
+    color: #CCCCCC;
+    user-select: none;
+    font-family: 'Consolas', monospace;
+}
+
+.command {
+    color: #CCCCCC;
+    margin-left: 2px;
+    position: relative;
+    min-width: 1px;
+    outline: none;
+    caret-color: transparent;
+    font-family: 'Consolas', monospace;
+}
+
+.command:focus {
+    outline: none;
+}
+
+.command::after {
+    content: '|';
+    color: #CCCCCC;
+    animation: blink 1s step-end infinite;
+    position: absolute;
+    margin-left: 1px;
+}
+
+.cursor {
+    color: #fff;
+    animation: blink 1s step-end infinite;
+    user-select: none;
+    display: inline;
+}
+
+.cursor.hide {
+    display: none;
+}
+
+.output {
+    color: #CCCCCC;
+    font-family: 'Consolas', monospace;
+    margin-left: 0;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    white-space: pre;
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        min-height: unset;
+    }
+    .terminal {
+        min-width: 300px;
+        width: 100%;
+        height: auto;
+    }
+    .card {
+        width: 100%;
+        max-width: 300px;
+        max-height: unset;
+        overflow-y: unset;
+    }
+}
+
+@media (max-width: 440px) {
+    .container {
+        padding: 10px;
+        width: 95%;
+    }
+    
+    .terminal, .card {
+        min-width: 100%;
+    }
+    
+    .terminal-content {
+        font-size: 12px;
+        padding: 12px;
+    }
+}
+
+.command-text {
+    color: #CCCCCC;
+    font-family: 'Consolas', monospace;
+    margin-left: 2px;
+}

@@ -9,8 +9,9 @@
   <div class="login-container">
     <h2 id="form-title">Login</h2>
     <form id="auth-form">
-      <input type="email" id="email" placeholder="Email" required />
-      <input type="password" id="password" placeholder="Password" required />
+      <input type="text" id="name" placeholder="Name" style="display:none;" autocomplete="name" />
+      <input type="email" id="email" placeholder="Email" required autocomplete="email" />
+      <input type="password" id="password" placeholder="Password" required autocomplete="current-password" />
       <button type="submit" id="auth-button">Login</button>
       <p class="toggle-link" id="toggle-form">Don't have an account? Sign Up</p>
       <p id="auth-error" class="error"></p>

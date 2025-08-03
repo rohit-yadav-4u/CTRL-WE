@@ -1,83 +1,155 @@
-<script type="module" src="../js/auth-guard.js"></script>
-<!-- html/profile.html -->
-<div id="navbar-container"></div>
-<div class="profile-page">
-  <h2>User Profile</h2>
-  <p>Email: <span id="user-email"></span></p>
-  <p>UID: <span id="user-uid"></span></p>
-  <button id="logout-btn" class="auth-btn">Logout</button>
-</div>
-<script>
-  // Dynamically load navbar.html into #navbar-container and inject its CSS/JS
-  document.addEventListener("DOMContentLoaded", function () {
-    fetch("../html/navbar.html")
-      .then((response) => response.text())
-      .then((html) => {
-        const tempDiv = document.createElement("div");
-        tempDiv.innerHTML = html;
-        // Inject all <link rel="stylesheet"> to <head>
-        tempDiv
-          .querySelectorAll('link[rel="stylesheet"]')
-          .forEach((link) => {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/profile.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+</head>
+<body>
+  <script type="module" src="../js/auth-guard.js"></script>
+  <div id="navbar-container"></div>
+  <div class="container">
+    <div class="card">
+      <div class="profile-header">
+        <div class="profile-image">
+          <img src="https://ui-avatars.com/api/?background=e3c9a3&color=181818&name=" id="profile-avatar" alt="Profile">
+        </div>
+        <div class="online-indicator"></div>
+      </div>
+      <div class="profile-content">
+        <h2 id="profile-name">Loading...</h2>
+        <p class="title" id="profile-email">Loading...</p>
+          <button class="logout-btn tan-theme" id="logout-btn-card">Logout</button>
+      </div>
+    </div>
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="terminal-buttons">
+          <span class="terminal-button close"></span>
+          <span class="terminal-button minimize"></span>
+          <span class="terminal-button maximize"></span>
+        </div>
+        <div class="terminal-title">Command Prompt</div>
+      </div>
+      <div class="terminal-content" id="terminal-content">
+        <div class="line">
+          <span class="prompt">C:\Users\guest&gt;</span>
+          <input class="command-input" id="current-line" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+        </div>
+        <div class="terminal-help" id="terminal-help" style="display:none; margin-top:10px; color:#e3c9a3;">
+          <div><b>Available commands:</b></div>
+          <div><code>clear</code> - Clear the terminal</div>
+          <div><code>help</code> - Show this help</div>
+          <div><code>myorders</code> - Show your orders</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Dynamically load navbar.html into #navbar-container and inject its CSS/JS
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("../html/navbar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = html;
+          // Inject all <link rel="stylesheet"> to <head>
+          tempDiv
+            .querySelectorAll('link[rel="stylesheet"]')
+            .forEach((link) => {
+              if (
+                !document.head.querySelector(
+                  `link[href="${link.getAttribute("href")}"]`
+                )
+              ) {
+                document.head.appendChild(link.cloneNode());
+              }
+            });
+          // Insert navbar HTML first
+          const navbarHtml = Array.from(tempDiv.children)
+            .filter(
+              (el) =>
+                el.tagName !== "SCRIPT" &&
+                el.tagName !== "LINK" &&
+                el.tagName !== "HEAD"
+            )
+            .map((el) => el.outerHTML)
+            .join("");
+          const navbarContainer = document.getElementById("navbar-container");
+          navbarContainer.innerHTML = navbarHtml;
+          navbarContainer.style.display = "block";
+          // Now inject all <script src> to <body> (after navbar is present)
+          tempDiv.querySelectorAll("script[src]").forEach((script) => {
             if (
-              !document.head.querySelector(
-                `link[href="${link.getAttribute("href")}"]`
+              !document.body.querySelector(
+                `script[src="${script.getAttribute("src")}"]`
               )
             ) {
-              document.head.appendChild(link.cloneNode());
+              const s = document.createElement("script");
+              s.src = script.getAttribute("src");
+              s.async = false;
+              document.body.appendChild(s);
             }
           });
-        // Insert navbar HTML first
-        const navbarHtml = Array.from(tempDiv.children)
-          .filter(
-            (el) =>
-              el.tagName !== "SCRIPT" &&
-              el.tagName !== "LINK" &&
-              el.tagName !== "HEAD"
-          )
-          .map((el) => el.outerHTML)
-          .join("");
-        const navbarContainer = document.getElementById("navbar-container");
-        navbarContainer.innerHTML = navbarHtml;
-        navbarContainer.style.display = "block";
-        // Now inject all <script src> to <body> (after navbar is present)
-        tempDiv.querySelectorAll("script[src]").forEach((script) => {
-          if (
-            !document.body.querySelector(
-              `script[src="${script.getAttribute("src")}"]`
-            )
-          ) {
-            const s = document.createElement("script");
-            s.src = script.getAttribute("src");
-            s.async = false;
-            document.body.appendChild(s);
-          }
+          // Inline scripts: execute them after navbar is present
+          tempDiv.querySelectorAll("script:not([src])").forEach((script) => {
+            try {
+              eval(script.textContent);
+            } catch (e) {}
+          });
         });
-        // Inline scripts: execute them after navbar is present
-        tempDiv.querySelectorAll("script:not([src])").forEach((script) => {
-          try {
-            eval(script.textContent);
-          } catch (e) {}
-        });
-      });
-  });
-</script>
+    });
+  </script>
+  <script type="module">
+    import { auth, db } from '../js/firebase-config.js';
+    import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-<script type="module">
-  import { auth } from '../js/firebase-config.js';
-  import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      document.getElementById("user-email").textContent = user.email;
-      document.getElementById("user-uid").textContent = user.uid;
-    } else {
-      window.location.href = "../html/login.html";
+    function setProfileInfo(name, email) {
+      document.getElementById("profile-name").textContent = name || "No Name";
+      document.getElementById("profile-email").textContent = email || "No Email";
+      document.getElementById("profile-avatar").src = `https://ui-avatars.com/api/?background=e3c9a3&color=181818&name=${encodeURIComponent(name || 'User')}`;
     }
-  });
 
-  document.getElementById("logout-btn").addEventListener("click", async () => {
-    await signOut(auth);
-    window.location.href = "../html/Login.html";
-  });
-</script>
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        // Fetch name from Firestore
+        const userDoc = await getDoc(doc(db, "users", user.uid));
+        let name = "";
+        if (userDoc.exists()) {
+          name = userDoc.data().name || "";
+        }
+        setProfileInfo(name, user.email);
+      } else {
+        window.location.href = "../html/login.html";
+      }
+    });
+
+    document.getElementById("logout-btn-card").addEventListener("click", async () => {
+      await signOut(auth);
+      window.location.href = "../html/Login.html";
+    });
+  </script>
+  <script src="/js/profile.js"></script>
+  <style>
+    .logout-btn.tan-theme {
+      background: #e3c9a3;
+      color: #181818;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 28px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+    .logout-btn.tan-theme:hover {
+      background: #d2b07b;
+      color: #181818;
+    }
+  
+  </style>
+</body>
+</html>
