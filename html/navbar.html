@@ -16,6 +16,71 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDzCPsjpe57hLqkzaReqUtEkeEZcqTgJlU",
+    authDomain: "kalayatra-57da8.firebaseapp.com",
+    projectId: "kalayatra-57da8",
+    storageBucket: "kalayatra-57da8.firebasestorage.app",
+    messagingSenderId: "30436098155",
+    appId: "1:30436098155:web:51324588a0e473cef3312e",
+    measurementId: "G-0YT4RR4353"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<script type="module">
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+
+const auth = getAuth();
+
+// function updateAuthSection(user) {
+//   const authSection = document.getElementById("auth-section");
+
+//   if (!authSection) return;
+
+//   if (user) {
+//     // User is signed in, show Profile + Logout
+//     authSection.innerHTML = `
+//       <button id="profile-btn" class="auth-btn">Profile</button>
+//       <button id="logout-btn" class="auth-btn">Logout</button>
+//     `;
+
+//     document.getElementById("profile-btn").addEventListener("click", () => {
+//       window.location.href = "/html/profile.html";
+//     });
+
+//     document.getElementById("logout-btn").addEventListener("click", () => {
+//       signOut(auth).then(() => {
+//         window.location.reload();
+//       });
+//     });
+
+//   } else {
+//     // No user signed in, show Login
+//     authSection.innerHTML = `
+//       <button id="login-btn" class="auth-btn">Login</button>
+//     `;
+
+//     document.getElementById("login-btn").addEventListener("click", () => {
+//       window.location.href = "/html/Login.html";
+//     });
+//   }
+// }
+
+// onAuthStateChanged(auth, updateAuthSection);
+
+  </script>
   </head>
   <body>
     <!-- Navbar reusable component -->
@@ -160,13 +225,11 @@
           <span class="morphsearch-close"></span>
         </div>
       </div>
-      <div class="desktop-login-btn" id="login-container">
-        <a href="/html/Login.html"
-          ><button id="login-btn" class="login-btn">
-            <span class="login-btn-text">Login</span>
-          </button></a
-        >
-      </div>
+     <!-- Place this where you want the login/profile/logout to appear -->
+<div id="auth-section">
+  <button id="profile-btn" class="auth-btn" onclick="window.location.href='/html/profile.html'">Profile</button>
+</div>
+
     </nav>
     <!-- Mobile Bottom Navbar -->
     <nav id="mobile-bottom-navbar">
@@ -197,50 +260,10 @@
       </ul>
     </nav>
     <!-- External JS for all navbar logic -->
-    <script src="../js/navbar.js"></script>
+<script type="module" src="../js/navbar.js"></script>
+
     <script src="../js/classiesearch.js"></script>
-    <script>
-      // Highlight active nav link based on current page
-      function setActiveNav() {
-        var path = window.location.pathname;
-        // Desktop
-        document.querySelectorAll("#nav-links a").forEach(function (link) {
-          link.classList.remove("active");
-        });
-        if (
-          path.endsWith("/index.html") ||
-          path === "/" ||
-          path.endsWith("/")
-        ) {
-          document.getElementById("nav-home")?.classList.add("active");
-        } else if (path.endsWith("/about_us.html")) {
-          document.getElementById("nav-about")?.classList.add("active");
-        } else if (path.endsWith("/shop.html")) {
-          document.getElementById("nav-shop")?.classList.add("active");
-        } else if (path.includes("canvas")) {
-          document.getElementById("nav-canvas")?.classList.add("active");
-        }
-        // Mobile
-        document
-          .querySelectorAll("#mobile-bottom-navbar li")
-          .forEach(function (li) {
-            li.classList.remove("active");
-          });
-        if (
-          path.endsWith("/index.html") ||
-          path === "/" ||
-          path.endsWith("/")
-        ) {
-          document.getElementById("mobile-home")?.classList.add("active");
-        } else if (path.endsWith("/about_us.html")) {
-          document.getElementById("mobile-about")?.classList.add("active");
-        } else if (path.endsWith("/shop.html")) {
-          document.getElementById("mobile-shop")?.classList.add("active");
-        } else if (path.includes("canvas")) {
-          document.getElementById("mobile-canvas")?.classList.add("active");
-        }
-      }
-      setActiveNav();
+<!-- No dynamic login/profile switching needed. Profile button always visible. -->
     </script>
   </body>
 </html>

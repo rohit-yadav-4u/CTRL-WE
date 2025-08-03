@@ -1,4 +1,46 @@
 // Simple navbar logic for searchbar morph and active link (no animation)
+import { auth } from './firebase-config.js';
+import {
+  onAuthStateChanged,
+  signOut
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+document.addEventListener('navbarLoaded', () => {
+  const authSection = document.getElementById('auth-section');
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is logged in
+      authSection.innerHTML = `
+        <button id="profile-btn">Profile</button>
+        <button id="logout-btn">Logout</button>
+      `;
+
+      // Handle Profile Click (Load Profile Page)
+      document.getElementById('profile-btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        fetch('../html/profile.html')
+          .then(res => res.text())
+          .then(html => {
+            document.body.innerHTML = html; // Replace full page with profile.html
+            // You can also use a div like <div id="main-content"> instead of replacing body
+          });
+      });
+
+      // Handle Logout
+      document.getElementById('logout-btn').addEventListener('click', async () => {
+        await signOut(auth);
+        location.reload();
+      });
+
+    } else {
+      // User not logged in
+      authSection.innerHTML = `<a href="../html/login.html">Login</a>`;
+    }
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // Show mobile bottom navbar on phones
   const mobileBottomNavbar = document.getElementById('mobile-bottom-navbar');
@@ -124,6 +166,45 @@ window.attachUnifiedSearchLogic = function() {
 // Attach on DOMContentLoaded for static navbar.html
 document.addEventListener('DOMContentLoaded', function() {
     window.attachUnifiedSearchLogic();
+});
+// Add this where navbar is rendered
+const loginContainer = document.getElementById('login-container');
+const user = JSON.parse(sessionStorage.getItem('loggedInUser'));
+
+if (loginContainer) {
+  if (user && user.username) {
+    loginContainer.innerHTML = `
+      <span>Hello, ${user.username}</span>
+      <button id="logout-btn" class="login-btn">Logout</button>
+    `;
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      sessionStorage.removeItem('loggedInUser');
+      location.reload();
+    });
+  } else {
+    loginContainer.innerHTML = `<a href="../html/login.html" class="login-btn">Login</a>`;
+  }
+}
+import { auth } from './firebase-config.js';
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+document.addEventListener('DOMContentLoaded', () => {
+  const loginContainer = document.getElementById('login-container');
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      loginContainer.innerHTML = `
+        <span>Hello, ${user.email}</span>
+        <button id="logout-btn">Logout</button>
+      `;
+      document.getElementById('logout-btn').addEventListener('click', async () => {
+        await signOut(auth);
+        location.reload();
+      });
+    } else {
+      loginContainer.innerHTML = `<a href="../html/login.html">Login</a>`;
+    }
+  });
 });
 
 

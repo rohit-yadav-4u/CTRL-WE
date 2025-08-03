@@ -1,0 +1,83 @@
+<script type="module" src="../js/auth-guard.js"></script>
+<!-- html/profile.html -->
+<div id="navbar-container"></div>
+<div class="profile-page">
+  <h2>User Profile</h2>
+  <p>Email: <span id="user-email"></span></p>
+  <p>UID: <span id="user-uid"></span></p>
+  <button id="logout-btn" class="auth-btn">Logout</button>
+</div>
+<script>
+  // Dynamically load navbar.html into #navbar-container and inject its CSS/JS
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("../html/navbar.html")
+      .then((response) => response.text())
+      .then((html) => {
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = html;
+        // Inject all <link rel="stylesheet"> to <head>
+        tempDiv
+          .querySelectorAll('link[rel="stylesheet"]')
+          .forEach((link) => {
+            if (
+              !document.head.querySelector(
+                `link[href="${link.getAttribute("href")}"]`
+              )
+            ) {
+              document.head.appendChild(link.cloneNode());
+            }
+          });
+        // Insert navbar HTML first
+        const navbarHtml = Array.from(tempDiv.children)
+          .filter(
+            (el) =>
+              el.tagName !== "SCRIPT" &&
+              el.tagName !== "LINK" &&
+              el.tagName !== "HEAD"
+          )
+          .map((el) => el.outerHTML)
+          .join("");
+        const navbarContainer = document.getElementById("navbar-container");
+        navbarContainer.innerHTML = navbarHtml;
+        navbarContainer.style.display = "block";
+        // Now inject all <script src> to <body> (after navbar is present)
+        tempDiv.querySelectorAll("script[src]").forEach((script) => {
+          if (
+            !document.body.querySelector(
+              `script[src="${script.getAttribute("src")}"]`
+            )
+          ) {
+            const s = document.createElement("script");
+            s.src = script.getAttribute("src");
+            s.async = false;
+            document.body.appendChild(s);
+          }
+        });
+        // Inline scripts: execute them after navbar is present
+        tempDiv.querySelectorAll("script:not([src])").forEach((script) => {
+          try {
+            eval(script.textContent);
+          } catch (e) {}
+        });
+      });
+  });
+</script>
+
+<script type="module">
+  import { auth } from '../js/firebase-config.js';
+  import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      document.getElementById("user-email").textContent = user.email;
+      document.getElementById("user-uid").textContent = user.uid;
+    } else {
+      window.location.href = "../html/login.html";
+    }
+  });
+
+  document.getElementById("logout-btn").addEventListener("click", async () => {
+    await signOut(auth);
+    window.location.href = "../html/Login.html";
+  });
+</script>

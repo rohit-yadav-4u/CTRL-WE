@@ -1,71 +1,45 @@
-$(document).ready(function () {
-  // Toggle between login and signup forms
-  $(".info-item .btn").click(function () {
-    $(".container").toggleClass("log-in");
-  });
+// js/login.js
+import { auth, db } from './firebase-config.js';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-  // Handle login button click
-  $(".form-item.log-in .btn").click(function () {
-    var username = $(".form-item.log-in input[name='Username']").val().trim();
-    var password = $(".form-item.log-in input[name='Password']").val().trim();
+const form = document.getElementById("auth-form");
+const toggleLink = document.getElementById("toggle-form");
+const errorDisplay = document.getElementById("auth-error");
+const formTitle = document.getElementById("form-title");
+const authButton = document.getElementById("auth-button");
 
-    if (username === "" || password === "") {
-      alert("Please enter both username and password.");
-      return;
+let isLogin = true; // toggle between login and signup
+
+toggleLink.addEventListener("click", () => {
+  isLogin = !isLogin;
+  formTitle.textContent = isLogin ? "Login" : "Sign Up";
+  authButton.textContent = isLogin ? "Login" : "Sign Up";
+  toggleLink.textContent = isLogin ? "Don't have an account? Sign Up" : "Already have an account? Login";
+  errorDisplay.textContent = "";
+});
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = form.email.value;
+  const password = form.password.value;
+  errorDisplay.textContent = "";
+
+  try {
+    if (isLogin) {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    } else {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      await setDoc(doc(db, "users", user.uid), {
+        email: user.email,
+        createdAt: new Date()
+      });
     }
 
-    // Call backend login API
-    $.ajax({
-      url: "http://localhost:3001/login",
-      method: "POST",
-      contentType: "application/json",
-      data: JSON.stringify({ username: username, password: password }),
-        success: function (response) {
-          alert(response.message);
-          // Store login state in sessionStorage
-          sessionStorage.setItem("loggedInUser", JSON.stringify(response.user));
-          $(".container").addClass("active");
-        },
-      error: function (xhr) {
-        if (xhr.responseJSON && xhr.responseJSON.message) {
-          alert("Login failed: " + xhr.responseJSON.message);
-        } else {
-          alert("Login failed: Unknown error");
-        }
-      }
-    });
-  });
-
-  // Handle signup button click
-  $(".form-item.sign-up .btn").click(function () {
-    var email = $(".form-item.sign-up input[name='email']").val().trim();
-    var fullName = $(".form-item.sign-up input[name='fullName']").val().trim();
-    var username = $(".form-item.sign-up input[name='Username']").val().trim();
-    var password = $(".form-item.sign-up input[name='Password']").val().trim();
-
-    if (email === "" || fullName === "" || username === "" || password === "") {
-      alert("Please fill in all signup fields.");
-      return;
-    }
-
-    // Call backend signup API
-    $.ajax({
-      url: "http://localhost:3001/signup",
-      method: "POST",
-      contentType: "application/json",
-      data: JSON.stringify({ email: email, fullName: fullName, username: username, password: password }),
-      success: function (response) {
-        alert(response.message);
-        // Optionally switch to login form after successful signup
-        $(".container").removeClass("log-in");
-      },
-      error: function (xhr) {
-        if (xhr.responseJSON && xhr.responseJSON.message) {
-          alert("Signup failed: " + xhr.responseJSON.message);
-        } else {
-          alert("Signup failed: Unknown error");
-        }
-      }
-    });
-  });
+    // Redirect after success
+    window.location.href = "../index.html";
+  } catch (error) {
+    errorDisplay.textContent = error.message;
+  }
 });
