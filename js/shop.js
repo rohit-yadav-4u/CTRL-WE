@@ -182,9 +182,9 @@
     const priceText = panelInfo.querySelector('.shop-panel-price').textContent;
     const price = parseFloat(priceText.replace(/[^\d.]/g, ''));
     const imgUrl = panelImg.style.backgroundImage.slice(5, -2); // strip url("...")
-  
+
     if (!title || isNaN(price)) return;
-  
+
     let existing = cart.find(i => i.title.toLowerCase() === title.toLowerCase());
     if (existing) {
       existing.qty++;
@@ -240,7 +240,7 @@ function updateCart() {
       <img src="${imgSrc}" alt="${item.title}" class="cart-item-img">
       <span class="cart-item-title">${item.title}</span>
       <span>x${item.qty}</span>
-      <span class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</span>
+      <span class="cart-item-price">₹${(item.price * item.qty).toFixed(2)}</span>
       <button class="cart-item-remove" data-idx="${idx}">✕</button>
     `;
     cartItemsEl.appendChild(el);
@@ -334,14 +334,95 @@ document.addEventListener('shop:productsLoaded', bindAddToCartButtons);
 
 // Checkout button
 const checkoutBtn = document.querySelector('.checkout-btn');
-checkoutBtn.onclick = () => {
+const modal = document.getElementById('checkout-modal');
+const closeModal = document.querySelector('.close-modal');
+const cancelCheckout = document.getElementById('cancel-checkout');
+const confirmCheckout = document.getElementById('confirm-checkout');
+const orderItems = document.getElementById('order-items');
+const orderTotal = document.getElementById('order-total');
+
+// Function to show the checkout modal
+function showCheckoutModal() {
   if (cart.length === 0) {
     alert('Your cart is empty!');
     return;
   }
-  alert('Thank you for your purchase! (Demo only)');
-  cart.length = 0;
-  updateCart();
-};
+  
+  // Populate order items
+  orderItems.innerHTML = '';
+  cart.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.innerHTML = `
+      <span>${item.title} x${item.qty}</span>
+      <span style="float: right;">₹${(item.price * item.qty).toFixed(2)}</span>
+    `;
+    orderItems.appendChild(itemDiv);
+  });
+  
+  // Set total
+  let total = 0;
+  cart.forEach(item => {
+    total += item.price * item.qty;
+  });
+  orderTotal.textContent = total.toFixed(2);
+  
+  // Show modal
+  modal.style.display = 'flex';
+}
+
+// Function to hide the checkout modal
+function hideCheckoutModal() {
+  modal.style.display = 'none';
+}
+
+// Event listeners for modal
+if (checkoutBtn) {
+  checkoutBtn.onclick = showCheckoutModal;
+}
+
+if (closeModal) {
+  closeModal.onclick = hideCheckoutModal;
+}
+
+if (cancelCheckout) {
+  cancelCheckout.onclick = hideCheckoutModal;
+}
+
+if (confirmCheckout) {
+  confirmCheckout.onclick = () => {
+    // Get form values
+    const name = document.getElementById('customer-name').value;
+    const address = document.getElementById('customer-address').value;
+    const phone = document.getElementById('customer-phone').value;
+    
+    // Simple validation
+    if (!name || !address || !phone) {
+      alert('Please fill in all fields');
+      return;
+    }
+    
+    // In a real application, you would send this data to a server here
+    alert(`Thank you for your order, ${name}! Your items will be delivered to ${address}.`);
+    
+    // Clear cart and update UI
+    cart.length = 0;
+    updateCart();
+    
+    // Hide modal
+    hideCheckoutModal();
+    
+    // Reset form
+    document.getElementById('checkout-form').reset();
+  };
+}
+
+// Close modal when clicking outside of it
+if (modal) {
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      hideCheckoutModal();
+    }
+  };
+}
 
 updateCart();

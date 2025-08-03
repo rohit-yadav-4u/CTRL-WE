@@ -40,7 +40,7 @@
           </div>
           <div class="cart-items"></div>
           <div class="cart-footer">
-            <div>Total: Rs<span class="cart-total">0.00</span></div>
+            <div>Total: ₹<span class="cart-total">0.00</span></div>
             <button class="checkout-btn">Checkout</button>
           </div>
         </div>
@@ -52,21 +52,21 @@
         style="pointer-events: none; opacity: 0"
       >
         <div class="shop-panel-img"></div>
-        <div class="shop-panel-info">
-          <h2></h2>
-          <div class="shop-panel-price"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque euismod, nisi eu consectetur.
-          </p>
-          <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-          </ul>
-          <button class="shop-panel-buy add-to-cart">Add to cart</button>
-        </div>
-        <button class="effect-panel-close">Close</button>
+      <div class="shop-panel-info">
+        <h2></h2>
+        <div class="shop-panel-price"></div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Pellentesque euismod, nisi eu consectetur.
+        </p>
+        <ul>
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+        </ul>
+        <button class="shop-panel-buy add-to-cart">Add to cart</button>
+      </div>
+      <button class="effect-panel-close">Close</button>
       </div>
       <div class="subscribe-section">
         <p class="subscribe-heading">
@@ -83,6 +83,47 @@
         <p class="subscribe-count">1,234 people subscribed</p>
       </div>
     </div>
+    
+    <!-- Checkout Modal Popup -->
+    <div id="checkout-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Checkout</h2>
+          <span class="close-modal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div id="order-items"></div>
+            <div class="order-total">
+              <strong>Pay on Delivery: ₹<span id="order-total">0.00</span></strong>
+            </div>
+          </div>
+          <div class="customer-info">
+            <h3>Customer Information</h3>
+            <form id="checkout-form">
+              <div class="form-group">
+                <label for="customer-name">Full Name:</label>
+                <input type="text" id="customer-name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="customer-address">Address:</label>
+                <textarea id="customer-address" name="address" rows="3" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="customer-phone">Phone Number:</label>
+                <input type="tel" id="customer-phone" name="phone" required>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="cancel-checkout" class="btn-secondary">Cancel</button>
+          <button id="confirm-checkout" class="btn-primary">Place Order</button>
+        </div>
+      </div>
+    </div>
+    
     <script src="../js/gsap.min.js"></script>
     <script>
       // Dynamically load navbar.html into #navbar-container and inject its CSS/JS
