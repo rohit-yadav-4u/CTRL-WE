@@ -105,7 +105,7 @@
 			gallery.innerHTML = results.map(img => `
 				<li class="gallery__item" data-fancybox="gallery" data-src="../${img.src}">
 					<img src="../${img.src}" alt="${img.title || img.category || ''}" class="gallery__img">
-					<span class="zoom">zoom</span>
+					<span class="zoom">Reveal</span>
 				</li>
 			`).join('');
 			Fancybox.bind('[data-fancybox="gallery"]', {

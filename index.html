@@ -70,55 +70,6 @@
 
 <body>
   
-   
-   <div class="logo-a">
-<div class="banner">
-        <img id="logopic" src="assets/logo/logopic.png" alt="Logo Pic" />
-        <div class="title">
-            <!-- SVG will be injected here by svglogo.js -->
-        </div>
-    </div>
-    <div class="zero" id="zero-section">
-       
-   </div>
-
-   </div> 
-    <script src="js/svglogo.js"></script>
-    <script>
-    // Animate logopic.png when SVG logo starts animating
-    window.addEventListener('DOMContentLoaded', function() {
-        const logopic = document.getElementById('logopic');
-        setTimeout(() => {
-            logopic.style.opacity = '1';
-            logopic.style.filter = 'blur(0px)';
-            logopic.style.width = window.innerWidth <= 600 ? '90px' : '130px';
-        }, 100); // Start just after SVG injects
-    });
-
-    // Listen for custom event from svglogo.js to trigger hero section and wipe
-    window.addEventListener('svgAnimationComplete', function() {
-        // Instantly remove SVG logo and logopic, then show hero section
-        const svg = document.querySelector('.title svg');
-        if (svg) svg.remove();
-        const logopic = document.getElementById('logopic');
-        if (logopic) logopic.remove();
-        document.getElementById('zero-section').classList.add('visible');
-        // Reveal hero section images now
-        const heroSection = document.querySelector('.hero');
-        if (heroSection) {
-            heroSection.classList.remove('hide-hero-images');
-            heroSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-    </script>
-
-
-
-
-
-
-
-
  <div class="wrapp">
         <div class="follow"></div>
         <div class="follow"></div>
@@ -378,8 +329,8 @@
 
     <section class="hero">
         <div class="hero-header">
-            <h3 class="tricolor-text scroll-animate">KalaYatra</h3>
-            <p class="scroll-animate">Where Tradition Travels Timelessly</p>
+            <h3 class="tricolor-text title-main">KalaYatra</h3>
+            <p>Where Tradition Travels Timelessly</p>
         </div>
         <div class="animated-icons">
             <div class="animated-icon icon-1">
@@ -446,7 +397,7 @@
             <div class="da-slide">
                <h2>Instrument Play</h2>
                <p>KalaYatra offers variety of instruments to play, allowing users to virtually play traditional Indian instruments and learn about their cultural significance.</p>
-               <a href="#" class="da-link">Explore</a>
+               <a href="/canvas/Musical-Instruments/index.html" class="da-link">Explore</a>
                <div class="da-img"><img src="assets/images-offer/1.png" alt="image01" /></div>
             </div>
             <div class="da-slide">
@@ -622,8 +573,8 @@
                
                <figure>
                   <div class="book" data-book="book-2"></div>
-                  <div class="buttons"><a href="#">Look inside</a><a href="#">Details</a></div>
-                  <figcaption class="scroll-animate"><h2>Art & Architecture <span>Wonder House Books</span></h2></figcaption>
+                  <div class="buttons scroll-animate"><a href="#">Look inside</a><a href="#">Details</a></div>
+                  <figcaption  class="scroll-animate"><h2>Art & Architecture <span>Wonder House Books</span></h2></figcaption>
                   <div class="details">
                      <ul>
                         <li>It is a visually rich encyclopedia for children, introducing major art styles, iconic architecture, and famous artists from history. It uses simple language, illustrations, and fun facts to make learning engaging and accessible.</li>
@@ -636,7 +587,7 @@
                
                <figure>
                   <div class="book" data-book="book-3"></div>
-                  <div class="buttons"><a href="#">Look inside</a><a href="#">Details</a></div>
+                  <div class="buttons scroll-animate"><a href="#">Look inside</a><a href="#">Details</a></div>
                   <figcaption class="scroll-animate"><h2>The Big Book of Indian Art<span>Bina Darkar Ellias</span></h2></figcaption>
                   <div class="details">
                      <ul>
@@ -649,7 +600,7 @@
                </figure>
                <figure>
                   <div class="book" data-book="book-4"></div>
-                  <div class="buttons"><a href="#">Look inside</a><a href="#">Details</a></div>
+                  <div class="buttons scroll-animate"><a href="#">Look inside</a><a href="#">Details</a></div>
                   <figcaption class="scroll-animate"><h2>The Arts of India <span> Joseph M Dye III </span></h2></figcaption>
                   <div class="details">
                      <ul>
@@ -1139,9 +1090,9 @@
           <h4 class="plain-footer__heading">Visual Arts</h4>
           <a href="/canvas/html/visualarts.html" class="plain-footer__link">Introduction</a>
           <a href="/canvas/html/paintings.html" class="plain-footer__link">Paintings</a>
-          <a href="#" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
-          <a href="#" class="plain-footer__link" id="footer-sculptures-link">Sculptures & Stone</a>
-          <a href="#" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
+          <a href="" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
+          <a href="" class="plain-footer__link" id="footer-sculptures-link">Sculptures & Stone</a>
+          <a href="" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
         </div>
         <div class="plain-footer__column">
           <h4 class="plain-footer__heading">Performing Arts</h4>
@@ -1160,7 +1111,7 @@
           <a href="#" class="plain-footer__link">Dholak</a>
           <a href="#" class="plain-footer__link">Ravanahatha</a>
           <a href="#" class="plain-footer__link">Shehnai</a>
-          <a href="#" class="plain-footer__link">Play Instrument</a>
+          <a href="/canvas/Musical-Instruments/index.html" class="plain-footer__link">Play Instrument</a>
         </div>
         <div class="plain-footer__column">
           <h4 class="plain-footer__heading">KalaYatra's </h4>
@@ -1201,6 +1152,33 @@ document.addEventListener('DOMContentLoaded', function() {
     metalArtsLink.addEventListener('click', function(e) {
       e.preventDefault();
       localStorage.setItem('searchQuery', 'Metal Art');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
+
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-sculptures-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Sculpture');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-textile-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Textile Art');
       window.location.href = '/html/searchresult.html';
     });
   }

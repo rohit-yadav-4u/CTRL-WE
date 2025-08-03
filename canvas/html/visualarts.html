@@ -288,9 +288,9 @@
           <h4 class="plain-footer__heading">Visual Arts</h4>
           <a href="/canvas/html/visualarts.html" class="plain-footer__link">Introduction</a>
           <a href="/canvas/html/paintings.html" class="plain-footer__link">Paintings</a>
-          <a href="#" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
-          <a href="#" class="plain-footer__link" id="footer-sculptures-link">Sculptures & Stone</a>
-          <a href="#" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
+          <a href="" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
+          <a href="" class="plain-footer__link" id="footer-sculptures-link">Sculptures & Stone</a>
+          <a href="" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
         </div>
         <div class="plain-footer__column">
           <h4 class="plain-footer__heading">Performing Arts</h4>
@@ -309,7 +309,7 @@
           <a href="#" class="plain-footer__link">Dholak</a>
           <a href="#" class="plain-footer__link">Ravanahatha</a>
           <a href="#" class="plain-footer__link">Shehnai</a>
-          <a href="#" class="plain-footer__link">Play Instrument</a>
+          <a href="/canvas/Musical-Instruments/index.html" class="plain-footer__link">Play Instrument</a>
         </div>
         <div class="plain-footer__column">
           <h4 class="plain-footer__heading">KalaYatra's </h4>
@@ -355,6 +355,34 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-sculptures-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Sculptures');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-textile-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Textile Arts');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
+
     <script src="/canvas/js/visualarts.js"></script>
 
     <script>

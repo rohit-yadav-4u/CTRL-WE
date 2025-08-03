@@ -21,6 +21,23 @@ footer .tricolor-text {
   transform: translateX(-155px);
   margin-bottom: 40px;
 }
+.tricolor-text.title-main {
+  font-family: "Samarkan", cursive;
+  display: inline-block;
+  background: linear-gradient(90deg, orange 0%, #fff 45%, #fff 55%, green 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 200px;
+  font-weight: 500;
+  scale: 0.6;
+  margin-bottom: 40px;
+}
+
+
 
 .plain-footer {
   background-color: #000;

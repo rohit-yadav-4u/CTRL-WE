@@ -58,7 +58,11 @@
 					<div class="gallery__item gallery__item--m" style="background-image:url(img/canvasmainimg/2.jpg)"></div>
 					<div class="gallery__item gallery__item--s" style="background-image:url(img/canvasmainimg/6.jpg)"></div>
 					<div class="caption">
-						Traditional Indian music includes classical forms like Hindustani and Carnatic, featuring instruments such as the sitar, tabla, and veena. It also embraces devotional songs, bhajans, and folk tunes.
+						Traditional Indian music includes classical forms like Hindustani and Carnatic, featuring instruments such as the sitar, tabla, and veena.
+						
+      <a class="content__item btn1-a" href="/canvas/Musical-Instruments/index.html"><button class="button button--hyperion"><span><span>Play the Instruments</span></span></button></a>
+      <a class="content__item btn1-b" href="/canvas/html/music.html"><button class="button button--hyperion"><span><span>More Info</span></span></button></a>
+  
 					</div>
 				</div>
 			</div>
@@ -66,6 +70,7 @@
 			<section class="project project--details">
 				<div class="project__label project__label--default scroll-animate">Indian Handicrafts</div>
 				<p class="scroll-animate">Indian handicrafts are a testament to the country's rich heritage and skilled artistry. Each region offers unique crafts like Dhokra metalwork, Jaipur blue pottery, Kashmir’s Pashmina, and Northeast bamboo art. Embroidered textiles such as Phulkari and Zardozi, along with wood carving and terracotta, reflect cultural traditions passed through generations. Blending utility with beauty, these crafts preserve India’s diverse artistic legacy.</p>
+			
 			</section>
 			
 			<div class="gallery-wrap gallery-wrap--large">
@@ -81,6 +86,8 @@
 					<div class="gallery__item gallery__item-cut"><div class="gallery__item-inner" style="background-image:url(img/canvasmainimg/11.jpg)"></div></div>
 					<div class="caption">
 						<p>Indian handicrafts are deeply tied to local traditions, festivals, and beliefs. Made using natural, sustainable methods, they carry cultural stories and heritage. Today, they gain global recognition while supporting artisan communities and preserving age-old skills.</p>
+						      <a class="content__item btn2" href="/canvas/html/handicrafts.html"><button class="button button--hyperion"><span><span>More Info</span></span></button></a>
+
 					</div>
 				</div>
 			</div>
@@ -127,7 +134,11 @@
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/37.jpg)"></div>
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/38.jpg)"></div>
 					<div class="caption">
-						<p>Indian textile arts like Bandhani, Kalamkari, Chikankari, and Pashmina showcase intricate handwork, natural dyes, cultural stories, and regional traditions.</p>
+						<p>Indian textile arts like Bandhani, Kalamkari, Chikankari, and Pashmina showcase intricate handwork, natural dyes, cultural stories, and regional traditions.
+							<a class="content__item btn3" id="footer-textiless-link" href=""><button class="button button--hyperion"><span><span>More Info</span></span></button></a>
+
+						</p>
+						
 					</div>
 				</div>
 			</div>
@@ -141,13 +152,18 @@
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/42.jpg)"></div>
 					<div class="gallery__item" style="background-image:url(img/canvasmainimg/43.jpg)"></div>
 					<div class="caption">
-						<p>Indian sculpture and stone arts reflect centuries of devotion and craftsmanship. Indian metal arts like Dhokra, Bidriware, and temple brassware reflect traditional craftsmanship, cultural motifs, utility, and decorative excellence.</p>
+						<p>Indian sculpture and stone arts reflect centuries of devotion and craftsmanship. Indian metal arts like Dhokra, Bidriware, and temple brassware reflect traditional craftsmanship, cultural motifs, utility, and decorative excellence.
+																				      <a class="content__item btn3"  id="footer-sculpturess-link" href=""><button class="button button--hyperion"><span><span>More Info</span></span></button></a>
+
+						</p>
 					</div>
 				</div>
 			</div>
 			<section class="project project--details project--right">
 				<span class="project__label project__label--default scroll-animate">Indian Traditional Dances</span>
-				<p class="scroll-animate">Indian classical and folk dances beautifully represent the country’s cultural richness. Classical forms like Bharatanatyam, Kathak, Kuchipudi, Kathakali, Mohiniyattam, Manipuri, Sattriya and Odissi are rooted in tradition and storytelling, using precise movements and expressions. Folk dances such as Bihu, Garba, and Ghoomar are lively, community-based performances tied to festivals and local life. Together, they showcase India's deep artistic heritage through rhythm, emotion, and tradition.</p>
+				<p class="scroll-animate">Indian classical and folk dances beautifully represent the country’s cultural richness. Classical forms like Bharatanatyam, Kathak, Kuchipudi, Kathakali, Mohiniyattam, Manipuri, Sattriya and Odissi are rooted in tradition and storytelling, using precise movements and expressions. Folk dances such as Bihu, Garba, and Ghoomar are lively, community-based performances tied to festivals and local life. Together, they showcase India's deep artistic heritage through rhythm, emotion, and tradition.
+
+				</p>
 			</section>
 			<div class="gallery-wrap">
 				<div class="gallery gallery--gridtiny" id="gallery-7">
@@ -278,9 +294,9 @@
           <h4 class="plain-footer__heading">Visual Arts</h4>
           <a href="/canvas/html/visualarts.html" class="plain-footer__link">Introduction</a>
           <a href="/canvas/html/paintings.html" class="plain-footer__link">Paintings</a>
-          <a href="#" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
-          <a href="#" class="plain-footer__link" id="footer-sculptures-link">Sculptures & Stone</a>
-          <a href="#" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
+          <a href="" class="plain-footer__link" id="footer-metal-arts-link">Metal Arts</a>
+          <a href="" class="plain-footer__link" id="footer-sculpture-link">Sculptures & Stone</a>
+          <a href="" class="plain-footer__link" id="footer-textile-link">Textile Arts</a>
         </div>
         <div class="plain-footer__column">
           <h4 class="plain-footer__heading">Performing Arts</h4>
@@ -345,6 +361,32 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-sculptures-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Sculpture');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
+<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-textile-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Textile Art');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
 	
 		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -381,4 +423,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 		</script>
 	</body>
+
+
+	<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-textiless-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Textile Art');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
+	<script>
+// Footer Metal Arts link: open search result with correct query
+document.addEventListener('DOMContentLoaded', function() {
+  var metalArtsLink = document.getElementById('footer-sculpturess-link');
+  if (metalArtsLink) {
+    metalArtsLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.setItem('searchQuery', 'Sculpture');
+      window.location.href = '/html/searchresult.html';
+    });
+  }
+});
+</script>
 </html>
