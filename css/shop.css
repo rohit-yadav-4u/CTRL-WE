@@ -164,17 +164,18 @@ body {
   font-weight: 540;
   margin-bottom: 2px;
   /*text-align:;*/
-  padding-left: 2px;
+  padding-left: 1vw;
 }
 
 .shop-price {
   font-size: 1.8rem;
-  padding-left: 6px;
+  padding-left: 1vw;
   padding-top: 2px;
-  color: var(--color-link-hover);
+  color: var(--color-btn-bg);
   font-weight: 700;
   margin-bottom: 4px;
   margin-top: 0px;
+  text-shadow: 0 2px 4px var(--color-border);
 }
 
 /*.add-to-cart {
@@ -837,8 +838,7 @@ button:hover,
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 1em;
-  font-weight: 600;
-  margin-bottom: 1em;
+ 
 }
 
 .shop-panel-info p {
