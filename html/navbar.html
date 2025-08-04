@@ -241,6 +241,16 @@
         }
       }
       setActiveNav();
+
+      // Attach searchQuery setter to all .search-link in morphsearch
+      document.querySelectorAll('.morphsearch-content .search-link[data-search]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var tag = link.getAttribute('data-search');
+          if (tag) {
+            localStorage.setItem('searchQuery', tag);
+          }
+        });
+      });
     </script>
   </body>
 </html>
